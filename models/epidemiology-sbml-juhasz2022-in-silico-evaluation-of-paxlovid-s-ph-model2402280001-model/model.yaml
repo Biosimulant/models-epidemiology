@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2402280001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2402280001?filename=NirmatrelvirExperiments.java
   license: CC0
-bsim:
+biosim:
   entrypoint: src.juhasz2022_in_silico_evaluation_of_paxlovid_s_ph_model2402280001_model:Juhasz2022InSilicoEvaluationOfPaxlovidSPhModel2402280001Model
   init_kwargs:
     model_path: data/MODEL2402280001.xml

@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000717?filename=HSI
     reactions.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model:Lee2018AvianHumanHalfSaturatedIncidenceHsiBiomd0000000717Model
   init_kwargs:
     model_path: data/BIOMD0000000717.xml

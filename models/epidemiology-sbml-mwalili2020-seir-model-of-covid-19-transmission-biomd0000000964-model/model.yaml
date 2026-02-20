@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000964
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000964?filename=Mwalili2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model:Mwalili2020SeirModelOfCovid19TransmissionBiomd0000000964Model
   init_kwargs:
     model_path: data/BIOMD0000000964.xml

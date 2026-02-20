@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000958
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000958?filename=Ndairou2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model:Ndairou2020EarlyStageTransmissionDynamicsOfBiomd0000000958Model
   init_kwargs:
     model_path: data/BIOMD0000000958.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2503040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2503040001?filename=SC2_modular_model.omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.miroshnichenko2025_a_modular_model_of_immune_res_model2503040001_model:Miroshnichenko2025AModularModelOfImmuneResModel2503040001Model
   init_kwargs:
     model_path: data/MODEL2503040001.xml

@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2205010001?filename=2022
     Nature Comp Sci.pdf
   license: CC0
-bsim:
+biosim:
   entrypoint: src.praneshpadmanabhan2022_sars_cov_2_virus_dynamics_model2205010001_model:Praneshpadmanabhan2022SarsCov2VirusDynamicsModel2205010001Model
   init_kwargs:
     model_path: data/MODEL2205010001.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1805220001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1805220001?filename=Turner2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.turner2015_human_mosquito_seir_sei_model_model1805220001_model:Turner2015HumanMosquitoSeirSeiModelModel1805220001Model
   init_kwargs:
     model_path: data/MODEL1805220001.xml

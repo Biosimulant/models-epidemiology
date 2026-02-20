@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000950
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000950?filename=Chitnis2012_model_1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model:Chitnis2012ModelRiftValleyFeverTransmissionBiomd0000000950Model
   init_kwargs:
     model_path: data/BIOMD0000000950.xml

@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003160003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003160003?filename=Mukhta2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mukhta2018_the_effect_of_bednet_coverage_on_mala_model2003160003_model:Mukhta2018TheEffectOfBednetCoverageOnMalaModel2003160003Model
   init_kwargs:
     model_path: data/MODEL2003160003.xml

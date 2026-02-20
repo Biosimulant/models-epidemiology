@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2007210001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2007210001?filename=iHsaEC21.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bannerman2020_integrated_model_of_the_human_airw_model2007210001_model:Bannerman2020IntegratedModelOfTheHumanAirwModel2007210001Model
   init_kwargs:
     model_path: data/MODEL2007210001.xml

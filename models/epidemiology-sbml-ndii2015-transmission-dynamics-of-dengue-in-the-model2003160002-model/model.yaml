@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003160002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003160002?filename=Ndii2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model:Ndii2015TransmissionDynamicsOfDengueInTheModel2003160002Model
   init_kwargs:
     model_path: data/MODEL2003160002.xml

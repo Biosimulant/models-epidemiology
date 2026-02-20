@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1507180051
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1507180051?filename=MODEL1507180051_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.fang2011_genome_scale_metabolic_network_of_burkh_model1507180051_model:Fang2011GenomeScaleMetabolicNetworkOfBurkhModel1507180051Model
   init_kwargs:
     model_path: data/MODEL1507180051.xml

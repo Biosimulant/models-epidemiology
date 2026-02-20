@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2405130004?filename=BioModelsMetadata
     - eos8fth.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kc2021_a_machine_learning_platform_to_estimate_a_model2405130004_model:Kc2021AMachineLearningPlatformToEstimateAModel2405130004Model
   init_kwargs:
     model_path: data/MODEL2405130004.xml

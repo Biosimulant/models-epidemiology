@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000851
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000851?filename=Ho2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model:Ho2019MathematicalModelsOfTransmissionDynamBiomd0000000851Model
   init_kwargs:
     model_path: data/BIOMD0000000851.xml

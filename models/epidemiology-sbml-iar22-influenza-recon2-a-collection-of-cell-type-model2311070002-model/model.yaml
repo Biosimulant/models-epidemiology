@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2311070002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2311070002?filename=Influenza.omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.iar22_influenza_recon2_a_collection_of_cell_type_model2311070002_model:Iar22InfluenzaRecon2ACollectionOfCellTypeModel2311070002Model
   init_kwargs:
     model_path: data/MODEL2311070002.xml

@@ -24,7 +24,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1808280013?filename=Final
     Version.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model:Ducrot2009MalariaTransmissionInTwoHostTypeModel1808280013Model
   init_kwargs:
     model_path: data/MODEL1808280013.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003020001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003020001?filename=iAB_AMO1410_SARS-CoV-2.omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.renz2020_gem_of_human_alveolar_macrophage_with_s_model2003020001_model:Renz2020GemOfHumanAlveolarMacrophageWithSModel2003020001Model
   init_kwargs:
     model_path: data/MODEL2003020001.xml

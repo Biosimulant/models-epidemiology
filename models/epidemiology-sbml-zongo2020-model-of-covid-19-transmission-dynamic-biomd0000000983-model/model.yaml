@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000983
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000983?filename=Zongo2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model:Zongo2020ModelOfCovid19TransmissionDynamicBiomd0000000983Model
   init_kwargs:
     model_path: data/BIOMD0000000983.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2212160001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2212160001?filename=Model-Antiviral-Heterogeneity-Tissue-Infected-SARS-2.zip
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gianlupi2022_antiviral_timing_potency_and_hetero_model2212160001_model:Gianlupi2022AntiviralTimingPotencyAndHeteroModel2212160001Model
   init_kwargs:
     model_path: data/MODEL2212160001.xml

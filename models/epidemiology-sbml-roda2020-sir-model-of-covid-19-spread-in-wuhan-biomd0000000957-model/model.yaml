@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000957
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000957?filename=Roda2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model:Roda2020SirModelOfCovid19SpreadInWuhanBiomd0000000957Model
   init_kwargs:
     model_path: data/BIOMD0000000957.xml

@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000709?filename=Liu2017
     - Dynamics of Avian Influenza with Allee Growth Effect.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liu2017_dynamics_of_avian_influenza_with_allee_g_biomd0000000709_model:Liu2017DynamicsOfAvianInfluenzaWithAlleeGBiomd0000000709Model
   init_kwargs:
     model_path: data/BIOMD0000000709.xml

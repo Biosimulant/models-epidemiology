@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000955
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000955?filename=Giordano2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model:Giordano2020SidartheModelOfCovid19SpreadIBiomd0000000955Model
   init_kwargs:
     model_path: data/BIOMD0000000955.xml

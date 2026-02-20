@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2212310001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2212310001?filename=covid_ethiopia_seir2x_model.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model:ModelBasedPredictionOfSarsCov2InEthiopiaModel2212310001Model
   init_kwargs:
     model_path: data/MODEL2212310001.sbml

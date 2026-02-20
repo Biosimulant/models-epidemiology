@@ -21,7 +21,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001045?filename=Smith
     and moore2004-the SIR Model for Spread of Disease.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model:Smithandmoore2004TheSirModelForTheSpreadOBiomd0000001045Model
   init_kwargs:
     model_path: data/BIOMD0000001045.xml

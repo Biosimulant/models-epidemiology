@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2209020001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2209020001?filename=bycovidgraph_2ndSep.pkl
   license: CC0
-bsim:
+biosim:
   entrypoint: src.by_covid_knowledge_graph_a_comprehensive_network_model2209020001_model:ByCovidKnowledgeGraphAComprehensiveNetworkModel2209020001Model
   init_kwargs:
     model_path: data/MODEL2209020001.xml

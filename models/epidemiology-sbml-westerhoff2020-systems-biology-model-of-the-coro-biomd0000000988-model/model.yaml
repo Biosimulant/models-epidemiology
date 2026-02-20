@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000988
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000988?filename=Westerhoff2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model:Westerhoff2020SystemsBiologyModelOfTheCoroBiomd0000000988Model
   init_kwargs:
     model_path: data/BIOMD0000000988.xml

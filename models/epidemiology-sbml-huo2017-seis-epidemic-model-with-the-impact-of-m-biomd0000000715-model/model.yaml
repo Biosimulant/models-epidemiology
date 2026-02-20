@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000715?filename=Epidemic
     Model with the impact of Media Reactions.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model:Huo2017SeisEpidemicModelWithTheImpactOfMBiomd0000000715Model
   init_kwargs:
     model_path: data/BIOMD0000000715.xml

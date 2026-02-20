@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000977
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000977?filename=Sarkar2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model:Sarkar2020SairModelOfCovid19TransmissionWBiomd0000000977Model
   init_kwargs:
     model_path: data/BIOMD0000000977.xml

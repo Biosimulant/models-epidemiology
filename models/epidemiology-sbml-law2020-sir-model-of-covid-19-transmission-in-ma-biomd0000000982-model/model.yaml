@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000982
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000982?filename=Law2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model:Law2020SirModelOfCovid19TransmissionInMaBiomd0000000982Model
   init_kwargs:
     model_path: data/BIOMD0000000982.xml

@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2010280002?filename=Delattre2020
     - SARS-CoV-2-infected human lung cell.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.delattre2020_sars_cov_2_infected_human_lung_cell_model2010280002_model:Delattre2020SarsCov2InfectedHumanLungCellModel2010280002Model
   init_kwargs:
     model_path: data/MODEL2010280002.xml

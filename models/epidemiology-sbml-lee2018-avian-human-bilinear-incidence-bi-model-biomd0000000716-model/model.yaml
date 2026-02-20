@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000716?filename=BI
     reactions.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model:Lee2018AvianHumanBilinearIncidenceBiModelBiomd0000000716Model
   init_kwargs:
     model_path: data/BIOMD0000000716.xml

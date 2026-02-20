@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2504120001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2504120001?filename=covid_ethiopa_multivariants_model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.merkt2024_seir_based_model_of_sars_cov_2_variant_model2504120001_model:Merkt2024SeirBasedModelOfSarsCov2VariantModel2504120001Model
   init_kwargs:
     model_path: data/MODEL2504120001.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000984
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000984?filename=Fang2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model:Fang2020SeirModelOfCovid19TransmissionConBiomd0000000984Model
   init_kwargs:
     model_path: data/BIOMD0000000984.xml

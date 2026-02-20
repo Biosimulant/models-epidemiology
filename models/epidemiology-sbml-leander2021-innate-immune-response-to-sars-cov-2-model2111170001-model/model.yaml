@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2111170001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2111170001?filename=Leander2021.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model:Leander2021InnateImmuneResponseToSarsCov2Model2111170001Model
   init_kwargs:
     model_path: data/MODEL2111170001.xml

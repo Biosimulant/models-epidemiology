@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000991
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000991?filename=Okuonghae2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model:Okuonghae2020SeairModelOfCovid19TransmissiBiomd0000000991Model
   init_kwargs:
     model_path: data/BIOMD0000000991.xml

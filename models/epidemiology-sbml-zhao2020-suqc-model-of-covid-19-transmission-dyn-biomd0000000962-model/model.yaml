@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000962
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000962?filename=Zhao2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model:Zhao2020SuqcModelOfCovid19TransmissionDynBiomd0000000962Model
   init_kwargs:
     model_path: data/BIOMD0000000962.xml

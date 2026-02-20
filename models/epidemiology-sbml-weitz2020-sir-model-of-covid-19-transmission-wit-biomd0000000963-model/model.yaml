@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000963
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000963?filename=Weitz2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model:Weitz2020SirModelOfCovid19TransmissionWitBiomd0000000963Model
   init_kwargs:
     model_path: data/BIOMD0000000963.xml

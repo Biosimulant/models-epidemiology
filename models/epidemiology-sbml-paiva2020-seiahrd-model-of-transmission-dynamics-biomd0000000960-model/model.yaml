@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000960
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000960?filename=Paiva2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model:Paiva2020SeiahrdModelOfTransmissionDynamicsBiomd0000000960Model
   init_kwargs:
     model_path: data/BIOMD0000000960.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000949
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000949?filename=Chitnis2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model:Chitnis2008MathematicalModelOfMalariaTransmBiomd0000000949Model
   init_kwargs:
     model_path: data/BIOMD0000000949.xml

@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2202230002?filename=COVID19
     immunotherapy a Mathematical Model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.covid_19_immunotherapy_a_mathematical_model_model2202230002_model:Covid19ImmunotherapyAMathematicalModelModel2202230002Model
   init_kwargs:
     model_path: data/MODEL2202230002.xml

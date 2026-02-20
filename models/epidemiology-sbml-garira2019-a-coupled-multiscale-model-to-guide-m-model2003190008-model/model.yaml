@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190008
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190008?filename=Garira2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.garira2019_a_coupled_multiscale_model_to_guide_m_model2003190008_model:Garira2019ACoupledMultiscaleModelToGuideMModel2003190008Model
   init_kwargs:
     model_path: data/MODEL2003190008.xml

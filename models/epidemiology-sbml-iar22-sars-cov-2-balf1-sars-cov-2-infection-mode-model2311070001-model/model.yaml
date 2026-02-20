@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2311070001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2311070001?filename=SARS-CoV-2_CoreModelsBALF1Epithelial.omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.iar22_sars_cov_2_balf1_sars_cov_2_infection_mode_model2311070001_model:Iar22SarsCov2Balf1SarsCov2InfectionModeModel2311070001Model
   init_kwargs:
     model_path: data/MODEL2311070001.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000981
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000981?filename=Wan2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model:Wan2020RiskEstimationAndPredictionOfTheTrBiomd0000000981Model
   init_kwargs:
     model_path: data/BIOMD0000000981.xml

@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000726
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000726?filename=Model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model:Ruan2017TransmissionDynamicsAndControlOfRaBiomd0000000726Model
   init_kwargs:
     model_path: data/BIOMD0000000726.xml

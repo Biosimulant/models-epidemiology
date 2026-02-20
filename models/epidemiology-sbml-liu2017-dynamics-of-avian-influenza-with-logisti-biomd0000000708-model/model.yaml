@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000708?filename=Liu2017
     - Dynamics of Avian Influenza with Logistic Growth.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model:Liu2017DynamicsOfAvianInfluenzaWithLogistiBiomd0000000708Model
   init_kwargs:
     model_path: data/BIOMD0000000708.xml

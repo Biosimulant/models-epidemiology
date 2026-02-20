@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2202240001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2202240001?filename=iHBEC-BOFVBOF-2023.omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.new_workflow_predicts_drug_targets_against_sars_model2202240001_model:NewWorkflowPredictsDrugTargetsAgainstSarsModel2202240001Model
   init_kwargs:
     model_path: data/MODEL2202240001.xml

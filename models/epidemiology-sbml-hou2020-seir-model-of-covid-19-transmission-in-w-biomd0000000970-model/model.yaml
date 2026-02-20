@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000970
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000970?filename=Hou2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model:Hou2020SeirModelOfCovid19TransmissionInWBiomd0000000970Model
   init_kwargs:
     model_path: data/BIOMD0000000970.xml

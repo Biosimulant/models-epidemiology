@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001102
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001102?filename=model_Burbano2023.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.burbano2023_hgfsignaling_in_fattyliverdisease_biomd0000001102_model:Burbano2023HgfsignalingInFattyliverdiseaseBiomd0000001102Model
   init_kwargs:
     model_path: data/BIOMD0000001102.xml

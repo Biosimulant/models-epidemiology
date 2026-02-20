@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000980
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000980?filename=Malkov2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model:Malkov2020SeirsModelOfCovid19TransmissionBiomd0000000980Model
   init_kwargs:
     model_path: data/BIOMD0000000980.xml
