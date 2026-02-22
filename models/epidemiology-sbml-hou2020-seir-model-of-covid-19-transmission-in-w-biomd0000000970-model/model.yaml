@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Hou2020SeirModelOfCovid19TransmissionInWBiomd0000000970Model'
-description: A novel coronavirus pneumonia, first identified in Wuhan City and referred
-  to as COVID-19 by the World Health Organization, has been quickly spreading to other
-  cities and countries. To control the epi
+description: "A novel coronavirus pneumonia, first identified in Wuhan City and referred to as COVID-19 by the World Health Organization, has been quickly spreading to other cities and countries. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

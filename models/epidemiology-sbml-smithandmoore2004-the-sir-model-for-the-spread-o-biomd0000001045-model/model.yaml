@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Smithandmoore2004TheSirModelForTheSpreadOBiomd0000001045Model'
-description: This is the SIR model for disease spread of the Hong Kong flu in New
-  York City in the late 1960's.
+description: "This is the SIR model for disease spread of the Hong Kong flu in New York City in the late 1960's. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

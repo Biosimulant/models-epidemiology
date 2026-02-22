@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Burbano2023HgfsignalingInFattyliverdiseaseBiomd0000001102Model'
-description: Chronic liver diseases are worldwide on the rise. Due to the rapidly
-  increasing incidence, in particular in Western countries, non-alcoholic fatty liver
-  disease (NAFLD) is gaining importance. As the d
+description: "Chronic liver diseases are worldwide on the rise. Due to the rapidly increasing incidence, in particular in Western countries, non-alcoholic fatty liver disease (NAFLD) is gaining importance."
 standard: other
 tags:
 - epidemiology

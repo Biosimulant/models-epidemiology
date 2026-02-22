@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Ho2019MathematicalModelsOfTransmissionDynamBiomd0000000851Model'
-description: This is the simple version of the two mathematical models presented by
-  Ho et al. It is a model comprised of simple ordinary differential equations describing
-  the overall epidemic dynamics of influenza
+description: "This is the simple version of the two mathematical models presented by Ho et al. It is a model comprised of simple ordinary differential equations describing the overall epidemic dynamics of influenza."
 standard: other
 tags:
 - epidemiology

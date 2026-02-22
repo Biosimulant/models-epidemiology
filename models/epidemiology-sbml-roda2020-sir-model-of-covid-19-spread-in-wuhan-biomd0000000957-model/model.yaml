@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Roda2020SirModelOfCovid19SpreadInWuhanBiomd0000000957Model'
-description: '=Since the COVID-19 outbreak in Wuhan City in December of 2019, numerous
-  model predictions on the COVID-19 epidemics in Wuhan and other parts of China have
-  been reported. These model predictions have '
+description: "=Since the COVID-19 outbreak in Wuhan City in December of 2019, numerous model predictions on the COVID-19 epidemics in Wuhan and other parts of China have been reported. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

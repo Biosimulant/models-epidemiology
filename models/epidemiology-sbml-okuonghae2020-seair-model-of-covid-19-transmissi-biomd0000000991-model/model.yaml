@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Okuonghae2020SeairModelOfCovid19TransmissiBiomd0000000991Model'
-description: This work examines the impact of various non-pharmaceutical control measures
-  (government and personal) on the population dynamics of the novel coronavirus disease
-  2019 (COVID-19) in Lagos, Nigeria, us
+description: "This work examines the impact of various non-pharmaceutical control measures (government and personal) on the population dynamics of the novel coronavirus disease 2019 (COVID-19) in Lagos, Nigeria, us. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

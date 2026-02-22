@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Renz2020GemOfHumanAlveolarMacrophageWithSModel2003020001Model'
-description: 'Background: The novel coronavirus (SARS-CoV-2) currently spreads worldwide,
-  causing the disease COVID-19. The number of infections increases daily, without
-  any approved antiviral therapy. The recently'
+description: "Background: The novel coronavirus (SARS-CoV-2) currently spreads worldwide, causing the disease COVID-19. The number of infections increases daily, without any approved antiviral therapy."
 standard: other
 tags:
 - epidemiology

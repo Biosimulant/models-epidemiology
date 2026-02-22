@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Bannerman2020IntegratedModelOfTheHumanAirwModel2007210001Model'
-description: We have developed a new model of the human airway epithelial cell by
-  deriving the cell-specific metabolic reactions identified from (i) a draft automated
-  model by Wang et al. 2017 (ii) gene expression
+description: "We have developed a new model of the human airway epithelial cell by deriving the cell-specific metabolic reactions identified from (i) a draft automated model by Wang et al. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

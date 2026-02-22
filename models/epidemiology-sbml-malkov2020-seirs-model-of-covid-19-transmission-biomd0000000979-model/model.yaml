@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Malkov2020SeirsModelOfCovid19TransmissionBiomd0000000979Model'
-description: Epidemiological models of COVID-19 transmission assume that recovered
-  individuals have a fully protected immunity. To date, there is no definite answer
-  about whether people who recover from COVID-19 c
+description: "Epidemiological models of COVID-19 transmission assume that recovered individuals have a fully protected immunity. To date, there is no definite answer about whether people who recover from COVID-19 c."
 standard: other
 tags:
 - epidemiology

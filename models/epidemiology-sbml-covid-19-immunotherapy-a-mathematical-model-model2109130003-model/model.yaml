@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Covid19ImmunotherapyAMathematicalModelModel2109130003Model'
-description: We propose a within-host population (ODE) innate immunity model, whose
-  focus is on NK cells and their relevant role in preventing COVID19 from progressing
-  to the acute phase that may eventually lead t
+description: "We propose a within-host population (ODE) innate immunity model, whose focus is on NK cells and their relevant role in preventing COVID19 from progressing to the acute phase that may eventually lead t. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

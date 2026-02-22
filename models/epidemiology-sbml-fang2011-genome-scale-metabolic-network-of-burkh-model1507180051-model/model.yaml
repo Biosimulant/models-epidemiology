@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Fang2011GenomeScaleMetabolicNetworkOfBurkhModel1507180051Model'
-description: 'Fang2011 - Genome-scale metabolic network ofBurkholderia cenocepacia
-  (iKF1028) This model is described in the article: Exploring the metabolic network
-  of the epidemic pathogen Burkholderia cenocepacia'
+description: "Fang2011 - Genome-scale metabolic network ofBurkholderia cenocepacia (iKF1028) This model is described in the article: Exploring the metabolic network of the epidemic pathogen Burkholderia cenocepacia. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

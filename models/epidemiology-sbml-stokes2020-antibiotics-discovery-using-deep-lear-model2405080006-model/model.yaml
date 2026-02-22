@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Stokes2020AntibioticsDiscoveryUsingDeepLearModel2405080006Model'
-description: This model was developed to support the early efforts in the identification
-  of novel drugs against SARS-CoV2. It predicts the probability that a small molecule
-  inhibits SARS-3CLpro-mediated peptide cl
+description: "This model was developed to support the early efforts in the identification of novel drugs against SARS-CoV2. It predicts the probability that a small molecule inhibits SARS-3CLpro-mediated peptide cl."
 standard: other
 tags:
 - epidemiology

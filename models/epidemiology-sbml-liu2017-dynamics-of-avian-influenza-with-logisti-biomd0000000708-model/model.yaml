@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Liu2017DynamicsOfAvianInfluenzaWithLogistiBiomd0000000708Model'
-description: 'Sanhong Liu, Shigui Ruan & Xinan Zhang. Nonlinear dynamics of avian
-  influenza epidemic models. Mathematical Biosciences 283 (2017). Avian influenza
-  is a zoonotic disease caused by the transmission of '
+description: "Sanhong Liu, Shigui Ruan & Xinan Zhang. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

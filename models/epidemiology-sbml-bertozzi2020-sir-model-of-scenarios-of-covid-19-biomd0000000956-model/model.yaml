@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Bertozzi2020SirModelOfScenariosOfCovid19Biomd0000000956Model'
-description: The coronavirus disease 2019 (COVID-19) pandemic has placed epidemic
-  modeling at the forefront of worldwide public policy making. Nonetheless, modeling
-  and forecasting the spread of COVID-19 remains a
+description: "The coronavirus disease 2019 (COVID-19) pandemic has placed epidemic modeling at the forefront of worldwide public policy making. Nonetheless, modeling and forecasting the spread of COVID-19 remains a."
 standard: other
 tags:
 - epidemiology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Zongo2020ModelOfCovid19TransmissionDynamicBiomd0000000983Model'
-description: 'The main objective of this paper is to address the following question:
-  are the containment measures imposed by most of the world governments effective
-  and sufficient to stop the epidemic of COVID-19 b'
+description: "The main objective of this paper is to address the following question: are the containment measures imposed by most of the world governments effective and sufficient to stop the epidemic of COVID-19 b. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Huo2017SeisEpidemicModelWithTheImpactOfMBiomd0000000715Model'
-description: 'Hai-Feng Huo, Peng Yang & Hong Xiang. Stability and bifurcation for
-  an SEIS epidemic model with the impact of media. Physica A: Statistical Mechanics
-  and its Applications 490 (2018). A novel SEIS epid'
+description: "Hai-Feng Huo, Peng Yang & Hong Xiang. Stability and bifurcation for an SEIS epidemic model with the impact of media."
 standard: other
 tags:
 - epidemiology

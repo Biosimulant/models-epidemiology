@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Ndii2015TransmissionDynamicsOfDengueInTheModel2003160002Model'
-description: 'Use of the bacterium Wolbachia is an innovative new strategy designed
-  to break the cycle of dengue transmission. There are two main mechanisms by which
-  Wolbachia could achieve this: by reducing the le'
+description: "Use of the bacterium Wolbachia is an innovative new strategy designed to break the cycle of dengue transmission. There are two main mechanisms by which Wolbachia could achieve this: by reducing the le."
 standard: other
 tags:
 - epidemiology

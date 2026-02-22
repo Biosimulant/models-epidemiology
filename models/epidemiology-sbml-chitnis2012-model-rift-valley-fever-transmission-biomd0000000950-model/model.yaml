@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Chitnis2012ModelRiftValleyFeverTransmissionBiomd0000000950Model'
-description: Mathematical model for Rift Valley Fever transmission between cattle
-  and mosquitoes without infectious eggs.
+description: "Mathematical model for Rift Valley Fever transmission between cattle and mosquitoes without infectious eggs. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

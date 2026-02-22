@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Zhao2020SuqcModelOfCovid19TransmissionDynBiomd0000000962Model'
-description: Background - The coronavirus disease 2019 (COVID-19) is rapidly spreading
-  in China and more than 30 countries over last two months. COVID-19 has multiple
-  characteristics distinct from other infectious
+description: "Background - The coronavirus disease 2019 (COVID-19) is rapidly spreading in China and more than 30 countries over last two months. COVID-19 has multiple characteristics distinct from other infectious."
 standard: other
 tags:
 - epidemiology

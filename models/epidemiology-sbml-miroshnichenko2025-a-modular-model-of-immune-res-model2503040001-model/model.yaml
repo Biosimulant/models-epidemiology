@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Miroshnichenko2025AModularModelOfImmuneResModel2503040001Model'
-description: 'A multicompartmental model consisting of four submodules: the lungs,
-  the upper airways, and the corresponding lymph nodes for both submodules. The model
-  is made up of 35 differential equations (includ'
+description: "A multicompartmental model consisting of four submodules: the lungs, the upper airways, and the corresponding lymph nodes for both submodules. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

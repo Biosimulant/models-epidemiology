@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Ghanbari2020ForecastingTheSecondWaveOfCoviBiomd0000000976Model'
-description: 'One of the common misconceptions about COVID-19 disease is to assume
-  that we will not see a recurrence after the first wave of the disease has subsided.
-  This completely wrong perception causes people '
+description: "One of the common misconceptions about COVID-19 disease is to assume that we will not see a recurrence after the first wave of the disease has subsided. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

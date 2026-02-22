@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Weitz2020SirModelOfCovid19TransmissionWitBiomd0000000963Model'
-description: The COVID-19 pandemic has precipitated a global crisis, with more than
-  1,430,000 confirmed cases and more than 85,000 confirmed deaths globally as of 9
-  April 2020. Mitigation and suppression of new in
+description: "The COVID-19 pandemic has precipitated a global crisis, with more than 1,430,000 confirmed cases and more than 85,000 confirmed deaths globally as of 9 April 2020. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

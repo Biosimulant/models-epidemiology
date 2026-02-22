@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Praneshpadmanabhan2022SarsCov2VirusDynamicsModel2205010001Model'
-description: SARS-CoV-2 virus dynamics ODE model parameterized using non-linear mixed
-  effects fitting to longitudinal human data.
+description: "SARS-CoV-2 virus dynamics ODE model parameterized using non-linear mixed effects fitting to longitudinal human data. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

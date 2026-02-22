@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Fang2020SeirModelOfCovid19TransmissionConBiomd0000000984Model'
-description: "Using the parameterized susceptible\u2010exposed\u2010infectious\u2010\
-  recovered model, we simulated the spread dynamics of coronavirus disease 2019 (COVID\u2010\
-  19) outbreak and impact of different control measures, condu"
+description: "Using the parameterized susceptible\u2010exposed\u2010infectious\u2010recovered model, we simulated the spread dynamics of coronavirus disease 2019 (COVID\u201019) outbreak and impact of different control measures, condu. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

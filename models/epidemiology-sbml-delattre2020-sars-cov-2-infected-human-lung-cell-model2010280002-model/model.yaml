@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Delattre2020SarsCov2InfectedHumanLungCellModel2010280002Model'
-description: Modified Recon2.2 where the host biomass objective function has been
-  modified to reflect the average composition of the proteome of human lung cells
-  (based on expression data from the human proteome a
+description: "Modified Recon2.2 where the host biomass objective function has been modified to reflect the average composition of the proteome of human lung cells (based on expression data from the human proteome a. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

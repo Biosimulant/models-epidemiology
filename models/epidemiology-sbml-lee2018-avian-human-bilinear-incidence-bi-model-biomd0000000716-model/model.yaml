@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Lee2018AvianHumanBilinearIncidenceBiModelBiomd0000000716Model'
-description: Hanl Lee & Angelyn Lao. Transmission dynamics and control strategies
-  assessment of avian influenza A (H5N6) in the Philippines. Infectious Disease Modelling
-  3 (2018). Due to the outbreaks of Highly Pa
+description: "Hanl Lee & Angelyn Lao. Transmission dynamics and control strategies assessment of avian influenza A (H5N6) in the Philippines."
 standard: other
 tags:
 - epidemiology

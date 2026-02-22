@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: ModelBasedPredictionOfSarsCov2InEthiopiaModel2212310001Model'
-description: One of three models used to describe dynamics of COVID-19 spread in Ethiopia.
-  Here the two investigated population groups healthcare workers and community members
-  are modeled as separate but interacti
+description: "One of three models used to describe dynamics of COVID-19 spread in Ethiopia. Here the two investigated population groups healthcare workers and community members are modeled as separate but interacti."
 standard: other
 tags:
 - epidemiology

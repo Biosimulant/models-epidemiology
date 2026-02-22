@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Giordano2020SidartheModelOfCovid19SpreadIBiomd0000000955Model'
-description: In Italy, 128,948 confirmed cases and 15,887 deaths of people who tested
-  positive for SARS-CoV-2 were registered as of 5 April 2020. Ending the global SARS-CoV-2
-  pandemic requires implementation of mu
+description: "In Italy, 128,948 confirmed cases and 15,887 deaths of people who tested positive for SARS-CoV-2 were registered as of 5 April 2020. Ending the global SARS-CoV-2 pandemic requires implementation of mu."
 standard: other
 tags:
 - epidemiology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Law2020SirModelOfCovid19TransmissionInMaBiomd0000000982Model'
-description: The susceptible-infectious-removed (SIR) model offers the simplest framework
-  to study transmission dynamics of COVID-19, however, it does not factor in its early
-  depleting trend observed during a lock
+description: "The susceptible-infectious-removed (SIR) model offers the simplest framework to study transmission dynamics of COVID-19, however, it does not factor in its early depleting trend observed during a lock. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

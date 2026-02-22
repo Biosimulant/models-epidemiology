@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Turner2015HumanMosquitoSeirSeiModelModel1805220001Model'
-description: Mathematical model of malaria transmission between humans and mosquitoes.
+description: "Mathematical model of malaria transmission between humans and mosquitoes. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

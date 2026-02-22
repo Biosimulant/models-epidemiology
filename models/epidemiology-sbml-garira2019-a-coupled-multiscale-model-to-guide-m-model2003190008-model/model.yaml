@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Garira2019ACoupledMultiscaleModelToGuideMModel2003190008Model'
-description: 'This is a coupled multiscale mathematical model of malaria control and
-  elimination containing four submodels: mosquito-to-human transmission of the malaria
-  parasite, human-to-mosquito transmission of '
+description: "This is a coupled multiscale mathematical model of malaria control and elimination containing four submodels: mosquito-to-human transmission of the malaria parasite, human-to-mosquito transmission of. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

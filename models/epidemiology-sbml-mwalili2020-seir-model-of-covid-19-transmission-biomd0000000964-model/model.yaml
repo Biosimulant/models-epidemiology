@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Mwalili2020SeirModelOfCovid19TransmissionBiomd0000000964Model'
-description: 'Objective: Coronavirus disease 2019 (COVID-19) is a pandemic respiratory
-  illness spreading from person-to-person caused by a novel coronavirus and poses
-  a serious public health risk. The goal of this '
+description: "Objective: Coronavirus disease 2019 (COVID-19) is a pandemic respiratory illness spreading from person-to-person caused by a novel coronavirus and poses a serious public health risk. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Tang2020EstimationOfTransmissionRiskOfCoviBiomd0000000972Model'
-description: "The basic reproduction number of an infectious agent is the average\
-  \ number of infections one case can generate over the course of the infectious period,\
-  \ in a na\xEFve, uninfected population. It is well-k"
+description: "The basic reproduction number of an infectious agent is the average number of infections one case can generate over the course of the infectious period, in a na\u00efve, uninfected population. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:
 - epidemiology

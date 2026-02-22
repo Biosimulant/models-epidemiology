@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: ByCovidKnowledgeGraphAComprehensiveNetworkModel2209020001Model'
-description: The BY-COVID Knowledge Graph integrates biological and chemical data
-  from BY-COVID project partner sites. These data are further enriched with information
-  such as biological processes, assays, drug ca
+description: "The BY-COVID Knowledge Graph integrates biological and chemical data from BY-COVID project partner sites. These data are further enriched with information such as biological processes, assays, drug ca."
 standard: other
 tags:
 - epidemiology

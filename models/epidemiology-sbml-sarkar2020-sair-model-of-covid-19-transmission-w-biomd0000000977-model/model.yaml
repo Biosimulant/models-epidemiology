@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Sarkar2020SairModelOfCovid19TransmissionWBiomd0000000977Model'
-description: In India, 100,340 confirmed cases and 3155 confirmed deaths due to COVID-19
-  were reported as of May 18, 2020. Due to absence of specific vaccine or therapy,
-  non-pharmacological interventions including
+description: "In India, 100,340 confirmed cases and 3155 confirmed deaths due to COVID-19 were reported as of May 18, 2020. Due to absence of specific vaccine or therapy, non-pharmacological interventions including."
 standard: other
 tags:
 - epidemiology

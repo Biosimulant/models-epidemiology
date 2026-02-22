@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Epidemiology: Mukhta2018TheEffectOfBednetCoverageOnMalaModel2003160003Model'
-description: A campaign for malaria control, using Long Lasting Insecticide Nets (LLINs)
-  was launched in South Sudan in 2009. The success of such a campaign often depends
-  upon adequate available resources and reli
+description: "A campaign for malaria control, using Long Lasting Insecticide Nets (LLINs) was launched in South Sudan in 2009. The success of such a campaign often depends upon adequate available resources and reli."
 standard: other
 tags:
 - epidemiology
