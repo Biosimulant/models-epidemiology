@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlSarkar2020SairModelOfCovid19TransmissionWith(biosim.BioModule):
     """BioModule wrapper for SBML model: Sarkar2020 - SAIR model of COVID-19 transmission with quarantine measures in India."""
 
@@ -60,7 +64,8 @@ class SbmlSarkar2020SairModelOfCovid19TransmissionWith(biosim.BioModule):
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(
@@ -93,7 +98,7 @@ class SbmlSarkar2020SairModelOfCovid19TransmissionWith(biosim.BioModule):
                     "name": species_id,
                     "points": [[self._t, value]]
                 })
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
                 continue
 
         if not series:
