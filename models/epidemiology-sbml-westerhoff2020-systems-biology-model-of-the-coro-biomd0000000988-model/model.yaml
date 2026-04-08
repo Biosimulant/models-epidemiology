@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Westerhoff2020SystemsBiologyModelOfTheCoroBiomd0000000988Model'
+title: "Westerhoff2020 - systems biology model of the coronavirus pandemic 2020"
 description: "Using standard systems biology methodologies a 14-compartment dynamic model was developed for the Corona virus epidemic. The model predicts that: (i) it will be impossible to limit lockdown intensity."
 standard: other
 tags:

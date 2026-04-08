@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Carcione2020DeterministicSeirSimulationOfABiomd0000000974Model'
+title: "Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak"
 description: "An epidemic disease caused by a new coronavirus has spread in Northern Italy with a strong contagion rate. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:

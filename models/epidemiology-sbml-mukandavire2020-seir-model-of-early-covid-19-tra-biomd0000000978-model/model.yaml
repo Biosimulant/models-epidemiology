@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Mukandavire2020SeirModelOfEarlyCovid19TraBiomd0000000978Model'
+title: "Mukandavire2020 - SEIR model of early COVID-19 transmission in South Africa"
 description: "The emergence and fast global spread of COVID-19 has presented one of the greatest public health challenges in modern times with no proven cure or vaccine. Africa is still early in this epidemic, ther."
 standard: other
 tags:

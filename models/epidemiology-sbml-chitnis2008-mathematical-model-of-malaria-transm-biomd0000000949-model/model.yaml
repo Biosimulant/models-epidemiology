@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Chitnis2008MathematicalModelOfMalariaTransmBiomd0000000949Model'
+title: "Chitnis2008 - Mathematical model of malaria transmission"
 description: "Mathematical model of malaria transmission for low and high transmission rates. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:

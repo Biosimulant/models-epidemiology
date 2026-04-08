@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Juhasz2022InSilicoEvaluationOfPaxlovidSPhModel2402280001Model'
+title: "Juhasz2022 - In silico evaluation of Paxlovid’s pharmacometrics for SARS-CoV-2"
 description: "Paxlovid is a promising, orally bioavailable novel drug for SARS-CoV-2 with excellent safety profiles. Our main goal here is to explore the pharmacometric features of this new antiviral."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Iar22InfluenzaRecon2ACollectionOfCellTypeModel2311070002Model'
+title: "iAR22_Influenza_Recon2 - A collection of cell-type specific constraint-based metabolic influenza infection models"
 description: "A collection of constraint-based metabolic models of human host cells infected with SARS-CoV-2 based that were generated based on gene-expression data. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:

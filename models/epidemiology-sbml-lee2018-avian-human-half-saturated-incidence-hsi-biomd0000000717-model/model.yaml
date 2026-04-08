@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Lee2018AvianHumanHalfSaturatedIncidenceHsiBiomd0000000717Model'
+title: "Lee2018 - Avian human half-saturated incidence (HSI) model"
 description: "Hanl Lee & Angelyn Lao. Transmission dynamics and control strategies assessment of avian influenza A (H5N6) in the Philippines."
 standard: other
 tags:

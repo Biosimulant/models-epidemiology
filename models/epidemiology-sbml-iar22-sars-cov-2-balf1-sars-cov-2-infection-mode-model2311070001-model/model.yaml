@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Iar22SarsCov2Balf1SarsCov2InfectionModeModel2311070001Model'
+title: "iAR22_SARS-CoV-2_BALF1 - SARS-CoV-2 infection models of bronchoalveolar lavage fluid epithelia cells"
 description: "A collection of constraint-based metabolic models of bronchoalveolar lavage fluid epithelia cells infected with SARS-CoV-2 based that were generated based on gene-expression data. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:

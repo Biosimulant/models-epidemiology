@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Paiva2020SeiahrdModelOfTransmissionDynamicsBiomd0000000960Model'
+title: "Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19"
 description: "This paper proposes a dynamic model to describe and forecast the dynamics of the coronavirus disease COVID-19 transmission. The model is based on an approach previously used to describe the Middle Eas."
 standard: other
 tags:

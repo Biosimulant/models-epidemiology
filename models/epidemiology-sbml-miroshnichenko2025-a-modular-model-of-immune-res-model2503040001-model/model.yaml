@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Miroshnichenko2025AModularModelOfImmuneResModel2503040001Model'
+title: "Miroshnichenko2025 - A modular model of immune response to SARS-CoV-2 infection"
 description: "A multicompartmental model consisting of four submodules: the lungs, the upper airways, and the corresponding lymph nodes for both submodules. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:

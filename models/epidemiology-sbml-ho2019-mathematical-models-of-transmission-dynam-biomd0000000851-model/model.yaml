@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Ho2019MathematicalModelsOfTransmissionDynamBiomd0000000851Model'
+title: "Ho2019 - Mathematical models of transmission dynamics and vaccine strategies in Hong Kong during the 2017-2018 winter influenza season (Simple)"
 description: "This is the simple version of the two mathematical models presented by Ho et al. It is a model comprised of simple ordinary differential equations describing the overall epidemic dynamics of influenza."
 standard: other
 tags:

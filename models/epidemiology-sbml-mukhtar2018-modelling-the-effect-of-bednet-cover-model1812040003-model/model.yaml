@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Mukhtar2018ModellingTheEffectOfBednetCoverModel1812040003Model'
+title: "Mukhtar2018 - Modelling the effect of bednet coverage on malaria transmission in South Sudan."
 description: "Epidemiology Mukhtar2018Modelling The Effect Of Bednet Cover Model1812040003Model captures core biological behavior in the context of epidemiology, sbml, biomodels_ebi using a biomodels_ebi-sourced OTHER model. When you run it, you can observe state and evaluate how the modeled system changes across runs."
 standard: other
 tags:

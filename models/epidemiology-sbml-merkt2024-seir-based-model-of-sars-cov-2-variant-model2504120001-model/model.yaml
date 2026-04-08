@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Merkt2024SeirBasedModelOfSarsCov2VariantModel2504120001Model'
+title: "Merkt2024 - SEIR based model of SARS-CoV-2 variant spread and cross-immunity in Ethiopia"
 description: "Spanning August 2020 to July 2022, this model reconstructs SARS-CoV-2 infection and reinfection dynamics across multiple variants \u2014 mainly wildtype, Alpha, Delta, and Omicron BA.4/5. It can be used to explore transmission dynamics and compare scenario outcomes across conditions."
 standard: other
 tags:

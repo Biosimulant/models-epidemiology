@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: Munz2009ZombieBasicSzrModel1009230000Model'
+title: "Munz2009 - Zombie basic SZR"
 description: "Munz2009 - Zombie basic SZR This is the basic SZR model for zombie infection. It is based on a classic mathematical model in epidemiology, the SIR model, which divides the population in three classes."
 standard: other
 tags:

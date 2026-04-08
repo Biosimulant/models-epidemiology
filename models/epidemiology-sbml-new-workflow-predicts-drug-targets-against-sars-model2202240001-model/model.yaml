@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Epidemiology: NewWorkflowPredictsDrugTargetsAgainstSarsModel2202240001Model'
+title: "New workflow predicts drug targets against SARS-CoV-2 via metabolic changes in infected cells"
 description: "COVID-19 is one of the deadliest respiratory diseases, and its emergence caught the pharmaceutical industry off guard. While vaccines have been rapidly developed, treatment options for infected people."
 standard: other
 tags:
