@@ -11,14 +11,13 @@ Fang2011 - Genome-scale metabolic network ofBurkholderia cenocepacia (iKF1028) T
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-fang2011-genome-scale-metabolic-network-of-burkh-model1507180051-model
     alias: model
-    manifest_path: models/epidemiology-sbml-fang2011-genome-scale-metabolic-network-of-burkh-model1507180051-model/model.yaml
 ```
 
 ## Tags

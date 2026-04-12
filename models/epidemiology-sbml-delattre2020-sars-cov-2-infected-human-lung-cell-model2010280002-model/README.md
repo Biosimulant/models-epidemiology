@@ -11,14 +11,13 @@ Modified Recon2.2 where the host biomass objective function has been modified to
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-delattre2020-sars-cov-2-infected-human-lung-cell-model2010280002-model
     alias: model
-    manifest_path: models/epidemiology-sbml-delattre2020-sars-cov-2-infected-human-lung-cell-model2010280002-model/model.yaml
 ```
 
 ## Tags

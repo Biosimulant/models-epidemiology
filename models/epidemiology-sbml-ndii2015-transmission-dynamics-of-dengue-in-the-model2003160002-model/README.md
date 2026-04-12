@@ -11,14 +11,13 @@ Use of the bacterium Wolbachia is an innovative new strategy designed to break t
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-ndii2015-transmission-dynamics-of-dengue-in-the-model2003160002-model
     alias: model
-    manifest_path: models/epidemiology-sbml-ndii2015-transmission-dynamics-of-dengue-in-the-model2003160002-model/model.yaml
 ```
 
 ## Tags

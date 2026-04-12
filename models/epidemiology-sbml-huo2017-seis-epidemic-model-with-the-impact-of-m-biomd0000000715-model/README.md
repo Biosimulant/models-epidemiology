@@ -11,14 +11,13 @@ Hai-Feng Huo, Peng Yang & Hong Xiang. Stability and bifurcation for an SEIS epid
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-huo2017-seis-epidemic-model-with-the-impact-of-m-biomd0000000715-model
     alias: model
-    manifest_path: models/epidemiology-sbml-huo2017-seis-epidemic-model-with-the-impact-of-m-biomd0000000715-model/model.yaml
 ```
 
 ## Tags

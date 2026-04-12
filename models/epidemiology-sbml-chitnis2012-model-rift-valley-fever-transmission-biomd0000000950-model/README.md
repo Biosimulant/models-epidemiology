@@ -11,14 +11,13 @@ Mathematical model for Rift Valley Fever transmission between cattle and mosquit
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-chitnis2012-model-rift-valley-fever-transmission-biomd0000000950-model
     alias: model
-    manifest_path: models/epidemiology-sbml-chitnis2012-model-rift-valley-fever-transmission-biomd0000000950-model/model.yaml
 ```
 
 ## Tags

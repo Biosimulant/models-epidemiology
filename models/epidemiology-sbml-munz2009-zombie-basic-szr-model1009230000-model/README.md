@@ -11,14 +11,13 @@ Munz2009 - Zombie basic SZR This is the basic SZR model for zombie infection. It
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-munz2009-zombie-basic-szr-model1009230000-model
     alias: model
-    manifest_path: models/epidemiology-sbml-munz2009-zombie-basic-szr-model1009230000-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ The role of geospatial disparities in the dynamics of the COVID-19 pandemic is p
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-cuadros2020-sihrd-spatiotemporal-model-of-covid-biomd0000000969-model
     alias: model
-    manifest_path: models/epidemiology-sbml-cuadros2020-sihrd-spatiotemporal-model-of-covid-biomd0000000969-model/model.yaml
 ```
 
 ## Tags

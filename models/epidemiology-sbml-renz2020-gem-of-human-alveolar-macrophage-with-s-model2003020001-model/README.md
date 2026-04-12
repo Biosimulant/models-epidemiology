@@ -11,14 +11,13 @@ Background: The novel coronavirus (SARS-CoV-2) currently spreads worldwide, caus
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-renz2020-gem-of-human-alveolar-macrophage-with-s-model2003020001-model
     alias: model
-    manifest_path: models/epidemiology-sbml-renz2020-gem-of-human-alveolar-macrophage-with-s-model2003020001-model/model.yaml
 ```
 
 ## Tags

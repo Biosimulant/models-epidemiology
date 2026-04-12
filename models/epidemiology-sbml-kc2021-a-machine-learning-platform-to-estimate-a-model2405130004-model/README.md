@@ -11,14 +11,13 @@ Predictor of several endpoints related to Sars-CoV-2. It provides predictions fo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-kc2021-a-machine-learning-platform-to-estimate-a-model2405130004-model
     alias: model
-    manifest_path: models/epidemiology-sbml-kc2021-a-machine-learning-platform-to-estimate-a-model2405130004-model/model.yaml
 ```
 
 ## Tags

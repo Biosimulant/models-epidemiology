@@ -11,14 +11,13 @@ Since the emergence of the first cases in Wuhan, China, the novel coronavirus (2
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-tang2020-estimation-of-transmission-risk-of-covi-biomd0000000971-model
     alias: model
-    manifest_path: models/epidemiology-sbml-tang2020-estimation-of-transmission-risk-of-covi-biomd0000000971-model/model.yaml
 ```
 
 ## Tags

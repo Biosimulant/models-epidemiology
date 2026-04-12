@@ -11,14 +11,13 @@ The pandemic caused by SARS-CoV-2 is responsible for terrible health devastation
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-covid-19-immunotherapy-a-mathematical-model-model2202230002-model
     alias: model
-    manifest_path: models/epidemiology-sbml-covid-19-immunotherapy-a-mathematical-model-model2202230002-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ A campaign for malaria control, using Long Lasting Insecticide Nets (LLINs) was 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-mukhta2018-the-effect-of-bednet-coverage-on-mala-model2003160003-model
     alias: model
-    manifest_path: models/epidemiology-sbml-mukhta2018-the-effect-of-bednet-coverage-on-mala-model2003160003-model/model.yaml
 ```
 
 ## Tags

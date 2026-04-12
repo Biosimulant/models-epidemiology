@@ -11,14 +11,13 @@ A novel coronavirus pneumonia, first identified in Wuhan City and referred to as
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-hou2020-seir-model-of-covid-19-transmission-in-w-biomd0000000970-model
     alias: model
-    manifest_path: models/epidemiology-sbml-hou2020-seir-model-of-covid-19-transmission-in-w-biomd0000000970-model/model.yaml
 ```
 
 ## Tags

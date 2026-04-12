@@ -11,14 +11,13 @@ The coronavirus disease 2019 (COVID-19) pandemic has placed epidemic modeling at
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-bertozzi2020-sir-model-of-scenarios-of-covid-19-biomd0000000956-model
     alias: model
-    manifest_path: models/epidemiology-sbml-bertozzi2020-sir-model-of-scenarios-of-covid-19-biomd0000000956-model/model.yaml
 ```
 
 ## Tags

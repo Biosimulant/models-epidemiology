@@ -11,14 +11,13 @@ Chronic liver diseases are worldwide on the rise. Due to the rapidly increasing 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-burbano2023-hgfsignaling-in-fattyliverdisease-biomd0000001102-model
     alias: model
-    manifest_path: models/epidemiology-sbml-burbano2023-hgfsignaling-in-fattyliverdisease-biomd0000001102-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This model was developed to support the early efforts in the identification of n
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-stokes2020-antibiotics-discovery-using-deep-lear-model2405080006-model
     alias: model
-    manifest_path: models/epidemiology-sbml-stokes2020-antibiotics-discovery-using-deep-lear-model2405080006-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Spanning August 2020 to July 2022, this model reconstructs SARS-CoV-2 infection 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-merkt2024-seir-based-model-of-sars-cov-2-variant-model2504120001-model
     alias: model
-    manifest_path: models/epidemiology-sbml-merkt2024-seir-based-model-of-sars-cov-2-variant-model2504120001-model/model.yaml
 ```
 
 ## Tags

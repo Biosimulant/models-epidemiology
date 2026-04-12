@@ -11,14 +11,13 @@ This paper proposes a dynamic model to describe and forecast the dynamics of the
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-paiva2020-seiahrd-model-of-transmission-dynamics-biomd0000000960-model
     alias: model
-    manifest_path: models/epidemiology-sbml-paiva2020-seiahrd-model-of-transmission-dynamics-biomd0000000960-model/model.yaml
 ```
 
 ## Tags

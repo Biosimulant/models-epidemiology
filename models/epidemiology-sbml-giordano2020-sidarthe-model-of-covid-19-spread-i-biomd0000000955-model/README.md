@@ -11,14 +11,13 @@ In Italy, 128,948 confirmed cases and 15,887 deaths of people who tested positiv
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-giordano2020-sidarthe-model-of-covid-19-spread-i-biomd0000000955-model
     alias: model
-    manifest_path: models/epidemiology-sbml-giordano2020-sidarthe-model-of-covid-19-spread-i-biomd0000000955-model/model.yaml
 ```
 
 ## Tags

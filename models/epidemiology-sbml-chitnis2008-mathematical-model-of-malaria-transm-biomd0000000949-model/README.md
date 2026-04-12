@@ -11,14 +11,13 @@ Mathematical model of malaria transmission for low and high transmission rates.
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-chitnis2008-mathematical-model-of-malaria-transm-biomd0000000949-model
     alias: model
-    manifest_path: models/epidemiology-sbml-chitnis2008-mathematical-model-of-malaria-transm-biomd0000000949-model/model.yaml
 ```
 
 ## Tags

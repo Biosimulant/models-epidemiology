@@ -11,14 +11,13 @@ In India, 100,340 confirmed cases and 3155 confirmed deaths due to COVID-19 were
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-sarkar2020-sair-model-of-covid-19-transmission-w-biomd0000000977-model
     alias: model
-    manifest_path: models/epidemiology-sbml-sarkar2020-sair-model-of-covid-19-transmission-w-biomd0000000977-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This is the SIR model for disease spread of the Hong Kong flu in New York City i
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-smithandmoore2004-the-sir-model-for-the-spread-o-biomd0000001045-model
     alias: model
-    manifest_path: models/epidemiology-sbml-smithandmoore2004-the-sir-model-for-the-spread-o-biomd0000001045-model/model.yaml
 ```
 
 ## Tags

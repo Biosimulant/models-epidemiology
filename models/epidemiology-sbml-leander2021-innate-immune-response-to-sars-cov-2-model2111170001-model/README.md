@@ -11,14 +11,13 @@ A mathematical ODE based model of the innate immune response to SARS-CoV-2 in th
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-leander2021-innate-immune-response-to-sars-cov-2-model2111170001-model
     alias: model
-    manifest_path: models/epidemiology-sbml-leander2021-innate-immune-response-to-sars-cov-2-model2111170001-model/model.yaml
 ```
 
 ## Tags

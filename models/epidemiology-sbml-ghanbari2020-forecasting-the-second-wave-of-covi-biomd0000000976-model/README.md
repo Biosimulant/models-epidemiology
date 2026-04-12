@@ -11,14 +11,13 @@ One of the common misconceptions about COVID-19 disease is to assume that we wil
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-ghanbari2020-forecasting-the-second-wave-of-covi-biomd0000000976-model
     alias: model
-    manifest_path: models/epidemiology-sbml-ghanbari2020-forecasting-the-second-wave-of-covi-biomd0000000976-model/model.yaml
 ```
 
 ## Tags

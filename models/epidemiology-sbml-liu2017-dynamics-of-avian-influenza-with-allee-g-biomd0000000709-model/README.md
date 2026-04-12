@@ -11,14 +11,13 @@ Sanhong Liu, Shigui Ruan & Xinan Zhang. Nonlinear dynamics of avian influenza ep
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-liu2017-dynamics-of-avian-influenza-with-allee-g-biomd0000000709-model
     alias: model
-    manifest_path: models/epidemiology-sbml-liu2017-dynamics-of-avian-influenza-with-allee-g-biomd0000000709-model/model.yaml
 ```
 
 ## Tags

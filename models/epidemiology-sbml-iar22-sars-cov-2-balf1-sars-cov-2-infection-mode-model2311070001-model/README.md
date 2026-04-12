@@ -11,14 +11,13 @@ A collection of constraint-based metabolic models of bronchoalveolar lavage flui
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-iar22-sars-cov-2-balf1-sars-cov-2-infection-mode-model2311070001-model
     alias: model
-    manifest_path: models/epidemiology-sbml-iar22-sars-cov-2-balf1-sars-cov-2-infection-mode-model2311070001-model/model.yaml
 ```
 
 ## Tags

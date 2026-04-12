@@ -11,14 +11,13 @@ SARS-CoV-2 virus dynamics ODE model parameterized using non-linear mixed effects
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-praneshpadmanabhan2022-sars-cov-2-virus-dynamics-model2205010001-model
     alias: model
-    manifest_path: models/epidemiology-sbml-praneshpadmanabhan2022-sars-cov-2-virus-dynamics-model2205010001-model/model.yaml
 ```
 
 ## Tags

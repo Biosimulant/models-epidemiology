@@ -11,14 +11,13 @@ Objective: Coronavirus disease 2019 (COVID-19) is a pandemic respiratory illness
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-mwalili2020-seir-model-of-covid-19-transmission-biomd0000000964-model
     alias: model
-    manifest_path: models/epidemiology-sbml-mwalili2020-seir-model-of-covid-19-transmission-biomd0000000964-model/model.yaml
 ```
 
 ## Tags

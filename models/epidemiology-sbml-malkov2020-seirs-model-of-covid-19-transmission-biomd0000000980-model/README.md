@@ -11,14 +11,13 @@ Epidemiological models of COVID-19 transmission assume that recovered individual
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-malkov2020-seirs-model-of-covid-19-transmission-biomd0000000980-model
     alias: model
-    manifest_path: models/epidemiology-sbml-malkov2020-seirs-model-of-covid-19-transmission-biomd0000000980-model/model.yaml
 ```
 
 ## Tags

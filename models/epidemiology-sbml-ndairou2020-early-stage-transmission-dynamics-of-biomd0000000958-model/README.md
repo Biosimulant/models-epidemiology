@@ -11,14 +11,13 @@ We propose a compartmental mathematical model for the spread of the COVID-19 dis
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-ndairou2020-early-stage-transmission-dynamics-of-biomd0000000958-model
     alias: model
-    manifest_path: models/epidemiology-sbml-ndairou2020-early-stage-transmission-dynamics-of-biomd0000000958-model/model.yaml
 ```
 
 ## Tags

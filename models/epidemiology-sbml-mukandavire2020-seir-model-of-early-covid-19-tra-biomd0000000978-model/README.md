@@ -11,14 +11,13 @@ The emergence and fast global spread of COVID-19 has presented one of the greate
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-mukandavire2020-seir-model-of-early-covid-19-tra-biomd0000000978-model
     alias: model
-    manifest_path: models/epidemiology-sbml-mukandavire2020-seir-model-of-early-covid-19-tra-biomd0000000978-model/model.yaml
 ```
 
 ## Tags

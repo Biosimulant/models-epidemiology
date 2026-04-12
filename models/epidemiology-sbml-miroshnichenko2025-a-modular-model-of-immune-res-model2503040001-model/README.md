@@ -11,14 +11,13 @@ A multicompartmental model consisting of four submodules: the lungs, the upper a
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-miroshnichenko2025-a-modular-model-of-immune-res-model2503040001-model
     alias: model
-    manifest_path: models/epidemiology-sbml-miroshnichenko2025-a-modular-model-of-immune-res-model2503040001-model/model.yaml
 ```
 
 ## Tags

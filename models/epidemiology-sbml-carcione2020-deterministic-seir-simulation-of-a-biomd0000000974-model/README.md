@@ -11,14 +11,13 @@ An epidemic disease caused by a new coronavirus has spread in Northern Italy wit
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/epidemiology-sbml-carcione2020-deterministic-seir-simulation-of-a-biomd0000000974-model
     alias: model
-    manifest_path: models/epidemiology-sbml-carcione2020-deterministic-seir-simulation-of-a-biomd0000000974-model/model.yaml
 ```
 
 ## Tags
