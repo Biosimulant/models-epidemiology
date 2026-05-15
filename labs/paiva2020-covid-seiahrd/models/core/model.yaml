@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19
+description: This paper proposes a dynamic model to describe and forecast the dynamics
+  of the coronavirus disease COVID-19 transmission. The model is based on an approach
+  previously used to describe the Middle Eas.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Henrique Mohallem Paiva
+- "Rubens Junqueira Magalh\xE3es Afonso"
+- Igor Luppi de Oliveira
+- Gabriele Fernandes Garcia
+upstream:
+  id: biomodels_ebi:BIOMD0000000960
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000960
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000960
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000960?filename=Paiva2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model:Paiva2020SeiahrdModelOfTransmissionDynamicsBiomd0000000960Model
+  init_kwargs:
+    model_path: data/BIOMD0000000960.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: beta_1
+    label: Transmission Rate
+    description: COVID-19 transmission-rate parameter. Maps to SBML symbol `beta_1`.
+  - name: incubation_rate
+    maps_to: kappa
+    label: Incubation Rate
+    description: Exposed-to-infectious progression parameter. Maps to SBML symbol
+      `kappa`.
+  - name: asymptomatic_fraction
+    maps_to: rho
+    label: Asymptomatic Fraction
+    description: Asymptomatic-branch fraction parameter. Maps to SBML symbol `rho`.
+  - name: hospitalization_rate
+    maps_to: mu
+    label: Hospitalization Rate
+    description: Hospitalization-rate parameter. Maps to SBML symbol `mu`.
+  - name: hospital_mortality_rate
+    maps_to: delta_H
+    label: Hospital Mortality Rate
+    description: Hospital mortality parameter. Maps to SBML symbol `delta_H`.
+  - name: infectious_mortality_rate
+    maps_to: delta_I
+    label: Infectious Mortality Rate
+    description: Infectious mortality parameter. Maps to SBML symbol `delta_I`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: Exposed
+    label: Exposed
+  - name: infectious
+    maps_to: Infectious
+    label: Infectious
+  - name: hospitalized
+    maps_to: Hospitalized
+    label: Hospitalized
+  - name: deceased
+    maps_to: Deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered
+  - name: asymptomatic
+    maps_to: Asymptomatic
+    label: Asymptomatic
+  - name: cumulative_cases
+    maps_to: Cumulative_Cases
+    label: Cumulative Cases

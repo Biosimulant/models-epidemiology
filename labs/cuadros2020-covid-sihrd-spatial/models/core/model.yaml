@@ -1,0 +1,98 @@
+schema_version: '2.0'
+title: Cuadros2020 - SIHRD spatiotemporal model of COVID-19 transmission in Ohio
+description: The role of geospatial disparities in the dynamics of the COVID-19 pandemic
+  is poorly understood. We developed a spatially-explicit mathematical model to simulate
+  transmission dynamics of COVID-19 dis.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Diego F Cuadros
+- Yanyu Xiao
+- Zindoga Mukandavire
+- Esteban Correa-Agudelo
+- "Andr\xE9s Hern\xE1ndez"
+upstream:
+  id: biomodels_ebi:BIOMD0000000969
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000969
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000969
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000969?filename=Cuadros2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model:Cuadros2020SihrdSpatiotemporalModelOfCovidBiomd0000000969Model
+  init_kwargs:
+    model_path: data/BIOMD0000000969.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: airport_county_transmission_rate
+    maps_to: lambda_Counties_with_airports
+    label: Airport County Transmission Rate
+    description: Transmission parameter for counties with airports. Maps to SBML symbol
+      `lambda_Counties_with_airports`.
+  - name: highway_county_transmission_rate
+    maps_to: lambda_Counties_with_highways
+    label: Highway County Transmission Rate
+    description: Transmission parameter for counties with highways. Maps to SBML symbol
+      `lambda_Counties_with_highways`.
+  - name: low_risk_county_transmission_rate
+    maps_to: lambda_Low_risk_counties
+    label: Low Risk County Transmission Rate
+    description: Transmission parameter for low-risk counties. Maps to SBML symbol
+      `lambda_Low_risk_counties`.
+  - name: recovery_rate
+    maps_to: gamma
+    label: Recovery Rate
+    description: Recovery-rate parameter. Maps to SBML symbol `gamma`.
+  - name: hospital_to_icu_rate
+    maps_to: phi
+    label: Hospital To Icu Rate
+    description: Hospital-to-ICU transition parameter. Maps to SBML symbol `phi`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected_low_risk_counties
+    maps_to: Infected_Low_risk_counties
+    label: Infected Low risk counties
+  - name: infected_counties_with_airports
+    maps_to: Infected_Counties_with_airports
+    label: Infected Counties with airports
+  - name: infected_counties_with_highways
+    maps_to: Infected_Counties_with_highways
+    label: Infected Counties with highways
+  - name: hospitalised_low_risk_counties
+    maps_to: Hospitalised_Low_risk_counties
+    label: Hospitalised Low risk counties
+  - name: hospitalised_counties_with_airports
+    maps_to: Hospitalised_Counties_with_airports
+    label: Hospitalised Counties with airports
+  - name: hospitalised_counties_with_highways
+    maps_to: Hospitalised_Counties_with_highways
+    label: Hospitalised Counties with highways
+  - name: icu_low_risk_counties
+    maps_to: ICU_Low_risk_counties
+    label: ICU Low risk counties
+  - name: icu_counties_with_airports
+    maps_to: ICU_Counties_with_airports
+    label: ICU Counties with airports

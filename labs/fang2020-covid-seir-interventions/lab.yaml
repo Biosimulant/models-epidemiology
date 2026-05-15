@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Fang2020 - SEIR model of COVID-19 transmission considering government interventions
+  in Wuhan Lab
+description: Single-model lab wrapper for Fang2020 - SEIR model of COVID-19 transmission
+  considering government interventions in Wuhan. Using the parameterized susceptible\u2010exposed\u2010infectious\u2010recovered
+  model, we simulated the spread dynamics of coronavirus disease 2019 (COVID\u201019)
+  outbreak and impact of different control measures, condu. It can be used to explore
+  transmission dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000984.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.state
+  to:
+  - visualisation.epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model_state
+- from: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.summary
+  to:
+  - visualisation.epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model_summary
+- from: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.transmission_rate
+    label: Transmission Rate
+  - name: baseline_transmission_rate
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.baseline_transmission_rate
+    label: Baseline Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.exposed
+    label: Exposed
+  - name: infected
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.recovered
+    label: Recovered
+  - name: total_population
+    maps_to: epidemiology_sbml_fang2020_seir_model_of_covid_19_transmission_con_biomd0000000984_model.total_population
+    label: Total population
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

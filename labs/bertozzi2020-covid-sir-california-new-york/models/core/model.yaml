@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Bertozzi2020 - SIR model of scenarios of COVID-19 spread in CA and NY
+description: The coronavirus disease 2019 (COVID-19) pandemic has placed epidemic
+  modeling at the forefront of worldwide public policy making. Nonetheless, modeling
+  and forecasting the spread of COVID-19 remains a.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Andrea L Bertozzi
+- Elisa Franco
+- George Mohler
+- Martin B Short
+- Daniel Sledge
+upstream:
+  id: biomodels_ebi:BIOMD0000000956
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000956
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000956
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000956?filename=Bertozzi2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model:Bertozzi2020SirModelOfScenariosOfCovid19Biomd0000000956Model
+  init_kwargs:
+    model_path: data/BIOMD0000000956.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: reproduction_number
+    maps_to: Ro
+    label: Reproduction Number
+    description: Basic reproduction number parameter. Maps to SBML symbol `Ro`.
+  - name: recovery_rate
+    maps_to: gamma
+    label: Recovery Rate
+    description: Recovery-rate parameter. Maps to SBML symbol `gamma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected
+    maps_to: Infected
+    label: Infected
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered

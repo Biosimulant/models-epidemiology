@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Mukhtar2018 - Modelling the effect of bednet coverage on malaria transmission
+  in South Sudan
+description: Epidemiology Mukhtar2018Modelling The Effect Of Bednet Cover Model1812040003Model
+  captures core biological behavior in the context of epidemiology, sbml, biomodels_ebi
+  using a biomodels_ebi-sourced OTHER model. When you run it, you can observe state
+  and evaluate how the modeled system changes across runs.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Abdulaziz Y A Mukhtar
+- Justin B Munyakazi
+- Ouifki R
+- Allan E Clark
+upstream:
+  id: biomodels_ebi:MODEL1812040003
+  source_db: biomodels_ebi
+  source_id: MODEL1812040003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1812040003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812040003?filename=Model.xml
+  license: CC0
+biosim:
+  entrypoint: src.mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model:Mukhtar2018ModellingTheEffectOfBednetCoverModel1812040003Model
+  init_kwargs:
+    model_path: data/MODEL1812040003.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: bednet_coverage_factor
+    maps_to: phi
+    label: Bednet Coverage Factor
+    description: LLIN/bednet coverage factor. Maps to SBML symbol `phi`.
+  - name: mosquito_biting_rate
+    maps_to: b
+    label: Mosquito Biting Rate
+    description: Mosquito biting-rate parameter. Maps to SBML symbol `b`.
+  - name: mosquito_transmission_rate
+    maps_to: beta
+    label: Mosquito Transmission Rate
+    description: Mosquito infection/transmission parameter. Maps to SBML symbol `beta`.
+  - name: human_recovery_rate
+    maps_to: alpha_1
+    label: Human Recovery Rate
+    description: Human recovery-rate parameter. Maps to SBML symbol `alpha_1`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_humans
+    maps_to: S
+    label: Susceptible humans
+  - name: exposed_humans
+    maps_to: E
+    label: Exposed humans
+  - name: infected_humans
+    maps_to: I
+    label: Infected humans
+  - name: asymptomatic_humans
+    maps_to: A
+    label: Asymptomatic humans
+  - name: recovered_humans
+    maps_to: R
+    label: Recovered humans
+  - name: susceptible_mosquitoes
+    maps_to: X
+    label: Susceptible mosquitoes
+  - name: exposed_mosquitoes
+    maps_to: Y
+    label: Exposed mosquitoes
+  - name: infectious_mosquitoes
+    maps_to: Z
+    label: Infectious mosquitoes

@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and
+  China
+description: Background - The coronavirus disease 2019 (COVID-19) is rapidly spreading
+  in China and more than 30 countries over last two months. COVID-19 has multiple
+  characteristics distinct from other infectious.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Shilei Zhao
+- Hua Chen
+upstream:
+  id: biomodels_ebi:BIOMD0000000962
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000962
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000962
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000962?filename=Zhao2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model:Zhao2020SuqcModelOfCovid19TransmissionDynBiomd0000000962Model
+  init_kwargs:
+    model_path: data/BIOMD0000000962.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: reproduction_number
+    maps_to: R
+    label: Reproduction Number
+    description: Reproduction-number parameter. Maps to SBML symbol `R`.
+  - name: transmission_rate
+    maps_to: beta
+    label: Transmission Rate
+    description: Transmission-rate parameter. Maps to SBML symbol `beta`.
+  - name: incubation_rate
+    maps_to: sigma
+    label: Incubation Rate
+    description: Incubation/progression-rate parameter. Maps to SBML symbol `sigma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: unquarantined_infected
+    maps_to: Unquarantined_Infected
+    label: Unquarantined Infected
+  - name: quarantined_infected
+    maps_to: Quarantined_Infected
+    label: Quarantined Infected
+  - name: confirmed_infected
+    maps_to: Confirmed_Infected
+    label: Confirmed Infected
+  - name: cumulative_infected
+    maps_to: Cumulative_Infected
+    label: Cumulative Infected
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible

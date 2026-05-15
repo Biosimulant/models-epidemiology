@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Huo2017 - SEIS epidemic model with the impact of media
+description: Hai-Feng Huo, Peng Yang & Hong Xiang. Stability and bifurcation for an
+  SEIS epidemic model with the impact of media.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Hai-Feng Huo
+- Peng Yang
+- Hong Xiang
+upstream:
+  id: biomodels_ebi:BIOMD0000000715
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000715
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000715
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000715?filename=Epidemic
+    Model with the impact of Media Reactions.xml
+  license: CC0
+biosim:
+  entrypoint: src.huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model:Huo2017SeisEpidemicModelWithTheImpactOfMBiomd0000000715Model
+  init_kwargs:
+    model_path: data/BIOMD0000000715.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: beta
+    label: Transmission Rate
+    description: Transmission-rate parameter. Maps to SBML symbol `beta`.
+  - name: recovery_rate
+    maps_to: gamma
+    label: Recovery Rate
+    description: Recovery-rate parameter. Maps to SBML symbol `gamma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: exposed_individuals_e
+    maps_to: E
+    label: Exposed Individuals (E)
+  - name: infected_individuals_i
+    maps_to: I
+    label: Infected Individuals (I)
+  - name: susceptible_individuals_s
+    maps_to: S
+    label: Susceptible Individuals (S)
+  - name: message_m
+    maps_to: M
+    label: Message (M)
+  - name: total_population_n
+    maps_to: N
+    label: Total population (N)

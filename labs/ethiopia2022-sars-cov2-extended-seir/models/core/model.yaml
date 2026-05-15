@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: 'Model-based prediction of SARS-CoV-2 in Ethiopia: Extended SEIR model'
+description: One of three models used to describe dynamics of COVID-19 spread in Ethiopia.
+  Here the two investigated population groups healthcare workers and community members
+  are modeled as separate but interacti.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Esayas Kebede Gudina
+- Solomon Ali
+- Eyob Girma
+- Addisu Gize
+- Birhanemeskel Tegene
+upstream:
+  id: biomodels_ebi:MODEL2212310001
+  source_db: biomodels_ebi
+  source_id: MODEL2212310001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2212310001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2212310001?filename=covid_ethiopia_seir2x_model.sbml
+  license: CC0
+biosim:
+  entrypoint: src.model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model:ModelBasedPredictionOfSarsCov2InEthiopiaModel2212310001Model
+  init_kwargs:
+    model_path: data/MODEL2212310001.sbml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: community_transmission_rate
+    maps_to: beta_0
+    label: Community Transmission Rate
+    description: Community SARS-CoV-2 transmission parameter. Maps to SBML symbol
+      `beta_0`.
+  - name: incubation_period
+    maps_to: kappa_inverse
+    label: Incubation Period
+    description: Incubation-period parameter. Maps to SBML symbol `kappa_inverse`.
+  - name: recovery_period
+    maps_to: gamma_inverse
+    label: Recovery Period
+    description: Recovery-period parameter. Maps to SBML symbol `gamma_inverse`.
+  - name: initial_infected
+    maps_to: I_0
+    label: Initial Infected
+    description: Initial infected count parameter. Maps to SBML symbol `I_0`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_community
+    maps_to: Sus_com
+    label: Susceptible community
+  - name: exposed_community
+    maps_to: Exp_com
+    label: Exposed community
+  - name: infected_community
+    maps_to: Infc_com
+    label: Infected community
+  - name: recovered_community
+    maps_to: Rec_com
+    label: Recovered community
+  - name: susceptible_healthcare_workers
+    maps_to: Sus_hcw
+    label: Susceptible healthcare workers
+  - name: exposed_healthcare_workers
+    maps_to: Exp_hcw
+    label: Exposed healthcare workers
+  - name: infected_healthcare_workers
+    maps_to: Infc_hcw
+    label: Infected healthcare workers
+  - name: recovered_healthcare_workers
+    maps_to: Rec_hcw
+    label: Recovered healthcare workers

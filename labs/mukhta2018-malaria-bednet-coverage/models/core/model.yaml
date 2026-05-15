@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Mukhta2018-the effect of bednet coverage on malaria transmission in South Sudan
+description: A campaign for malaria control, using Long Lasting Insecticide Nets (LLINs)
+  was launched in South Sudan in 2009. The success of such a campaign often depends
+  upon adequate available resources and reli.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Abdulaziz Y A Mukhtar
+- Justin B Munyakazi
+- Ouifki R
+- Allan E Clark
+upstream:
+  id: biomodels_ebi:MODEL2003160003
+  source_db: biomodels_ebi
+  source_id: MODEL2003160003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003160003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003160003?filename=Mukhta2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.mukhta2018_the_effect_of_bednet_coverage_on_mala_model2003160003_model:Mukhta2018TheEffectOfBednetCoverageOnMalaModel2003160003Model
+  init_kwargs:
+    model_path: data/MODEL2003160003.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: bednet_coverage_factor
+    maps_to: phi
+    label: Bednet Coverage Factor
+    description: LLIN/bednet coverage factor. Maps to SBML symbol `phi`.
+  - name: mosquito_biting_rate
+    maps_to: b
+    label: Mosquito Biting Rate
+    description: Mosquito biting-rate parameter. Maps to SBML symbol `b`.
+  - name: mosquito_transmission_rate
+    maps_to: beta
+    label: Mosquito Transmission Rate
+    description: Mosquito infection/transmission parameter. Maps to SBML symbol `beta`.
+  - name: human_recovery_rate
+    maps_to: alpha_1
+    label: Human Recovery Rate
+    description: Human recovery-rate parameter. Maps to SBML symbol `alpha_1`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_humans
+    maps_to: S1
+    label: Susceptible humans
+  - name: exposed_humans
+    maps_to: E1
+    label: Exposed humans
+  - name: infected_humans
+    maps_to: I1
+    label: Infected humans
+  - name: asymptomatic_humans
+    maps_to: A1
+    label: Asymptomatic humans
+  - name: recovered_humans
+    maps_to: R1
+    label: Recovered humans
+  - name: susceptible_mosquitoes
+    maps_to: X1
+    label: Susceptible mosquitoes
+  - name: exposed_mosquitoes
+    maps_to: Y1
+    label: Exposed mosquitoes
+  - name: infectious_mosquitoes
+    maps_to: Z1
+    label: Infectious mosquitoes

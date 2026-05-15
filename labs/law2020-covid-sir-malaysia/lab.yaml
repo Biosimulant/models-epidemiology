@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Law2020 - SIR model of COVID-19 transmission in Malyasia with time-varying
+  parameters Lab
+description: Single-model lab wrapper for Law2020 - SIR model of COVID-19 transmission
+  in Malyasia with time-varying parameters. The susceptible-infectious-removed (SIR)
+  model offers the simplest framework to study transmission dynamics of COVID-19,
+  however, it does not factor in its early depleting trend observed during a lock.
+  It can be used to explore transmission dynamics and compare scenario outcomes across
+  conditions.
+models:
+- alias: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000982.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.state
+  to:
+  - visualisation.epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model_state
+- from: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.summary
+  to:
+  - visualisation.epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model_summary
+- from: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.transmission_rate
+    label: Transmission Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.susceptible
+    label: Susceptible
+  - name: removed
+    maps_to: epidemiology_sbml_law2020_sir_model_of_covid_19_transmission_in_ma_biomd0000000982_model.removed
+    label: Removed
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

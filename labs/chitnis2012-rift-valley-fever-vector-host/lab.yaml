@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Chitnis2012 - Model Rift Valley Fever transmission between cattle and mosquitoes
+  (Model 1) Lab
+description: Single-model lab wrapper for Chitnis2012 - Model Rift Valley Fever transmission
+  between cattle and mosquitoes (Model 1). Mathematical model for Rift Valley Fever
+  transmission between cattle and mosquitoes without infectious eggs. It can be used
+  to explore transmission dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000950.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.state
+  to:
+  - visualisation.epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model_state
+- from: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.summary
+  to:
+  - visualisation.epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model_summary
+- from: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model_species_labels
+io:
+  inputs:
+  - name: cattle_to_mosquito_transmission
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.cattle_to_mosquito_transmission
+    label: Cattle To Mosquito Transmission
+  - name: mosquito_to_cattle_transmission
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.mosquito_to_cattle_transmission
+    label: Mosquito To Cattle Transmission
+  - name: cattle_recovery_rate
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.cattle_recovery_rate
+    label: Cattle Recovery Rate
+  - name: mosquito_birth_rate
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.mosquito_birth_rate
+    label: Mosquito Birth Rate
+  - name: mosquito_mortality_rate
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.mosquito_mortality_rate
+    label: Mosquito Mortality Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.species_labels
+    label: Species labels
+  - name: susceptible_cattle
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.susceptible_cattle
+    label: Susceptible cattle
+  - name: asymptomatic_cattle
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.asymptomatic_cattle
+    label: Asymptomatic cattle
+  - name: infected_cattle
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.infected_cattle
+    label: Infected cattle
+  - name: recovered_cattle
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.recovered_cattle
+    label: Recovered cattle
+  - name: susceptible_mosquitoes
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.susceptible_mosquitoes
+    label: Susceptible mosquitoes
+  - name: exposed_mosquitoes
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.exposed_mosquitoes
+    label: Exposed mosquitoes
+  - name: infected_mosquitoes
+    maps_to: epidemiology_sbml_chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model.infected_mosquitoes
+    label: Infected mosquitoes
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: COVID-19 immunotherapy A mathematical model Lab
+description: Single-model lab wrapper for COVID-19 immunotherapy A mathematical model.
+  The pandemic caused by SARS-CoV-2 is responsible for terrible health devastation
+  with profoundly harmful consequences for the economic, social and political activities
+  of communities on a global scale. It can be used to explore transmission dynamics
+  and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2202230002.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.state
+  to:
+  - visualisation.epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model_state
+- from: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.summary
+  to:
+  - visualisation.epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model_summary
+- from: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model_species_labels
+io:
+  inputs:
+  - name: virus_clearance_rate
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.virus_clearance_rate
+    label: Virus Clearance Rate
+  - name: virus_production_rate
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.virus_production_rate
+    label: Virus Production Rate
+  - name: infected_cell_death_rate
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.infected_cell_death_rate
+    label: Infected Cell Death Rate
+  - name: immune_activation_rate
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.immune_activation_rate
+    label: Immune Activation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.species_labels
+    label: Species labels
+  - name: treated_viral_load
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_viral_load
+    label: Treated viral load
+  - name: treated_free_virus
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_free_virus
+    label: Treated free virus
+  - name: treated_infected_epithelial_cells
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_infected_epithelial_cells
+    label: Treated infected epithelial cells
+  - name: treated_activated_neutrophils
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_activated_neutrophils
+    label: Treated activated neutrophils
+  - name: treated_interleukin_12
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_interleukin_12
+    label: Treated interleukin 12
+  - name: treated_antibody_response
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_antibody_response
+    label: Treated antibody response
+  - name: treated_b_cells
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treated_b_cells
+    label: Treated B cells
+  - name: treatment_inhibition_signal
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2202230002_model.treatment_inhibition_signal
+    label: Treatment inhibition signal
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

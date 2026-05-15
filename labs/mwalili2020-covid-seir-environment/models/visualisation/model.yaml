@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Mwalili2020 - SEIR model of COVID-19 transmission and environmental pathogen
+  prevalence Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Mwalili2020 - SEIR model of COVID-19 transmission and environmental
+      pathogen prevalence
+    question: Does environmental pathogen prevalence sustain COVID-19 outbreak burden?
+    sources:
+    - alias: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model
+      schemas:
+        state:
+          Infected_Asymptomatic: float
+          Exposed: float
+          Infected_Symptomatic: float
+          Susceptible: float
+          Recovered: float
+          Pathogen_0: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Infected_Asymptomatic: str
+          Exposed: str
+          Infected_Symptomatic: str
+          Susceptible: str
+          Recovered: str
+          Pathogen_0: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model_state
+    maps_to: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model.state
+    label: Model state
+  - name: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model_summary
+    maps_to: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model_species_labels
+    maps_to: epidemiology_sbml_mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model.species_labels
+    label: Species labels
+  outputs: []

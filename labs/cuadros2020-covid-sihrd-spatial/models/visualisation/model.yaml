@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Cuadros2020 - SIHRD spatiotemporal model of COVID-19 transmission in Ohio Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Cuadros2020 - SIHRD spatiotemporal model of COVID-19 transmission in
+      Ohio
+    question: Which county-risk group carries the largest severe COVID-19 burden?
+    sources:
+    - alias: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model
+      schemas:
+        state:
+          Infected_Low_risk_counties: float
+          Infected_Counties_with_airports: float
+          Infected_Counties_with_highways: float
+          Hospitalised_Low_risk_counties: float
+          Hospitalised_Counties_with_airports: float
+          Hospitalised_Counties_with_highways: float
+          ICU_Low_risk_counties: float
+          ICU_Counties_with_airports: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Infected_Low_risk_counties: str
+          Infected_Counties_with_airports: str
+          Infected_Counties_with_highways: str
+          Hospitalised_Low_risk_counties: str
+          Hospitalised_Counties_with_airports: str
+          Hospitalised_Counties_with_highways: str
+          ICU_Low_risk_counties: str
+          ICU_Counties_with_airports: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model_state
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.state
+    label: Model state
+  - name: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model_summary
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model_species_labels
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.species_labels
+    label: Species labels
+  outputs: []

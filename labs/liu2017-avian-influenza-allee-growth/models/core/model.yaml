@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Liu2017 - Dynamics of Avian Influenza with Allee Growth Effect
+description: Sanhong Liu, Shigui Ruan & Xinan Zhang. It can be used to explore transmission
+  dynamics and compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Sanhong Liu
+- Shigui Ruan
+- Xinan Zhang
+upstream:
+  id: biomodels_ebi:BIOMD0000000709
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000709
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000709
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000709?filename=Liu2017
+    - Dynamics of Avian Influenza with Allee Growth Effect.xml
+  license: CC0
+biosim:
+  entrypoint: src.liu2017_dynamics_of_avian_influenza_with_allee_g_biomd0000000709_model:Liu2017DynamicsOfAvianInfluenzaWithAlleeGBiomd0000000709Model
+  init_kwargs:
+    model_path: data/BIOMD0000000709.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: recovery_rate
+    maps_to: gamma
+    label: Recovery Rate
+    description: Recovery-rate parameter. Maps to SBML symbol `gamma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected_avian_i_a
+    maps_to: I_a
+    label: Infected Avian (I a)
+  - name: susceptible_avian_s_a
+    maps_to: S_a
+    label: Susceptible Avian (S a)
+  - name: infected_human_i_h
+    maps_to: I_h
+    label: Infected Human (I h)
+  - name: susceptible_human_s_h
+    maps_to: S_h
+    label: Susceptible Human (S h)
+  - name: recovered_human_r_h
+    maps_to: R_h
+    label: Recovered Human (R h)

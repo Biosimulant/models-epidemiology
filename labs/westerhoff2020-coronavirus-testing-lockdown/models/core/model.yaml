@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Westerhoff2020 - systems biology model of the coronavirus pandemic 2020
+description: 'Using standard systems biology methodologies a 14-compartment dynamic
+  model was developed for the Corona virus epidemic. The model predicts that: (i)
+  it will be impossible to limit lockdown intensity.'
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Hans V Westerhoff
+- Alexey N Kolodkin
+upstream:
+  id: biomodels_ebi:BIOMD0000000988
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000988
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000988
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000988?filename=Westerhoff2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model:Westerhoff2020SystemsBiologyModelOfTheCoroBiomd0000000988Model
+  init_kwargs:
+    model_path: data/BIOMD0000000988.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: social_distance
+    maps_to: Social_Distance
+    label: Social Distance
+    description: Social-distance intervention parameter. Maps to SBML symbol `Social_Distance`.
+  - name: lockdown_severity
+    maps_to: Government_induced_isolation_factor_0
+    label: Lockdown Severity
+    description: Lockdown-severity intervention parameter. Maps to SBML symbol `Government_induced_isolation_factor_0`.
+  - name: random_testing_rate
+    maps_to: Testing_Randome
+    label: Random Testing Rate
+    description: Random testing-rate parameter. Maps to SBML symbol `Testing_Randome`.
+  - name: symptom_testing_rate
+    maps_to: Testing_for_Symptoms
+    label: Symptom Testing Rate
+    description: Symptom-driven testing-rate parameter. Maps to SBML symbol `Testing_for_Symptoms`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: uninfected_tested
+    maps_to: uninfected_tested_0
+    label: Uninfected tested
+  - name: uninfected_nontested
+    maps_to: uninfected_nontested_0
+    label: Uninfected nontested
+  - name: infected_tested
+    maps_to: infected_tested_0
+    label: Infected tested
+  - name: infected_nontested
+    maps_to: infected_nontested_0
+    label: Infected nontested
+  - name: infected_tested_div10
+    maps_to: infected_tested_div10
+    label: Infected tested div10
+  - name: dead_corona_tested
+    maps_to: dead_corona_tested_0
+    label: Dead corona tested
+  - name: dead_corona_nontested
+    maps_to: dead_corona_nontested_0
+    label: Dead corona nontested
+  - name: recovered_tested
+    maps_to: recovered_tested_0
+    label: Recovered tested

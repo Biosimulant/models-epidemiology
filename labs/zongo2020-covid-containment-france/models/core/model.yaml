@@ -1,0 +1,97 @@
+schema_version: '2.0'
+title: Zongo2020 - model of COVID-19 transmission dynamics under containment measures
+  in France
+description: 'The main objective of this paper is to address the following question:
+  are the containment measures imposed by most of the world governments effective
+  and sufficient to stop the epidemic of COVID-19 b. It can be used to explore transmission
+  dynamics and compare scenario outcomes across conditions.'
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- P Zongo
+- M Zorom
+- G Mophou
+- R Dorville
+- C Beaumont
+upstream:
+  id: biomodels_ebi:BIOMD0000000983
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000983
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000983
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000983?filename=Zongo2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model:Zongo2020ModelOfCovid19TransmissionDynamicBiomd0000000983Model
+  init_kwargs:
+    model_path: data/BIOMD0000000983.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_probability
+    maps_to: beta
+    label: Transmission Probability
+    description: COVID-19 transmission probability parameter. Maps to SBML symbol
+      `beta`.
+  - name: incubation_rate
+    maps_to: sigma
+    label: Incubation Rate
+    description: Exposed-to-infected progression parameter. Maps to SBML symbol `sigma`.
+  - name: containment_quarantine_rate
+    maps_to: q
+    label: Containment Quarantine Rate
+    description: Containment/quarantine transition parameter. Maps to SBML symbol
+      `q`.
+  - name: confinement_fraction
+    maps_to: p
+    label: Confinement Fraction
+    description: Fraction assigned to confined susceptible population. Maps to SBML
+      symbol `p`.
+  - name: unreported_infection_fraction
+    maps_to: f
+    label: Unreported Infection Fraction
+    description: Unreported-infection fraction parameter. Maps to SBML symbol `f`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_unconfined
+    maps_to: S_u
+    label: Susceptible unconfined
+  - name: infected_unreported
+    maps_to: I_u
+    label: Infected unreported
+  - name: susceptible_confined
+    maps_to: S_c
+    label: Susceptible confined
+  - name: exposed
+    maps_to: E
+    label: Exposed
+  - name: infected_reported
+    maps_to: I_r
+    label: Infected reported
+  - name: recovered
+    maps_to: R
+    label: Recovered
+  - name: quarantined
+    maps_to: Q
+    label: Quarantined

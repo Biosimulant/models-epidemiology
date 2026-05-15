@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Chitnis2012 - Model Rift Valley Fever transmission between cattle and mosquitoes
+  (Model 1)
+description: Mathematical model for Rift Valley Fever transmission between cattle
+  and mosquitoes without infectious eggs. It can be used to explore transmission dynamics
+  and compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Nakul Chitnis
+- James M Hyman
+- Carrie A Manore
+upstream:
+  id: biomodels_ebi:BIOMD0000000950
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000950
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000950
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000950?filename=Chitnis2012_model_1.xml
+  license: CC0
+biosim:
+  entrypoint: src.chitnis2012_model_rift_valley_fever_transmission_biomd0000000950_model:Chitnis2012ModelRiftValleyFeverTransmissionBiomd0000000950Model
+  init_kwargs:
+    model_path: data/BIOMD0000000950.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: cattle_to_mosquito_transmission
+    maps_to: beta_hv
+    label: Cattle To Mosquito Transmission
+    description: Cattle-to-mosquito Rift Valley fever transmission parameter. Maps
+      to SBML symbol `beta_hv`.
+  - name: mosquito_to_cattle_transmission
+    maps_to: beta_vh
+    label: Mosquito To Cattle Transmission
+    description: Mosquito-to-cattle Rift Valley fever transmission parameter. Maps
+      to SBML symbol `beta_vh`.
+  - name: cattle_recovery_rate
+    maps_to: gamma_h
+    label: Cattle Recovery Rate
+    description: Cattle recovery-rate parameter. Maps to SBML symbol `gamma_h`.
+  - name: mosquito_birth_rate
+    maps_to: psi_v
+    label: Mosquito Birth Rate
+    description: Mosquito recruitment/birth parameter. Maps to SBML symbol `psi_v`.
+  - name: mosquito_mortality_rate
+    maps_to: u_v
+    label: Mosquito Mortality Rate
+    description: Mosquito mortality parameter. Maps to SBML symbol `u_v`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_cattle
+    maps_to: S_h
+    label: Susceptible cattle
+  - name: asymptomatic_cattle
+    maps_to: A_h
+    label: Asymptomatic cattle
+  - name: infected_cattle
+    maps_to: I_h
+    label: Infected cattle
+  - name: recovered_cattle
+    maps_to: R_h
+    label: Recovered cattle
+  - name: susceptible_mosquitoes
+    maps_to: S_v
+    label: Susceptible mosquitoes
+  - name: exposed_mosquitoes
+    maps_to: E_v
+    label: Exposed mosquitoes
+  - name: infected_mosquitoes
+    maps_to: I_v
+    label: Infected mosquitoes

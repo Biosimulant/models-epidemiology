@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Sarkar2020 - SAIR model of COVID-19 transmission with quarantine measures in
+  India Lab
+description: Single-model lab wrapper for Sarkar2020 - SAIR model of COVID-19 transmission
+  with quarantine measures in India. In India, 100,340 confirmed cases and 3155 confirmed
+  deaths due to COVID-19 were reported as of May 18, 2020. Due to absence of specific
+  vaccine or therapy, non-pharmacological interventions including.
+models:
+- alias: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000977.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.state
+  to:
+  - visualisation.epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model_state
+- from: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.summary
+  to:
+  - visualisation.epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model_summary
+- from: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.transmission_rate
+    label: Transmission Rate
+  - name: asymptomatic_fraction
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.asymptomatic_fraction
+    label: Asymptomatic Fraction
+  - name: quarantine_transition_rate
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.quarantine_transition_rate
+    label: Quarantine Transition Rate
+  - name: infected_recovery_rate
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.infected_recovery_rate
+    label: Infected Recovery Rate
+  - name: asymptomatic_recovery_rate
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.asymptomatic_recovery_rate
+    label: Asymptomatic Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.species_labels
+    label: Species labels
+  - name: susceptible
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.susceptible
+    label: Susceptible
+  - name: infected
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.infected
+    label: Infected
+  - name: asymptomatic
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.asymptomatic
+    label: Asymptomatic
+  - name: susceptible_quarantined
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.susceptible_quarantined
+    label: Susceptible quarantined
+  - name: infected_quarantined
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.infected_quarantined
+    label: Infected quarantined
+  - name: recovered
+    maps_to: epidemiology_sbml_sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

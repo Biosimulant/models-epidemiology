@@ -1,0 +1,82 @@
+schema_version: '2.0'
+title: Giordano2020 - SIDARTHE model of COVID-19 spread in Italy Lab
+description: Single-model lab wrapper for Giordano2020 - SIDARTHE model of COVID-19
+  spread in Italy. In Italy, 128,948 confirmed cases and 15,887 deaths of people who
+  tested positive for SARS-CoV-2 were registered as of 5 April 2020. Ending the global
+  SARS-CoV-2 pandemic requires implementation of mu.
+models:
+- alias: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000955.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.state
+  to:
+  - visualisation.epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model_state
+- from: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.summary
+  to:
+  - visualisation.epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model_summary
+- from: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model_species_labels
+io:
+  inputs:
+  - name: undetected_transmission_rate
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.undetected_transmission_rate
+    label: Undetected Transmission Rate
+  - name: diagnosed_transmission_rate
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.diagnosed_transmission_rate
+    label: Diagnosed Transmission Rate
+  - name: ailing_transmission_rate
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.ailing_transmission_rate
+    label: Ailing Transmission Rate
+  - name: recognition_rate
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.recognition_rate
+    label: Recognition Rate
+  - name: severe_progression_rate
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.severe_progression_rate
+    label: Severe Progression Rate
+  - name: healing_rate
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.healing_rate
+    label: Healing Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.susceptible
+    label: Susceptible
+  - name: diagnosed
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.diagnosed
+    label: Diagnosed
+  - name: ailing
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.ailing
+    label: Ailing
+  - name: recognized
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.recognized
+    label: Recognized
+  - name: threatened
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.threatened
+    label: Threatened
+  - name: healed
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.healed
+    label: Healed
+  - name: extinct
+    maps_to: epidemiology_sbml_giordano2020_sidarthe_model_of_covid_19_spread_i_biomd0000000955_model.extinct
+    label: Extinct
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

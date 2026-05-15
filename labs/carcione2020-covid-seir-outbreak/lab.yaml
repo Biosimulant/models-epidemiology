@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak Lab
+description: Single-model lab wrapper for Carcione2020 - Deterministic SEIR simulation
+  of a COVID-19 outbreak. An epidemic disease caused by a new coronavirus has spread
+  in Northern Italy with a strong contagion rate. It can be used to explore transmission
+  dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000974.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.state
+  to:
+  - visualisation.epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model_state
+- from: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.summary
+  to:
+  - visualisation.epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model_summary
+- from: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.transmission_rate
+    label: Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.recovery_rate
+    label: Recovery Rate
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.incubation_rate
+    label: Incubation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.exposed
+    label: Exposed
+  - name: infected
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.infected
+    label: Infected
+  - name: deceased
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.recovered
+    label: Recovered
+  - name: total_population
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.total_population
+    label: Total population
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

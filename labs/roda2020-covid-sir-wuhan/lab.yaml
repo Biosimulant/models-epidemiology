@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Roda2020 - SIR model of COVID-19 spread in Wuhan Lab
+description: Single-model lab wrapper for Roda2020 - SIR model of COVID-19 spread
+  in Wuhan. =Since the COVID-19 outbreak in Wuhan City in December of 2019, numerous
+  model predictions on the COVID-19 epidemics in Wuhan and other parts of China have
+  been reported. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+models:
+- alias: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000957.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.state
+  to:
+  - visualisation.epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model_state
+- from: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.summary
+  to:
+  - visualisation.epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model_summary
+- from: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.transmission_rate
+    label: Transmission Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.recovered
+    label: Recovered
+  - name: confirmed
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.confirmed
+    label: Confirmed
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

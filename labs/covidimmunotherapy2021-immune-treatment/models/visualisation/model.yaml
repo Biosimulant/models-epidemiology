@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: COVID-19 immunotherapy A mathematical model Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: COVID-19 immunotherapy A mathematical model
+    question: Does the treatment scenario suppress viral and immune burden in the
+      within-host model?
+    sources:
+    - alias: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model
+      schemas:
+        state:
+          VL_tratamento: float
+          V_tratamento: float
+          A_I_tratamento: float
+          N_at_tratamento: float
+          I_12_tratamento: float
+          I_ab_tratamento: float
+          B_tratamento: float
+          Inib_tratamento: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          VL_tratamento: str
+          V_tratamento: str
+          A_I_tratamento: str
+          N_at_tratamento: str
+          I_12_tratamento: str
+          I_ab_tratamento: str
+          B_tratamento: str
+          Inib_tratamento: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model_state
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model.state
+    label: Model state
+  - name: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model_summary
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model_species_labels
+    maps_to: epidemiology_sbml_covid_19_immunotherapy_a_mathematical_model_model2109130003_model.species_labels
+    label: Species labels
+  outputs: []

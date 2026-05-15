@@ -1,0 +1,49 @@
+schema_version: '2.0'
+title: Smith&Moore2004 - The SIR model for the spread of HongKong Flu Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Smith&Moore2004 - The SIR model for the spread of HongKong Flu
+    question: What is the baseline Hong Kong flu SIR outbreak curve?
+    sources:
+    - alias: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model
+      schemas:
+        state:
+          Infected: float
+          Susceptible: float
+          Recovered: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Infected: str
+          Susceptible: str
+          Recovered: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model_state
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.state
+    label: Model state
+  - name: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model_summary
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model_species_labels
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.species_labels
+    label: Species labels
+  outputs: []

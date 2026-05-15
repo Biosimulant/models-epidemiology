@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak
+description: An epidemic disease caused by a new coronavirus has spread in Northern
+  Italy with a strong contagion rate. It can be used to explore transmission dynamics
+  and compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- "Jos\xE9 M Carcione"
+- Juan E Santos
+- Claudio Bagaini
+- Jing Ba
+upstream:
+  id: biomodels_ebi:BIOMD0000000974
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000974
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000974
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000974?filename=Carcione2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model:Carcione2020DeterministicSeirSimulationOfABiomd0000000974Model
+  init_kwargs:
+    model_path: data/BIOMD0000000974.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: beta
+    label: Transmission Rate
+    description: Transmission-rate parameter. Maps to SBML symbol `beta`.
+  - name: recovery_rate
+    maps_to: gamma
+    label: Recovery Rate
+    description: Recovery-rate parameter. Maps to SBML symbol `gamma`.
+  - name: incubation_rate
+    maps_to: epsilon
+    label: Incubation Rate
+    description: Incubation/progression-rate parameter. Maps to SBML symbol `epsilon`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: Exposed
+    label: Exposed
+  - name: infected
+    maps_to: Infected
+    label: Infected
+  - name: deceased
+    maps_to: Deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered
+  - name: total_population
+    maps_to: Total_population
+    label: Total population

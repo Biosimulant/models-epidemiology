@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Malkov2020 - SEIRS model of COVID-19 transmission with time-varying R values
+  and reinfection Lab
+description: Single-model lab wrapper for Malkov2020 - SEIRS model of COVID-19 transmission
+  with time-varying R values and reinfection. Epidemiological models of COVID-19 transmission
+  assume that recovered individuals have a fully pro- tected immunity. To date, there
+  is no definite answer about whether people who recover from COVID-19.
+models:
+- alias: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000980.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.state
+  to:
+  - visualisation.epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model_state
+- from: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.summary
+  to:
+  - visualisation.epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model_summary
+- from: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.transmission_rate
+    label: Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.recovery_rate
+    label: Recovery Rate
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.incubation_rate
+    label: Incubation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.exposed
+    label: Exposed
+  - name: infected
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.recovered
+    label: Recovered
+  - name: total_population
+    maps_to: epidemiology_sbml_malkov2020_seirs_model_of_covid_19_transmission_biomd0000000980_model.total_population
+    label: Total population
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

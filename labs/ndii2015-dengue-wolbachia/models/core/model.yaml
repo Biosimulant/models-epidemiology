@@ -1,0 +1,96 @@
+schema_version: '2.0'
+title: Ndii2015-transmission dynamics of dengue in the presence of Wolbachia
+description: 'Use of the bacterium Wolbachia is an innovative new strategy designed
+  to break the cycle of dengue transmission. There are two main mechanisms by which
+  Wolbachia could achieve this: by reducing the le.'
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Meksianis Z Ndii
+- R I Hickson
+- David Allingham
+- G N Mercer
+upstream:
+  id: biomodels_ebi:MODEL2003160002
+  source_db: biomodels_ebi
+  source_id: MODEL2003160002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003160002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003160002?filename=Ndii2015.xml
+  license: CC0
+biosim:
+  entrypoint: src.ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model:Ndii2015TransmissionDynamicsOfDengueInTheModel2003160002Model
+  init_kwargs:
+    model_path: data/MODEL2003160002.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: human_incubation_rate
+    maps_to: sigma
+    label: Human Incubation Rate
+    description: Human exposed-to-infectious dengue progression parameter. Maps to
+      SBML symbol `sigma`.
+  - name: wolbachia_transmission_reduction
+    maps_to: c
+    label: Wolbachia Transmission Reduction
+    description: Wolbachia-associated transmission reduction/compatibility parameter.
+      Maps to SBML symbol `c`.
+  - name: human_recovery_rate
+    maps_to: gamma_H
+    label: Human Recovery Rate
+    description: Human dengue recovery-rate parameter. Maps to SBML symbol `gamma_H`.
+  - name: non_wolbachia_mosquito_birth_rate
+    maps_to: b_N
+    label: Non Wolbachia Mosquito Birth Rate
+    description: Non-Wolbachia mosquito birth parameter. Maps to SBML symbol `b_N`.
+  - name: wolbachia_mosquito_birth_rate
+    maps_to: b_W
+    label: Wolbachia Mosquito Birth Rate
+    description: Wolbachia mosquito birth parameter. Maps to SBML symbol `b_W`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_human
+    maps_to: S_H
+    label: Susceptible human
+  - name: exposed_human
+    maps_to: E_H
+    label: Exposed human
+  - name: infected_human
+    maps_to: I_H
+    label: Infected human
+  - name: recovered_human
+    maps_to: R_H
+    label: Recovered human
+  - name: susceptible_non_wolbachia
+    maps_to: S_N
+    label: Susceptible non-Wolbachia
+  - name: infected_non_wolbachia
+    maps_to: I_N
+    label: Infected non-Wolbachia
+  - name: susceptible_wolbachia
+    maps_to: S_W
+    label: Susceptible Wolbachia
+  - name: infected_wolbachia
+    maps_to: I_W
+    label: Infected Wolbachia

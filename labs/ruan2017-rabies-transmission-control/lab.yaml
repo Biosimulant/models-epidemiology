@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Ruan2017 - Transmission dynamics and control of rabies in China Lab
+description: Single-model lab wrapper for Ruan2017 - Transmission dynamics and control
+  of rabies in China. Shigui Ruan. Modeling the transmission dynamics and control
+  of rabies in China.
+models:
+- alias: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000726.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.state
+  to:
+  - visualisation.epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model_state
+- from: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.summary
+  to:
+  - visualisation.epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model_summary
+- from: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.transmission_rate
+    label: Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.recovery_rate
+    label: Recovery Rate
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.incubation_rate
+    label: Incubation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.species_labels
+    label: Species labels
+  - name: exposed_humans_e_h
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.exposed_humans_e_h
+    label: Exposed humans (E h)
+  - name: infectious_humans_i_h
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.infectious_humans_i_h
+    label: Infectious humans (I h)
+  - name: exposed_dogs_e_d
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.exposed_dogs_e_d
+    label: Exposed dogs (E d)
+  - name: infectious_dogs_i_d
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.infectious_dogs_i_d
+    label: Infectious dogs (I d)
+  - name: susceptible_dogs_s_d
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.susceptible_dogs_s_d
+    label: Susceptible dogs (S d)
+  - name: recovered_dogs_r_d
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.recovered_dogs_r_d
+    label: Recovered dogs (R d)
+  - name: susceptible_humans_s_h
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.susceptible_humans_s_h
+    label: Susceptible humans (S h)
+  - name: recovered_humans_r_h
+    maps_to: epidemiology_sbml_ruan2017_transmission_dynamics_and_control_of_ra_biomd0000000726_model.recovered_humans_r_h
+    label: Recovered humans (R h)
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Okuonghae2020 - SEAIR model of COVID-19 transmission in Lagos, Nigeria Lab
+description: Single-model lab wrapper for Okuonghae2020 - SEAIR model of COVID-19
+  transmission in Lagos, Nigeria. This work examines the impact of various non-pharmaceutical
+  control measures (government and personal) on the population dynamics of the novel
+  coronavirus disease 2019 (COVID-19) in Lagos, Nigeria, us. It can be used to explore
+  transmission dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000991.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.state
+  to:
+  - visualisation.epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model_state
+- from: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.summary
+  to:
+  - visualisation.epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model_summary
+- from: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model_species_labels
+io:
+  inputs:
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.incubation_rate
+    label: Incubation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.species_labels
+    label: Species labels
+  - name: asymptomatic
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.asymptomatic
+    label: Asymptomatic
+  - name: exposed
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.exposed
+    label: Exposed
+  - name: deceased
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.recovered
+    label: Recovered
+  - name: symptomatic
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.symptomatic
+    label: Symptomatic
+  - name: detected
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.detected
+    label: Detected
+  - name: detected_cumulative
+    maps_to: epidemiology_sbml_okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model.detected_cumulative
+    label: Detected cumulative
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Westerhoff2020 - systems biology model of the coronavirus pandemic 2020 Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Westerhoff2020 - systems biology model of the coronavirus pandemic
+      2020
+    question: Do testing and lockdown states shift diagnosed and fatal burden?
+    sources:
+    - alias: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model
+      schemas:
+        state:
+          uninfected_tested_0: float
+          uninfected_nontested_0: float
+          infected_tested_0: float
+          infected_nontested_0: float
+          infected_tested_div10: float
+          dead_corona_tested_0: float
+          dead_corona_nontested_0: float
+          recovered_tested_0: float
+          recovered_nontested_0: float
+          symptoms_tested_0: float
+          symptoms_nontested_0: float
+          dead_noncorona_0: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          uninfected_tested_0: str
+          uninfected_nontested_0: str
+          infected_tested_0: str
+          infected_nontested_0: str
+          infected_tested_div10: str
+          dead_corona_tested_0: str
+          dead_corona_nontested_0: str
+          recovered_tested_0: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model_state
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.state
+    label: Model state
+  - name: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model_summary
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model_species_labels
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.species_labels
+    label: Species labels
+  outputs: []

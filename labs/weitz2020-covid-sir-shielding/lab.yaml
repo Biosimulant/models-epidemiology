@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Weitz2020 - SIR model of COVID-19 transmission with shielding Lab
+description: Single-model lab wrapper for Weitz2020 - SIR model of COVID-19 transmission
+  with shielding. The COVID-19 pandemic has precipitated a global crisis, with more
+  than 1,430,000 confirmed cases and more than 85,000 confirmed deaths globally as
+  of 9 April 2020. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+models:
+- alias: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000963.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.state
+  to:
+  - visualisation.epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model_state
+- from: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.summary
+  to:
+  - visualisation.epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model_summary
+- from: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.transmission_rate
+    label: Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_weitz2020_sir_model_of_covid_19_transmission_wit_biomd0000000963_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

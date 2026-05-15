@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Ducrot2009 - Malaria transmission in two host types Lab
+description: Single-model lab wrapper for Ducrot2009 - Malaria transmission in two
+  host types. The main purpose of this article is to formulate a deterministic mathematical
+  model for the transmission of malaria that considers two host types in the human
+  population. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+models:
+- alias: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1808280013.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.state
+  to:
+  - visualisation.epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model_state
+- from: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.summary
+  to:
+  - visualisation.epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model_summary
+- from: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model_species_labels
+io:
+  inputs:
+  - name: mosquito_to_nonimmune_transmission
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.mosquito_to_nonimmune_transmission
+    label: Mosquito To Nonimmune Transmission
+  - name: mosquito_to_semi_immune_transmission
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.mosquito_to_semi_immune_transmission
+    label: Mosquito To Semi Immune Transmission
+  - name: nonimmune_to_mosquito_transmission
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.nonimmune_to_mosquito_transmission
+    label: Nonimmune To Mosquito Transmission
+  - name: semi_immune_to_mosquito_transmission
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.semi_immune_to_mosquito_transmission
+    label: Semi Immune To Mosquito Transmission
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.species_labels
+    label: Species labels
+  - name: susceptible_nonimmune_humans
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.susceptible_nonimmune_humans
+    label: Susceptible non-immune humans
+  - name: exposed_nonimmune_humans
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.exposed_nonimmune_humans
+    label: Exposed non-immune humans
+  - name: infectious_nonimmune_humans
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.infectious_nonimmune_humans
+    label: Infectious non-immune humans
+  - name: exposed_semi_immune_humans
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.exposed_semi_immune_humans
+    label: Exposed semi-immune humans
+  - name: infectious_semi_immune_humans
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.infectious_semi_immune_humans
+    label: Infectious semi-immune humans
+  - name: immune_semi_immune_humans
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.immune_semi_immune_humans
+    label: Immune semi-immune humans
+  - name: exposed_mosquitoes
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.exposed_mosquitoes
+    label: Exposed mosquitoes
+  - name: infectious_mosquitoes
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.infectious_mosquitoes
+    label: Infectious mosquitoes
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

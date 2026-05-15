@@ -1,5 +1,8 @@
 # models-epidemiology
 
+> Storage-only repo: each former root model now lives in `labs/<slug>/models/core/` and is wrapped by
+> `labs/<slug>/lab.yaml`. This repo has no repo-level import catalog and no composed labs at the root.
+
 Curated collection of **epidemiology** and **infectious disease** simulation models for the **biosim** platform. This repository contains comprehensive computational models of disease transmission, outbreak dynamics, intervention strategies, and host-pathogen interactions, with extensive COVID-19, malaria, and other infectious disease models.
 
 ## What's Inside
@@ -66,9 +69,9 @@ Every model implements the `biosim.BioModule` interface:
 
 - **`inputs()`** — declares named input signals the module consumes
 - **`outputs()`** — declares named output signals the module produces
-- **`advance_to(t)`** — advances the model's internal state to time `t`
+- **`advance_window(t)`** — advances the model's internal state to time `t`
 
-Most curated models include Python source under `src/` and are wired together via `space.yaml` in composed simulations without additional code.
+Most curated models include Python source under `src/` and are wired together via `lab.yaml` in composed simulations without additional code.
 
 ### Model Standards
 
@@ -77,7 +80,7 @@ All models in this repository:
 - Are sourced from BioModels and COVID-19 Disease Maps
 - Include tellurium runtime for SBML execution
 - Provide `state` output for monitoring simulation results
-- Support configurable timesteps via `min_dt` parameter
+- Support configurable timesteps via `communication_step` parameter
 
 ### Epidemiological Model Types
 
@@ -119,7 +122,7 @@ pip install "biosim @ git+https://github.com/BioSimulant/biosim.git@main"
 
 To integrate epidemiology models into scenario simulations:
 
-1. Reference models by `manifest_path` (e.g., `models/epidemiology-sbml-bertozzi2020-sir-model-of-scenarios-of-covid-19/model.yaml`)
+1. Reference models by `manifest_path` (e.g., `labs/bertozzi2020-covid-sir-california-new-york/models/core/model.yaml`)
 2. Wire model outputs to inputs for intervention scenarios
 3. Compose multi-model simulations for policy evaluation
 4. Configure runtime parameters and simulation duration
@@ -127,7 +130,7 @@ To integrate epidemiology models into scenario simulations:
 ## Linking in biosim-platform
 
 - Models can be linked with explicit paths:
-  - `models/epidemiology-sbml-giordano2020-sidarthe-model-of-covid-19-spread-i/model.yaml`
+  - `labs/giordano2020-covid-sidarthe/models/core/model.yaml`
 - Epidemiology models can be composed with metabolic, immune, or pharmacological models for multi-scale disease modeling
 
 ## External Repos

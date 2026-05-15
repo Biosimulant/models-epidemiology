@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Ho2019 - Mathematical models of transmission dynamics and vaccine strategies
+  in Hong Kong during the 2017-2018 winter influenza season (Simple) Lab
+description: Single-model lab wrapper for Ho2019 - Mathematical models of transmission
+  dynamics and vaccine strategies in Hong Kong during the 2017-2018 winter influenza
+  season (Simple). This is the simple version of the two mathematical models presented
+  by Ho et al. It is a model comprised of simple ordinary differential equations describing
+  the overall epidemic dynamics of influenza.
+models:
+- alias: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000851.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.state
+  to:
+  - visualisation.epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model_state
+- from: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.summary
+  to:
+  - visualisation.epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model_summary
+- from: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.transmission_rate
+    label: Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.infected
+    label: Infected
+  - name: recovered
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.recovered
+    label: Recovered
+  - name: susceptible
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.susceptible
+    label: Susceptible
+  - name: vector
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.vector
+    label: Vector
+  - name: vector_e
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.vector_e
+    label: Vector e
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

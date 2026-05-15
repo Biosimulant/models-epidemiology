@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Bertozzi2020 - SIR model of scenarios of COVID-19 spread in CA and NY Lab
+description: Single-model lab wrapper for Bertozzi2020 - SIR model of scenarios of
+  COVID-19 spread in CA and NY. The coronavirus disease 2019 (COVID-19) pandemic has
+  placed epidemic modeling at the forefront of worldwide public policy making. Nonetheless,
+  modeling and forecasting the spread of COVID-19 remains a.
+models:
+- alias: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000956.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.state
+  to:
+  - visualisation.epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model_state
+- from: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.summary
+  to:
+  - visualisation.epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model_summary
+- from: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model_species_labels
+io:
+  inputs:
+  - name: reproduction_number
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.reproduction_number
+    label: Reproduction Number
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_bertozzi2020_sir_model_of_scenarios_of_covid_19_biomd0000000956_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

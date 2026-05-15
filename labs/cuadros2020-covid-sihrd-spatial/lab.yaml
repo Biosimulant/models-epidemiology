@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Cuadros2020 - SIHRD spatiotemporal model of COVID-19 transmission in Ohio Lab
+description: Single-model lab wrapper for Cuadros2020 - SIHRD spatiotemporal model
+  of COVID-19 transmission in Ohio. The role of geospatial disparities in the dynamics
+  of the COVID-19 pandemic is poorly understood. We developed a spatially-explicit
+  mathematical model to simulate transmission dynamics of COVID-19 dis.
+models:
+- alias: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000969.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.state
+  to:
+  - visualisation.epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model_state
+- from: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.summary
+  to:
+  - visualisation.epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model_summary
+- from: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model_species_labels
+io:
+  inputs:
+  - name: airport_county_transmission_rate
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.airport_county_transmission_rate
+    label: Airport County Transmission Rate
+  - name: highway_county_transmission_rate
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.highway_county_transmission_rate
+    label: Highway County Transmission Rate
+  - name: low_risk_county_transmission_rate
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.low_risk_county_transmission_rate
+    label: Low Risk County Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.recovery_rate
+    label: Recovery Rate
+  - name: hospital_to_icu_rate
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.hospital_to_icu_rate
+    label: Hospital To Icu Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.species_labels
+    label: Species labels
+  - name: infected_low_risk_counties
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.infected_low_risk_counties
+    label: Infected Low risk counties
+  - name: infected_counties_with_airports
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.infected_counties_with_airports
+    label: Infected Counties with airports
+  - name: infected_counties_with_highways
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.infected_counties_with_highways
+    label: Infected Counties with highways
+  - name: hospitalised_low_risk_counties
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.hospitalised_low_risk_counties
+    label: Hospitalised Low risk counties
+  - name: hospitalised_counties_with_airports
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.hospitalised_counties_with_airports
+    label: Hospitalised Counties with airports
+  - name: hospitalised_counties_with_highways
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.hospitalised_counties_with_highways
+    label: Hospitalised Counties with highways
+  - name: icu_low_risk_counties
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.icu_low_risk_counties
+    label: ICU Low risk counties
+  - name: icu_counties_with_airports
+    maps_to: epidemiology_sbml_cuadros2020_sihrd_spatiotemporal_model_of_covid_biomd0000000969_model.icu_counties_with_airports
+    label: ICU Counties with airports
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

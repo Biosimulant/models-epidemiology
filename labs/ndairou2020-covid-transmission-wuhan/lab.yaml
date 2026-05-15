@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Ndairou2020 - early-stage transmission dynamics of COVID-19 in Wuhan Lab
+description: Single-model lab wrapper for Ndairou2020 - early-stage transmission dynamics
+  of COVID-19 in Wuhan. We propose a compartmental mathematical model for the spread
+  of the COVID-19 disease with special focus on the transmissibility of super-spreaders
+  individuals. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+models:
+- alias: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000958.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.state
+  to:
+  - visualisation.epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model_state
+- from: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.summary
+  to:
+  - visualisation.epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model_summary
+- from: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.transmission_rate
+    label: Transmission Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.exposed
+    label: Exposed
+  - name: infectious
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.infectious
+    label: Infectious
+  - name: hospitalised
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.hospitalised
+    label: Hospitalised
+  - name: fatalities
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.fatalities
+    label: Fatalities
+  - name: susceptible
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.recovered
+    label: Recovered
+  - name: super_spreaders
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.super_spreaders
+    label: Super spreaders
+  - name: asymptomatic
+    maps_to: epidemiology_sbml_ndairou2020_early_stage_transmission_dynamics_of_biomd0000000958_model.asymptomatic
+    label: Asymptomatic
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

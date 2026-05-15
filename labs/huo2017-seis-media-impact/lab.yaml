@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Huo2017 - SEIS epidemic model with the impact of media Lab
+description: Single-model lab wrapper for Huo2017 - SEIS epidemic model with the impact
+  of media. Hai-Feng Huo, Peng Yang & Hong Xiang. Stability and bifurcation for an
+  SEIS epidemic model with the impact of media.
+models:
+- alias: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000715.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.state
+  to:
+  - visualisation.epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model_state
+- from: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.summary
+  to:
+  - visualisation.epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model_summary
+- from: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.transmission_rate
+    label: Transmission Rate
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.species_labels
+    label: Species labels
+  - name: exposed_individuals_e
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.exposed_individuals_e
+    label: Exposed Individuals (E)
+  - name: infected_individuals_i
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.infected_individuals_i
+    label: Infected Individuals (I)
+  - name: susceptible_individuals_s
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.susceptible_individuals_s
+    label: Susceptible Individuals (S)
+  - name: message_m
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.message_m
+    label: Message (M)
+  - name: total_population_n
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.total_population_n
+    label: Total population (N)
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

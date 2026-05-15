@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Ghanbari2020 - forecasting the second wave of COVID-19 in Iran Lab
+description: Single-model lab wrapper for Ghanbari2020 - forecasting the second wave
+  of COVID-19 in Iran. One of the common misconceptions about COVID-19 disease is
+  to assume that we will not see a recurrence after the first wave of the disease
+  has subsided. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+models:
+- alias: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000976.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.state
+  to:
+  - visualisation.epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model_state
+- from: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.summary
+  to:
+  - visualisation.epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model_summary
+- from: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.transmission_rate
+    label: Transmission Rate
+  - name: weak_immunity_recovery_rate
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.weak_immunity_recovery_rate
+    label: Weak Immunity Recovery Rate
+  - name: strong_immunity_recovery_rate
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.strong_immunity_recovery_rate
+    label: Strong Immunity Recovery Rate
+  - name: lockdown_start_day
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.lockdown_start_day
+    label: Lockdown Start Day
+  - name: lockdown_end_day
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.lockdown_end_day
+    label: Lockdown End Day
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.species_labels
+    label: Species labels
+  - name: infected_weak_immune_system
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.infected_weak_immune_system
+    label: Infected weak immune system
+  - name: infected_strong_immune_system
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.infected_strong_immune_system
+    label: Infected strong immune system
+  - name: susceptible
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

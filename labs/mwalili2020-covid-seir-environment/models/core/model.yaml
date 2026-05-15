@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Mwalili2020 - SEIR model of COVID-19 transmission and environmental pathogen
+  prevalence
+description: 'Objective: Coronavirus disease 2019 (COVID-19) is a pandemic respiratory
+  illness spreading from person-to-person caused by a novel coronavirus and poses
+  a serious public health risk. It can be used to explore transmission dynamics and
+  compare scenario outcomes across conditions.'
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Samuel Mwalili
+- Mark Kimathi
+- Viona Ojiambo
+- Duncan Gathungu
+- Rachel Mbogo
+upstream:
+  id: biomodels_ebi:BIOMD0000000964
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000964
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000964
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000964?filename=Mwalili2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.mwalili2020_seir_model_of_covid_19_transmission_biomd0000000964_model:Mwalili2020SeirModelOfCovid19TransmissionBiomd0000000964Model
+  init_kwargs:
+    model_path: data/BIOMD0000000964.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: incubation_rate
+    maps_to: sigma
+    label: Incubation Rate
+    description: Incubation/progression-rate parameter. Maps to SBML symbol `sigma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected_asymptomatic
+    maps_to: Infected_Asymptomatic
+    label: Infected Asymptomatic
+  - name: exposed
+    maps_to: Exposed
+    label: Exposed
+  - name: infected_symptomatic
+    maps_to: Infected_Symptomatic
+    label: Infected Symptomatic
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered
+  - name: pathogen
+    maps_to: Pathogen_0
+    label: Pathogen

@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Roda2020 - SIR model of COVID-19 spread in Wuhan Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Roda2020 - SIR model of COVID-19 spread in Wuhan
+    question: Does confirmed COVID-19 burden track the infection peak in Wuhan?
+    sources:
+    - alias: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model
+      schemas:
+        state:
+          Infected: float
+          Susceptible: float
+          Recovered: float
+          Confirmed: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Infected: str
+          Susceptible: str
+          Recovered: str
+          Confirmed: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model_state
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.state
+    label: Model state
+  - name: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model_summary
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model_species_labels
+    maps_to: epidemiology_sbml_roda2020_sir_model_of_covid_19_spread_in_wuhan_biomd0000000957_model.species_labels
+    label: Species labels
+  outputs: []

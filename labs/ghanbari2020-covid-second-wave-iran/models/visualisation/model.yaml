@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Ghanbari2020 - forecasting the second wave of COVID-19 in Iran Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Ghanbari2020 - forecasting the second wave of COVID-19 in Iran
+    question: Is a second-wave COVID-19 peak visible in the baseline Iran model run?
+    sources:
+    - alias: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model
+      schemas:
+        state:
+          Infected_weak_immune_system: float
+          Infected_strong_immune_system: float
+          Susceptible: float
+          Recovered: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Infected_weak_immune_system: str
+          Infected_strong_immune_system: str
+          Susceptible: str
+          Recovered: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model_state
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.state
+    label: Model state
+  - name: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model_summary
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model_species_labels
+    maps_to: epidemiology_sbml_ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model.species_labels
+    label: Species labels
+  outputs: []

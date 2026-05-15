@@ -1,0 +1,59 @@
+schema_version: '2.0'
+title: Hou2020 - SEIR model of COVID-19 transmission in Wuhan Lab
+description: Single-model lab wrapper for Hou2020 - SEIR model of COVID-19 transmission
+  in Wuhan. A novel coronavirus pneumonia, first identified in Wuhan City and referred
+  to as COVID-19 by the World Health Organization, has been quickly spreading to other
+  cities and countries. It can be used to explore transmission dynamics and compare
+  scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000970.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.state
+  to:
+  - visualisation.epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model_state
+- from: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.summary
+  to:
+  - visualisation.epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model_summary
+- from: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model_species_labels
+io:
+  inputs:
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.exposed
+    label: Exposed
+  - name: infected
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.recovered
+    label: Recovered
+  - name: total_population
+    maps_to: epidemiology_sbml_hou2020_seir_model_of_covid_19_transmission_in_w_biomd0000000970_model.total_population
+    label: Total Population
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and
+  China Lab
+description: Single-model lab wrapper for Zhao2020 - SUQC model of COVID-19 transmission
+  dynamics in Wuhan, Hubei, and China. Background - The coronavirus disease 2019 (COVID-19)
+  is rapidly spreading in China and more than 30 countries over last two months. COVID-19
+  has multiple characteristics distinct from other infectious.
+models:
+- alias: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000962.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.state
+  to:
+  - visualisation.epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model_state
+- from: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.summary
+  to:
+  - visualisation.epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model_summary
+- from: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model_species_labels
+io:
+  inputs:
+  - name: reproduction_number
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.reproduction_number
+    label: Reproduction Number
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.transmission_rate
+    label: Transmission Rate
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.incubation_rate
+    label: Incubation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.species_labels
+    label: Species labels
+  - name: unquarantined_infected
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.unquarantined_infected
+    label: Unquarantined Infected
+  - name: quarantined_infected
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.quarantined_infected
+    label: Quarantined Infected
+  - name: confirmed_infected
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.confirmed_infected
+    label: Confirmed Infected
+  - name: cumulative_infected
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.cumulative_infected
+    label: Cumulative Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_zhao2020_suqc_model_of_covid_19_transmission_dyn_biomd0000000962_model.susceptible
+    label: Susceptible
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

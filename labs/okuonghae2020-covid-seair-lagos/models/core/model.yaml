@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Okuonghae2020 - SEAIR model of COVID-19 transmission in Lagos, Nigeria
+description: This work examines the impact of various non-pharmaceutical control measures
+  (government and personal) on the population dynamics of the novel coronavirus disease
+  2019 (COVID-19) in Lagos, Nigeria, us. It can be used to explore transmission dynamics
+  and compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- D Okuonghae
+- A Omame
+upstream:
+  id: biomodels_ebi:BIOMD0000000991
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000991
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000991
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000991?filename=Okuonghae2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.okuonghae2020_seair_model_of_covid_19_transmissi_biomd0000000991_model:Okuonghae2020SeairModelOfCovid19TransmissiBiomd0000000991Model
+  init_kwargs:
+    model_path: data/BIOMD0000000991.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: incubation_rate
+    maps_to: sigma
+    label: Incubation Rate
+    description: Incubation/progression-rate parameter. Maps to SBML symbol `sigma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: asymptomatic
+    maps_to: asymptomatic
+    label: Asymptomatic
+  - name: exposed
+    maps_to: exposed
+    label: Exposed
+  - name: deceased
+    maps_to: deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: recovered
+    label: Recovered
+  - name: symptomatic
+    maps_to: symptomatic
+    label: Symptomatic
+  - name: detected
+    maps_to: detected
+    label: Detected
+  - name: detected_cumulative
+    maps_to: detected_cumulative
+    label: Detected cumulative

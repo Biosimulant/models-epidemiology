@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Lee2018 - Avian human bilinear incidence (BI) model Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Lee2018 - Avian human bilinear incidence (BI) model
+    question: How does bilinear incidence couple avian and human infection?
+    sources:
+    - alias: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model
+      schemas:
+        state:
+          I_a: float
+          S_h: float
+          I_b: float
+          S_b: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          I_a: str
+          S_h: str
+          I_b: str
+          S_b: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model_state
+    maps_to: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model.state
+    label: Model state
+  - name: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model_summary
+    maps_to: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model_species_labels
+    maps_to: epidemiology_sbml_lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model.species_labels
+    label: Species labels
+  outputs: []

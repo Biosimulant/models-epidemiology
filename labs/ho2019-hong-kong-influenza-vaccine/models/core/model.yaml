@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Ho2019 - Mathematical models of transmission dynamics and vaccine strategies
+  in Hong Kong during the 2017-2018 winter influenza season (Simple)
+description: This is the simple version of the two mathematical models presented by
+  Ho et al. It is a model comprised of simple ordinary differential equations describing
+  the overall epidemic dynamics of influenza.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Shing Hei Ho
+- Daihai He
+- Eftimie R
+upstream:
+  id: biomodels_ebi:BIOMD0000000851
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000851
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000851
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000851?filename=Ho2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model:Ho2019MathematicalModelsOfTransmissionDynamBiomd0000000851Model
+  init_kwargs:
+    model_path: data/BIOMD0000000851.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: beta
+    label: Transmission Rate
+    description: Transmission-rate parameter. Maps to SBML symbol `beta`.
+  - name: recovery_rate
+    maps_to: gamma
+    label: Recovery Rate
+    description: Recovery-rate parameter. Maps to SBML symbol `gamma`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected
+    maps_to: I
+    label: Infected
+  - name: recovered
+    maps_to: R
+    label: Recovered
+  - name: susceptible
+    maps_to: S
+    label: Susceptible
+  - name: vector
+    maps_to: V
+    label: Vector
+  - name: vector_e
+    maps_to: V_e
+    label: Vector e

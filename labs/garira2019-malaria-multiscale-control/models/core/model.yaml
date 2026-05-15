@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Garira2019 - A coupled multiscale model to guide malaria control and elimination
+description: 'This is a coupled multiscale mathematical model of malaria control and
+  elimination containing four submodels: mosquito-to-human transmission of the malaria
+  parasite, human-to-mosquito transmission of. It can be used to explore transmission
+  dynamics and compare scenario outcomes across conditions.'
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Winston Garira
+- Dephney Mathebula
+upstream:
+  id: biomodels_ebi:MODEL2003190008
+  source_db: biomodels_ebi
+  source_id: MODEL2003190008
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190008
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190008?filename=Garira2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.garira2019_a_coupled_multiscale_model_to_guide_m_model2003190008_model:Garira2019ACoupledMultiscaleModelToGuideMModel2003190008Model
+  init_kwargs:
+    model_path: data/MODEL2003190008.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: mosquito_to_human_transmission
+    maps_to: beta_H
+    label: Mosquito To Human Transmission
+    description: Mosquito-to-human malaria transmission parameter. Maps to SBML symbol
+      `beta_H`.
+  - name: human_to_mosquito_transmission
+    maps_to: beta_V
+    label: Human To Mosquito Transmission
+    description: Human-to-mosquito malaria transmission parameter. Maps to SBML symbol
+      `beta_V`.
+  - name: human_recovery_rate
+    maps_to: gamma_H
+    label: Human Recovery Rate
+    description: Human recovery-rate parameter. Maps to SBML symbol `gamma_H`.
+  - name: mosquito_mortality_rate
+    maps_to: mu_V
+    label: Mosquito Mortality Rate
+    description: Mosquito mortality parameter. Maps to SBML symbol `mu_V`.
+  - name: gametocyte_production_rate
+    maps_to: alpha_g
+    label: Gametocyte Production Rate
+    description: Within-human gametocyte production parameter. Maps to SBML symbol
+      `alpha_g`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_humans
+    maps_to: S_H
+    label: Susceptible humans
+  - name: infected_humans
+    maps_to: I_H
+    label: Infected humans
+  - name: vector_parasite_load
+    maps_to: P_V
+    label: Vector parasite load
+  - name: susceptible_vectors
+    maps_to: S_V
+    label: Susceptible vectors
+  - name: infected_vectors
+    maps_to: I_V
+    label: Infected vectors
+  - name: human_gametocyte_load
+    maps_to: G_H
+    label: Human gametocyte load

@@ -1,0 +1,89 @@
+schema_version: '2.0'
+title: Sarkar2020 - SAIR model of COVID-19 transmission with quarantine measures in
+  India
+description: In India, 100,340 confirmed cases and 3155 confirmed deaths due to COVID-19
+  were reported as of May 18, 2020. Due to absence of specific vaccine or therapy,
+  non-pharmacological interventions including.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Kankan Sarkar
+- Subhas Khajanchi
+- Juan J Nieto
+upstream:
+  id: biomodels_ebi:BIOMD0000000977
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000977
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000977
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000977?filename=Sarkar2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.sarkar2020_sair_model_of_covid_19_transmission_w_biomd0000000977_model:Sarkar2020SairModelOfCovid19TransmissionWBiomd0000000977Model
+  init_kwargs:
+    model_path: data/BIOMD0000000977.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: beta_s
+    label: Transmission Rate
+    description: COVID-19 transmission-rate parameter. Maps to SBML symbol `beta_s`.
+  - name: asymptomatic_fraction
+    maps_to: rho_s
+    label: Asymptomatic Fraction
+    description: Asymptomatic infection fraction parameter. Maps to SBML symbol `rho_s`.
+  - name: quarantine_transition_rate
+    maps_to: xi_q
+    label: Quarantine Transition Rate
+    description: Quarantine transition parameter. Maps to SBML symbol `xi_q`.
+  - name: infected_recovery_rate
+    maps_to: gamma_i
+    label: Infected Recovery Rate
+    description: Symptomatic infected recovery-rate parameter. Maps to SBML symbol
+      `gamma_i`.
+  - name: asymptomatic_recovery_rate
+    maps_to: gamma_a
+    label: Asymptomatic Recovery Rate
+    description: Asymptomatic recovery-rate parameter. Maps to SBML symbol `gamma_a`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: infected
+    maps_to: Infected
+    label: Infected
+  - name: asymptomatic
+    maps_to: Asymptomatic
+    label: Asymptomatic
+  - name: susceptible_quarantined
+    maps_to: Susceptible_quarantined
+    label: Susceptible quarantined
+  - name: infected_quarantined
+    maps_to: Exposed_quarantined
+    label: Infected quarantined
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered

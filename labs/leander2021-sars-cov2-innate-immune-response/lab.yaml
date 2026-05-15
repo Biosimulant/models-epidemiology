@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Leander2021 - innate immune response to SARS-CoV-2 in the alveolar epithelium
+  Lab
+description: Single-model lab wrapper for Leander2021 - innate immune response to
+  SARS-CoV-2 in the alveolar epithelium. A mathematical ODE based model of the innate
+  immune response to SARS-CoV-2 in the alveolar epithelium. It can be used to explore
+  transmission dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2111170001.xml
+    integration_step: 1.0e-06
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.state
+  to:
+  - visualisation.epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model_state
+- from: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.summary
+  to:
+  - visualisation.epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model_summary
+- from: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model_species_labels
+io:
+  inputs:
+  - name: viral_infection_rate
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.viral_infection_rate
+    label: Viral Infection Rate
+  - name: virus_clearance_rate
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.virus_clearance_rate
+    label: Virus Clearance Rate
+  - name: viral_production_rate
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.viral_production_rate
+    label: Viral Production Rate
+  - name: macrophage_activation_rate
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.macrophage_activation_rate
+    label: Macrophage Activation Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.species_labels
+    label: Species labels
+  - name: viral_load
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.viral_load
+    label: Viral load
+  - name: alveolar_type_1_cells
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.alveolar_type_1_cells
+    label: Alveolar type I cells
+  - name: ace2_positive_type_2_cells
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.ace2_positive_type_2_cells
+    label: ACE2-positive type II alveolar cells
+  - name: activated_ace2_positive_type_2_cells
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.activated_ace2_positive_type_2_cells
+    label: Activated ACE2-positive type II alveolar cells
+  - name: infected_cells
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.infected_cells
+    label: Infected cells
+  - name: activated_macrophages
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.activated_macrophages
+    label: Activated macrophages
+  - name: interferon_signal
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.interferon_signal
+    label: Interferon signal
+  - name: t_cell_response
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.t_cell_response
+    label: T cell response
+  - name: damaged_cells
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.damaged_cells
+    label: Damaged cells
+runtime:
+  duration: 1.0e-06
+  communication_step: 1.0e-06
+  initial_inputs: {}

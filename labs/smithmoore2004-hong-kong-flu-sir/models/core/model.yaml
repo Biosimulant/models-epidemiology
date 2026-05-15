@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Smith&Moore2004 - The SIR model for the spread of HongKong Flu
+description: This is the SIR model for disease spread of the Hong Kong flu in New
+  York City in the late 1960's. It can be used to explore transmission dynamics and
+  compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- David Smith
+- Lang Moore
+upstream:
+  id: biomodels_ebi:BIOMD0000001045
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001045
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001045
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001045?filename=Smith
+    and moore2004-the SIR Model for Spread of Disease.xml
+  license: CC0
+biosim:
+  entrypoint: src.smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model:Smithandmoore2004TheSirModelForTheSpreadOBiomd0000001045Model
+  init_kwargs:
+    model_path: data/BIOMD0000001045.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: beta
+    label: Transmission Rate
+    description: Transmission-rate parameter. Maps to SBML symbol `beta`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected
+    maps_to: Infected
+    label: Infected
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered

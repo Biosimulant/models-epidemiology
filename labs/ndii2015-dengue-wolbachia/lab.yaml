@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Ndii2015-transmission dynamics of dengue in the presence of Wolbachia Lab
+description: 'Single-model lab wrapper for Ndii2015-transmission dynamics of dengue
+  in the presence of Wolbachia.. Use of the bacterium Wolbachia is an innovative new
+  strategy designed to break the cycle of dengue transmission. There are two main
+  mechanisms by which Wolbachia could achieve this: by reducing the le.'
+models:
+- alias: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2003160002.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.state
+  to:
+  - visualisation.epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model_state
+- from: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.summary
+  to:
+  - visualisation.epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model_summary
+- from: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model_species_labels
+io:
+  inputs:
+  - name: human_incubation_rate
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.human_incubation_rate
+    label: Human Incubation Rate
+  - name: wolbachia_transmission_reduction
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.wolbachia_transmission_reduction
+    label: Wolbachia Transmission Reduction
+  - name: human_recovery_rate
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.human_recovery_rate
+    label: Human Recovery Rate
+  - name: non_wolbachia_mosquito_birth_rate
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.non_wolbachia_mosquito_birth_rate
+    label: Non Wolbachia Mosquito Birth Rate
+  - name: wolbachia_mosquito_birth_rate
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.wolbachia_mosquito_birth_rate
+    label: Wolbachia Mosquito Birth Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.species_labels
+    label: Species labels
+  - name: susceptible_human
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.susceptible_human
+    label: Susceptible human
+  - name: exposed_human
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.exposed_human
+    label: Exposed human
+  - name: infected_human
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.infected_human
+    label: Infected human
+  - name: recovered_human
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.recovered_human
+    label: Recovered human
+  - name: susceptible_non_wolbachia
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.susceptible_non_wolbachia
+    label: Susceptible non-Wolbachia
+  - name: infected_non_wolbachia
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.infected_non_wolbachia
+    label: Infected non-Wolbachia
+  - name: susceptible_wolbachia
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.susceptible_wolbachia
+    label: Susceptible Wolbachia
+  - name: infected_wolbachia
+    maps_to: epidemiology_sbml_ndii2015_transmission_dynamics_of_dengue_in_the_model2003160002_model.infected_wolbachia
+    label: Infected Wolbachia
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

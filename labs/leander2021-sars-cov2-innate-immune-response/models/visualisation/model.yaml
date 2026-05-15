@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Leander2021 - innate immune response to SARS-CoV-2 in the alveolar epithelium
+  Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Leander2021 - innate immune response to SARS-CoV-2 in the alveolar
+      epithelium
+    question: Does the innate immune response control viral load in the short stable
+      simulation window?
+    sources:
+    - alias: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model
+      schemas:
+        state:
+          V: float
+          A1: float
+          A2: float
+          A2_act: float
+          I: float
+          M_act: float
+          F: float
+          T: float
+          D: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          V: str
+          A1: str
+          A2: str
+          A2_act: str
+          I: str
+          M_act: str
+          F: str
+          T: str
+          D: str
+    integration_step: 1.0e-06
+  communication_step: 1.0e-06
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model_state
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.state
+    label: Model state
+  - name: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model_summary
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model_species_labels
+    maps_to: epidemiology_sbml_leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model.species_labels
+    label: Species labels
+  outputs: []

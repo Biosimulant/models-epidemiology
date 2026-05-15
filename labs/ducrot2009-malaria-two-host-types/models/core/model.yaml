@@ -1,0 +1,96 @@
+schema_version: '2.0'
+title: Ducrot2009 - Malaria transmission in two host types
+description: The main purpose of this article is to formulate a deterministic mathematical
+  model for the transmission of malaria that considers two host types in the human
+  population. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- A Ducrot
+- S B Sirima
+- "B Som\xE9"
+- Zongo P
+upstream:
+  id: biomodels_ebi:MODEL1808280013
+  source_db: biomodels_ebi
+  source_id: MODEL1808280013
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1808280013
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1808280013?filename=Final
+    Version.xml
+  license: CC0
+biosim:
+  entrypoint: src.ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model:Ducrot2009MalariaTransmissionInTwoHostTypeModel1808280013Model
+  init_kwargs:
+    model_path: data/MODEL1808280013.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: mosquito_to_nonimmune_transmission
+    maps_to: c_ve
+    label: Mosquito To Nonimmune Transmission
+    description: Mosquito-to-non-immune-human transmission parameter. Maps to SBML
+      symbol `c_ve`.
+  - name: mosquito_to_semi_immune_transmission
+    maps_to: c_va
+    label: Mosquito To Semi Immune Transmission
+    description: Mosquito-to-semi-immune-human transmission parameter. Maps to SBML
+      symbol `c_va`.
+  - name: nonimmune_to_mosquito_transmission
+    maps_to: c_ev
+    label: Nonimmune To Mosquito Transmission
+    description: Non-immune-human-to-mosquito transmission parameter. Maps to SBML
+      symbol `c_ev`.
+  - name: semi_immune_to_mosquito_transmission
+    maps_to: c_av
+    label: Semi Immune To Mosquito Transmission
+    description: Semi-immune-human-to-mosquito transmission parameter. Maps to SBML
+      symbol `c_av`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: susceptible_nonimmune_humans
+    maps_to: s_e
+    label: Susceptible non-immune humans
+  - name: exposed_nonimmune_humans
+    maps_to: e_e
+    label: Exposed non-immune humans
+  - name: infectious_nonimmune_humans
+    maps_to: i_e
+    label: Infectious non-immune humans
+  - name: exposed_semi_immune_humans
+    maps_to: e_a
+    label: Exposed semi-immune humans
+  - name: infectious_semi_immune_humans
+    maps_to: i_a
+    label: Infectious semi-immune humans
+  - name: immune_semi_immune_humans
+    maps_to: r_a
+    label: Immune semi-immune humans
+  - name: exposed_mosquitoes
+    maps_to: e_v
+    label: Exposed mosquitoes
+  - name: infectious_mosquitoes
+    maps_to: i_v
+    label: Infectious mosquitoes

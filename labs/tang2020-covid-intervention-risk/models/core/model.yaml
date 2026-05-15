@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Tang2020 - Estimation of transmission risk of COVID-19 and impact of public
+  health interventions
+description: Since the emergence of the first cases in Wuhan, China, the novel coronavirus
+  (2019-nCoV) infection has been quickly spreading out to other provinces and neighboring
+  countries. It can be used to explore transmission dynamics and compare scenario
+  outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Biao Tang
+- Xia Wang
+- Qian Li
+- Nicola Luigi Bragazzi
+- Sanyi Tang
+upstream:
+  id: biomodels_ebi:BIOMD0000000971
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000971
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000971
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000971?filename=Tang2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.tang2020_estimation_of_transmission_risk_of_covi_biomd0000000971_model:Tang2020EstimationOfTransmissionRiskOfCoviBiomd0000000971Model
+  init_kwargs:
+    model_path: data/BIOMD0000000971.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_probability
+    maps_to: beta
+    label: Transmission Probability
+    description: Transmission probability parameter. Maps to SBML symbol `beta`.
+  - name: exposed_progression_rate
+    maps_to: sigma
+    label: Exposed Progression Rate
+    description: Exposed-to-infectious progression parameter. Maps to SBML symbol
+      `sigma`.
+  - name: daily_contact_rate
+    maps_to: c
+    label: Daily Contact Rate
+    description: Daily contact-rate parameter. Maps to SBML symbol `c`.
+  - name: quarantine_probability
+    maps_to: q
+    label: Quarantine Probability
+    description: Quarantine probability parameter. Maps to SBML symbol `q`.
+  - name: hospitalization_rate
+    maps_to: delta_I
+    label: Hospitalization Rate
+    description: Infected-to-hospitalised transition parameter. Maps to SBML symbol
+      `delta_I`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: exposed_quarantined
+    maps_to: Exposed_quarantined
+    label: Exposed quarantined
+  - name: susceptible_quarantined
+    maps_to: Susceptible_quarantined
+    label: Susceptible quarantined
+  - name: exposed
+    maps_to: Exposed
+    label: Exposed
+  - name: infected
+    maps_to: Infected
+    label: Infected
+  - name: hospitalised
+    maps_to: Hospitalised
+    label: Hospitalised
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered
+  - name: asymptomatic
+    maps_to: Asymptomatic
+    label: Asymptomatic

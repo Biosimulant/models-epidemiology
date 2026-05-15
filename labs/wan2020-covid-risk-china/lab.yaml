@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Wan2020 - risk estimation and prediction of the transmission of COVID-19 in
+  maninland China excluding Hubei province Lab
+description: 'Single-model lab wrapper for Wan2020 - risk estimation and prediction
+  of the transmission of COVID-19 in maninland China excluding Hubei province. Background:
+  In December 2019, an outbreak of coronavirus disease (later named as COVID-19) was
+  identified in Wuhan, China and, later on, detected in other parts of China. It can
+  be used to explore transmission dynamics and compare scenario outcomes across conditions.'
+models:
+- alias: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000981.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.state
+  to:
+  - visualisation.epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model_state
+- from: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.summary
+  to:
+  - visualisation.epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model_summary
+- from: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.transmission_rate
+    label: Transmission Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.species_labels
+    label: Species labels
+  - name: recovered_from_hospitals
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.recovered_from_hospitals
+    label: Recovered from hospitals
+  - name: susceptible_isolated
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.susceptible_isolated
+    label: Susceptible isolated
+  - name: exposed
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.exposed
+    label: Exposed
+  - name: infected
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.infected
+    label: Infected
+  - name: hospitalised
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.hospitalised
+    label: Hospitalised
+  - name: deceased
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_wan2020_risk_estimation_and_prediction_of_the_tr_biomd0000000981_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

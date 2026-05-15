@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Smith&Moore2004 - The SIR model for the spread of HongKong Flu Lab
+description: Single-model lab wrapper for Smith&Moore2004 - The SIR model for the
+  spread of HongKong Flu. This is the SIR model for disease spread of the Hong Kong
+  flu in New York City in the late 1960's. It can be used to explore transmission
+  dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000001045.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.state
+  to:
+  - visualisation.epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model_state
+- from: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.summary
+  to:
+  - visualisation.epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model_summary
+- from: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.transmission_rate
+    label: Transmission Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.species_labels
+    label: Species labels
+  - name: infected
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.infected
+    label: Infected
+  - name: susceptible
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_smithandmoore2004_the_sir_model_for_the_spread_o_biomd0000001045_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Turner2015 - Human/Mosquito SEIR/SEI Model Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Turner2015 - Human/Mosquito SEIR/SEI Model
+    question: Which host-vector compartment carries transmission in the human-mosquito
+      SEIR/SEI model?
+    sources:
+    - alias: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model
+      schemas:
+        state:
+          Exposed_Human: float
+          Infected_Human: float
+          Exposed_Mosquito: float
+          Infected_Mosquito: float
+          Susceptible_Human: float
+          Susceptible_Mosquito: float
+          Recovered: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Exposed_Human: str
+          Infected_Human: str
+          Exposed_Mosquito: str
+          Infected_Mosquito: str
+          Susceptible_Human: str
+          Susceptible_Mosquito: str
+          Recovered: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model_state
+    maps_to: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model.state
+    label: Model state
+  - name: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model_summary
+    maps_to: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model_species_labels
+    maps_to: epidemiology_sbml_turner2015_human_mosquito_seir_sei_model_model1805220001_model.species_labels
+    label: Species labels
+  outputs: []

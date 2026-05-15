@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: COVID-19 immunotherapy A mathematical model
+description: The pandemic caused by SARS-CoV-2 is responsible for terrible health
+  devastation with profoundly harmful consequences for the economic, social and political
+  activities of communities on a global scale. It can be used to explore transmission
+  dynamics and compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- "Jo\xE3o Nuno Domingues Tavares"
+- Emilie Gomes
+upstream:
+  id: biomodels_ebi:MODEL2202230002
+  source_db: biomodels_ebi
+  source_id: MODEL2202230002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2202230002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2202230002?filename=COVID19
+    immunotherapy a Mathematical Model.xml
+  license: CC0
+biosim:
+  entrypoint: src.covid_19_immunotherapy_a_mathematical_model_model2202230002_model:Covid19ImmunotherapyAMathematicalModelModel2202230002Model
+  init_kwargs:
+    model_path: data/MODEL2202230002.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: virus_clearance_rate
+    maps_to: c
+    label: Virus Clearance Rate
+    description: Virus clearance-rate parameter. Maps to SBML symbol `c`.
+  - name: virus_production_rate
+    maps_to: p
+    label: Virus Production Rate
+    description: Virus production-rate parameter. Maps to SBML symbol `p`.
+  - name: infected_cell_death_rate
+    maps_to: delta
+    label: Infected Cell Death Rate
+    description: Infected-cell loss parameter. Maps to SBML symbol `delta`.
+  - name: immune_activation_rate
+    maps_to: epsilon
+    label: Immune Activation Rate
+    description: Immune activation/progression parameter. Maps to SBML symbol `epsilon`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: treated_viral_load
+    maps_to: VL_tratamento
+    label: Treated viral load
+  - name: treated_free_virus
+    maps_to: V_tratamento
+    label: Treated free virus
+  - name: treated_infected_epithelial_cells
+    maps_to: A_I_tratamento
+    label: Treated infected epithelial cells
+  - name: treated_activated_neutrophils
+    maps_to: N_at_tratamento
+    label: Treated activated neutrophils
+  - name: treated_interleukin_12
+    maps_to: I_12_tratamento
+    label: Treated interleukin 12
+  - name: treated_antibody_response
+    maps_to: I_ab_tratamento
+    label: Treated antibody response
+  - name: treated_b_cells
+    maps_to: B_tratamento
+    label: Treated B cells
+  - name: treatment_inhibition_signal
+    maps_to: Inib_tratamento
+    label: Treatment inhibition signal

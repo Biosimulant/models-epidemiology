@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Ho2019 - Mathematical models of transmission dynamics and vaccine strategies
+  in Hong Kong during the 2017-2018 winter influenza season (Simple) Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Ho2019 - Mathematical models of transmission dynamics and vaccine strategies
+      in Hong Kong during the 2017-2018 winter influenza season (Simple)
+    question: Does the influenza vaccine-strategy model reshape susceptible and infected
+      burden?
+    sources:
+    - alias: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model
+      schemas:
+        state:
+          I: float
+          R: float
+          S: float
+          V: float
+          V_e: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          I: str
+          R: str
+          S: str
+          V: str
+          V_e: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model_state
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.state
+    label: Model state
+  - name: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model_summary
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model_species_labels
+    maps_to: epidemiology_sbml_ho2019_mathematical_models_of_transmission_dynam_biomd0000000851_model.species_labels
+    label: Species labels
+  outputs: []

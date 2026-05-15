@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Mukandavire2020 - SEIR model of early COVID-19 transmission in South Africa
+  Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Mukandavire2020 - SEIR model of early COVID-19 transmission in South
+      Africa
+    question: What is the early-transmission peak behavior in the South Africa SEIR
+      model?
+    sources:
+    - alias: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model
+      schemas:
+        state:
+          Exposed: float
+          Infected: float
+          Susceptible: float
+          Recovered: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Exposed: str
+          Infected: str
+          Susceptible: str
+          Recovered: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model_state
+    maps_to: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model.state
+    label: Model state
+  - name: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model_summary
+    maps_to: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model_species_labels
+    maps_to: epidemiology_sbml_mukandavire2020_seir_model_of_early_covid_19_tra_biomd0000000978_model.species_labels
+    label: Species labels
+  outputs: []

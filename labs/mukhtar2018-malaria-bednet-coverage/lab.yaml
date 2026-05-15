@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Mukhtar2018 - Modelling the effect of bednet coverage on malaria transmission
+  in South Sudan Lab
+description: Single-model lab wrapper for Mukhtar2018 - Modelling the effect of bednet
+  coverage on malaria transmission in South Sudan.. Epidemiology Mukhtar2018Modelling
+  The Effect Of Bednet Cover Model1812040003Model captures core biological behavior
+  in the context of epidemiology, sbml, biomodels_ebi using a biomodels_ebi-sourced
+  OTHER model. When you run it, you can observe state and evaluate how the modeled
+  system changes across runs.
+models:
+- alias: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1812040003.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.state
+  to:
+  - visualisation.epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model_state
+- from: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.summary
+  to:
+  - visualisation.epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model_summary
+- from: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model_species_labels
+io:
+  inputs:
+  - name: bednet_coverage_factor
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.bednet_coverage_factor
+    label: Bednet Coverage Factor
+  - name: mosquito_biting_rate
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.mosquito_biting_rate
+    label: Mosquito Biting Rate
+  - name: mosquito_transmission_rate
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.mosquito_transmission_rate
+    label: Mosquito Transmission Rate
+  - name: human_recovery_rate
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.human_recovery_rate
+    label: Human Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.species_labels
+    label: Species labels
+  - name: susceptible_humans
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.susceptible_humans
+    label: Susceptible humans
+  - name: exposed_humans
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.exposed_humans
+    label: Exposed humans
+  - name: infected_humans
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.infected_humans
+    label: Infected humans
+  - name: asymptomatic_humans
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.asymptomatic_humans
+    label: Asymptomatic humans
+  - name: recovered_humans
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.recovered_humans
+    label: Recovered humans
+  - name: susceptible_mosquitoes
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.susceptible_mosquitoes
+    label: Susceptible mosquitoes
+  - name: exposed_mosquitoes
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.exposed_mosquitoes
+    label: Exposed mosquitoes
+  - name: infectious_mosquitoes
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.infectious_mosquitoes
+    label: Infectious mosquitoes
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

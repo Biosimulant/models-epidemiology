@@ -1,0 +1,82 @@
+schema_version: '2.0'
+title: Ghanbari2020 - forecasting the second wave of COVID-19 in Iran
+description: One of the common misconceptions about COVID-19 disease is to assume
+  that we will not see a recurrence after the first wave of the disease has subsided.
+  It can be used to explore transmission dynamics and compare scenario outcomes across
+  conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Behzad Ghanbari
+upstream:
+  id: biomodels_ebi:BIOMD0000000976
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000976
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000976
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000976?filename=Ghanbari2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.ghanbari2020_forecasting_the_second_wave_of_covi_biomd0000000976_model:Ghanbari2020ForecastingTheSecondWaveOfCoviBiomd0000000976Model
+  init_kwargs:
+    model_path: data/BIOMD0000000976.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: alpha
+    label: Transmission Rate
+    description: COVID-19 transmission parameter. Maps to SBML symbol `alpha`.
+  - name: weak_immunity_recovery_rate
+    maps_to: gamma_1
+    label: Weak Immunity Recovery Rate
+    description: Recovery-rate parameter for weak-immune infected group. Maps to SBML
+      symbol `gamma_1`.
+  - name: strong_immunity_recovery_rate
+    maps_to: gamma_2
+    label: Strong Immunity Recovery Rate
+    description: Recovery-rate parameter for strong-immune infected group. Maps to
+      SBML symbol `gamma_2`.
+  - name: lockdown_start_day
+    maps_to: Lockdown_start
+    label: Lockdown Start Day
+    description: Lockdown start time. Maps to SBML symbol `Lockdown_start`.
+  - name: lockdown_end_day
+    maps_to: Lockdown_end
+    label: Lockdown End Day
+    description: Lockdown end time. Maps to SBML symbol `Lockdown_end`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected_weak_immune_system
+    maps_to: Infected_weak_immune_system
+    label: Infected weak immune system
+  - name: infected_strong_immune_system
+    maps_to: Infected_strong_immune_system
+    label: Infected strong immune system
+  - name: susceptible
+    maps_to: Susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered

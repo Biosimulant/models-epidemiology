@@ -1,0 +1,82 @@
+schema_version: '2.0'
+title: Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19 Lab
+description: Single-model lab wrapper for Paiva2020 - SEIAHRD model of transmission
+  dynamics of COVID-19. This paper proposes a dynamic model to describe and forecast
+  the dynamics of the coronavirus disease COVID-19 transmission. The model is based
+  on an approach previously used to describe the Middle Eas.
+models:
+- alias: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000960.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.state
+  to:
+  - visualisation.epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model_state
+- from: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.summary
+  to:
+  - visualisation.epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model_summary
+- from: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model_species_labels
+io:
+  inputs:
+  - name: transmission_rate
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.transmission_rate
+    label: Transmission Rate
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.incubation_rate
+    label: Incubation Rate
+  - name: asymptomatic_fraction
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.asymptomatic_fraction
+    label: Asymptomatic Fraction
+  - name: hospitalization_rate
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.hospitalization_rate
+    label: Hospitalization Rate
+  - name: hospital_mortality_rate
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.hospital_mortality_rate
+    label: Hospital Mortality Rate
+  - name: infectious_mortality_rate
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.infectious_mortality_rate
+    label: Infectious Mortality Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.species_labels
+    label: Species labels
+  - name: exposed
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.exposed
+    label: Exposed
+  - name: infectious
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.infectious
+    label: Infectious
+  - name: hospitalized
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.hospitalized
+    label: Hospitalized
+  - name: deceased
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.deceased
+    label: Deceased
+  - name: susceptible
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.susceptible
+    label: Susceptible
+  - name: recovered
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.recovered
+    label: Recovered
+  - name: asymptomatic
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.asymptomatic
+    label: Asymptomatic
+  - name: cumulative_cases
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.cumulative_cases
+    label: Cumulative Cases
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

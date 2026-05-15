@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Liu2017 - Dynamics of Avian Influenza with Logistic Growth Lab
+description: Single-model lab wrapper for Liu2017 - Dynamics of Avian Influenza with
+  Logistic Growth. Sanhong Liu, Shigui Ruan & Xinan Zhang. It can be used to explore
+  transmission dynamics and compare scenario outcomes across conditions.
+models:
+- alias: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000708.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.state
+  to:
+  - visualisation.epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model_state
+- from: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.summary
+  to:
+  - visualisation.epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model_summary
+- from: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model_species_labels
+io:
+  inputs:
+  - name: recovery_rate
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.recovery_rate
+    label: Recovery Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.species_labels
+    label: Species labels
+  - name: infected_avian_i_a
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.infected_avian_i_a
+    label: Infected Avian (I a)
+  - name: susceptible_avian_s_a
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.susceptible_avian_s_a
+    label: Susceptible Avian (S a)
+  - name: infected_human_i_h
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.infected_human_i_h
+    label: Infected Human (I h)
+  - name: susceptible_human_s_h
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.susceptible_human_s_h
+    label: Susceptible Human (S h)
+  - name: recovered_human_r_h
+    maps_to: epidemiology_sbml_liu2017_dynamics_of_avian_influenza_with_logisti_biomd0000000708_model.recovered_human_r_h
+    label: Recovered Human (R h)
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

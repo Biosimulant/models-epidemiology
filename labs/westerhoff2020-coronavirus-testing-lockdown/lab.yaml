@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Westerhoff2020 - systems biology model of the coronavirus pandemic 2020 Lab
+description: 'Single-model lab wrapper for Westerhoff2020 - systems biology model
+  of the coronavirus pandemic 2020. Using standard systems biology methodologies a
+  14-compartment dynamic model was developed for the Corona virus epidemic. The model
+  predicts that: (i) it will be impossible to limit lockdown intensity.'
+models:
+- alias: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000988.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.state
+  to:
+  - visualisation.epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model_state
+- from: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.summary
+  to:
+  - visualisation.epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model_summary
+- from: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model_species_labels
+io:
+  inputs:
+  - name: social_distance
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.social_distance
+    label: Social Distance
+  - name: lockdown_severity
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.lockdown_severity
+    label: Lockdown Severity
+  - name: random_testing_rate
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.random_testing_rate
+    label: Random Testing Rate
+  - name: symptom_testing_rate
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.symptom_testing_rate
+    label: Symptom Testing Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.species_labels
+    label: Species labels
+  - name: uninfected_tested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.uninfected_tested
+    label: Uninfected tested
+  - name: uninfected_nontested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.uninfected_nontested
+    label: Uninfected nontested
+  - name: infected_tested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.infected_tested
+    label: Infected tested
+  - name: infected_nontested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.infected_nontested
+    label: Infected nontested
+  - name: infected_tested_div10
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.infected_tested_div10
+    label: Infected tested div10
+  - name: dead_corona_tested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.dead_corona_tested
+    label: Dead corona tested
+  - name: dead_corona_nontested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.dead_corona_nontested
+    label: Dead corona nontested
+  - name: recovered_tested
+    maps_to: epidemiology_sbml_westerhoff2020_systems_biology_model_of_the_coro_biomd0000000988_model.recovered_tested
+    label: Recovered tested
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

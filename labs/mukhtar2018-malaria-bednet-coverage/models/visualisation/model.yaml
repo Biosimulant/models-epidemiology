@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Mukhtar2018 - Modelling the effect of bednet coverage on malaria transmission
+  in South Sudan Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Mukhtar2018 - Modelling the effect of bednet coverage on malaria transmission
+      in South Sudan
+    question: Does bednet coverage change host and vector malaria dynamics?
+    sources:
+    - alias: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model
+      schemas:
+        state:
+          S: float
+          E: float
+          I: float
+          A: float
+          R: float
+          X: float
+          Y: float
+          Z: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          S: str
+          E: str
+          I: str
+          A: str
+          R: str
+          X: str
+          Y: str
+          Z: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model_state
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.state
+    label: Model state
+  - name: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model_summary
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model_species_labels
+    maps_to: epidemiology_sbml_mukhtar2018_modelling_the_effect_of_bednet_cover_model1812040003_model.species_labels
+    label: Species labels
+  outputs: []

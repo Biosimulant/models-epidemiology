@@ -1,0 +1,59 @@
+schema_version: '2.0'
+title: 'Model-based prediction of SARS-CoV-2 in Ethiopia: Extended SEIR model Visualisation'
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: 'Model-based prediction of SARS-CoV-2 in Ethiopia: Extended SEIR model'
+    question: What burden trajectory is predicted by the extended Ethiopia SEIR model?
+    sources:
+    - alias: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model
+      schemas:
+        state:
+          Sus_com: float
+          Exp_com: float
+          Infc_com: float
+          Rec_com: float
+          Sus_hcw: float
+          Exp_hcw: float
+          Infc_hcw: float
+          Rec_hcw: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Sus_com: str
+          Exp_com: str
+          Infc_com: str
+          Rec_com: str
+          Sus_hcw: str
+          Exp_hcw: str
+          Infc_hcw: str
+          Rec_hcw: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model_state
+    maps_to: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model.state
+    label: Model state
+  - name: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model_summary
+    maps_to: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model_species_labels
+    maps_to: epidemiology_sbml_model_based_prediction_of_sars_cov_2_in_ethiopia_model2212310001_model.species_labels
+    label: Species labels
+  outputs: []

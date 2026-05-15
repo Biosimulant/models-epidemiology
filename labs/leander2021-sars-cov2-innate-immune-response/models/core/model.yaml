@@ -1,0 +1,94 @@
+schema_version: '2.0'
+title: Leander2021 - innate immune response to SARS-CoV-2 in the alveolar epithelium
+description: A mathematical ODE based model of the innate immune response to SARS-CoV-2
+  in the alveolar epithelium. It can be used to explore transmission dynamics and
+  compare scenario outcomes across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- R N Leander
+- Y Wu
+- W Ding
+- D E Nelson
+- Z Sinkala
+upstream:
+  id: biomodels_ebi:MODEL2111170001
+  source_db: biomodels_ebi
+  source_id: MODEL2111170001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2111170001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2111170001?filename=Leander2021.xml
+  license: CC0
+biosim:
+  entrypoint: src.leander2021_innate_immune_response_to_sars_cov_2_model2111170001_model:Leander2021InnateImmuneResponseToSarsCov2Model2111170001Model
+  init_kwargs:
+    model_path: data/MODEL2111170001.xml
+    integration_step: 1.0e-06
+  communication_step: 1.0e-06
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: viral_infection_rate
+    maps_to: beta
+    label: Viral Infection Rate
+    description: Viral infection-rate parameter. Maps to SBML symbol `beta`.
+  - name: virus_clearance_rate
+    maps_to: gamma
+    label: Virus Clearance Rate
+    description: Virus clearance-rate parameter. Maps to SBML symbol `gamma`.
+  - name: viral_production_rate
+    maps_to: pV
+    label: Viral Production Rate
+    description: Virus production-rate parameter. Maps to SBML symbol `pV`.
+  - name: macrophage_activation_rate
+    maps_to: kM
+    label: Macrophage Activation Rate
+    description: Macrophage activation-rate parameter. Maps to SBML symbol `kM`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: viral_load
+    maps_to: V
+    label: Viral load
+  - name: alveolar_type_1_cells
+    maps_to: A1
+    label: Alveolar type I cells
+  - name: ace2_positive_type_2_cells
+    maps_to: A2
+    label: ACE2-positive type II alveolar cells
+  - name: activated_ace2_positive_type_2_cells
+    maps_to: A2_act
+    label: Activated ACE2-positive type II alveolar cells
+  - name: infected_cells
+    maps_to: I
+    label: Infected cells
+  - name: activated_macrophages
+    maps_to: M_act
+    label: Activated macrophages
+  - name: interferon_signal
+    maps_to: F
+    label: Interferon signal
+  - name: t_cell_response
+    maps_to: T
+    label: T cell response
+  - name: damaged_cells
+    maps_to: D
+    label: Damaged cells

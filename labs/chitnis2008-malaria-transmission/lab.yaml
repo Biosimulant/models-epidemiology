@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Chitnis2008 - Mathematical model of malaria transmission Lab
+description: Single-model lab wrapper for Chitnis2008 - Mathematical model of malaria
+  transmission. Mathematical model of malaria transmission for low and high transmission
+  rates. It can be used to explore transmission dynamics and compare scenario outcomes
+  across conditions.
+models:
+- alias: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000949.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.state
+  to:
+  - visualisation.epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model_state
+- from: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.summary
+  to:
+  - visualisation.epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model_summary
+- from: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model_species_labels
+io:
+  inputs:
+  - name: human_to_mosquito_transmission
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.human_to_mosquito_transmission
+    label: Human To Mosquito Transmission
+  - name: mosquito_to_human_transmission
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.mosquito_to_human_transmission
+    label: Mosquito To Human Transmission
+  - name: human_recovery_rate
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.human_recovery_rate
+    label: Human Recovery Rate
+  - name: mosquito_mortality_rate
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.mosquito_mortality_rate
+    label: Mosquito Mortality Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.species_labels
+    label: Species labels
+  - name: exposed_human
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.exposed_human
+    label: Exposed Human
+  - name: infected_human
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.infected_human
+    label: Infected Human
+  - name: exposed_mosquito
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.exposed_mosquito
+    label: Exposed Mosquito
+  - name: infected_mosquito
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.infected_mosquito
+    label: Infected Mosquito
+  - name: susceptible_human
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.susceptible_human
+    label: Susceptible Human
+  - name: susceptible_mosquito
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.susceptible_mosquito
+    label: Susceptible Mosquito
+  - name: recovered
+    maps_to: epidemiology_sbml_chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model.recovered
+    label: Recovered
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

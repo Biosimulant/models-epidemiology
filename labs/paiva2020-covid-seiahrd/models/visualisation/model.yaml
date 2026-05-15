@@ -1,0 +1,59 @@
+schema_version: '2.0'
+title: Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19 Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19
+    question: Which severe-burden pathway dominates the SEIAHRD COVID-19 model?
+    sources:
+    - alias: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model
+      schemas:
+        state:
+          Exposed: float
+          Infectious: float
+          Hospitalized: float
+          Deceased: float
+          Susceptible: float
+          Recovered: float
+          Asymptomatic: float
+          Cumulative_Cases: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Exposed: str
+          Infectious: str
+          Hospitalized: str
+          Deceased: str
+          Susceptible: str
+          Recovered: str
+          Asymptomatic: str
+          Cumulative_Cases: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model_state
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.state
+    label: Model state
+  - name: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model_summary
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model_species_labels
+    maps_to: epidemiology_sbml_paiva2020_seiahrd_model_of_transmission_dynamics_biomd0000000960_model.species_labels
+    label: Species labels
+  outputs: []

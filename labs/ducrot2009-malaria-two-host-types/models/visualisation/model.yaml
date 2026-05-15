@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Ducrot2009 - Malaria transmission in two host types Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Ducrot2009 - Malaria transmission in two host types
+    question: Which host type contributes most to malaria transmission in the baseline
+      model?
+    sources:
+    - alias: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model
+      schemas:
+        state:
+          s_e: float
+          e_e: float
+          i_e: float
+          e_a: float
+          i_a: float
+          r_a: float
+          e_v: float
+          i_v: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          s_e: str
+          e_e: str
+          i_e: str
+          e_a: str
+          i_a: str
+          r_a: str
+          e_v: str
+          i_v: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model_state
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.state
+    label: Model state
+  - name: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model_summary
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model_species_labels
+    maps_to: epidemiology_sbml_ducrot2009_malaria_transmission_in_two_host_type_model1808280013_model.species_labels
+    label: Species labels
+  outputs: []

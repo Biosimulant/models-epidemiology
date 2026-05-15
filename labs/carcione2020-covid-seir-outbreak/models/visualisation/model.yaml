@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak
+    question: How does exposed-to-infected progression shape the COVID-19 outbreak
+      burden?
+    sources:
+    - alias: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model
+      schemas:
+        state:
+          Exposed: float
+          Infected: float
+          Deceased: float
+          Susceptible: float
+          Recovered: float
+          Total_population: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          Exposed: str
+          Infected: str
+          Deceased: str
+          Susceptible: str
+          Recovered: str
+          Total_population: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model_state
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.state
+    label: Model state
+  - name: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model_summary
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model_species_labels
+    maps_to: epidemiology_sbml_carcione2020_deterministic_seir_simulation_of_a_biomd0000000974_model.species_labels
+    label: Species labels
+  outputs: []

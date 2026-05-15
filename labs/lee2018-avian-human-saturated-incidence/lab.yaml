@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Lee2018 - Avian human half-saturated incidence (HSI) model Lab
+description: Single-model lab wrapper for Lee2018 - Avian human half-saturated incidence
+  (HSI) model. Hanl Lee & Angelyn Lao. Transmission dynamics and control strategies
+  assessment of avian influenza A (H5N6) in the Philippines.
+models:
+- alias: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000717.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.state
+  to:
+  - visualisation.epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model_state
+- from: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.summary
+  to:
+  - visualisation.epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model_summary
+- from: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model_species_labels
+io:
+  inputs:
+  - name: bird_to_human_transmission
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.bird_to_human_transmission
+    label: Bird To Human Transmission
+  - name: bird_to_bird_transmission
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.bird_to_bird_transmission
+    label: Bird To Bird Transmission
+  - name: environmental_transmission
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.environmental_transmission
+    label: Environmental Transmission
+  - name: infected_bird_culling_rate
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.infected_bird_culling_rate
+    label: Infected Bird Culling Rate
+  - name: human_quarantine_rate
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.human_quarantine_rate
+    label: Human Quarantine Rate
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.species_labels
+    label: Species labels
+  - name: infected_human_i_a
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.infected_human_i_a
+    label: Infected Human (I a)
+  - name: susceptible_human_s_h
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.susceptible_human_s_h
+    label: Susceptible human (S h)
+  - name: infected_bird_i_b
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.infected_bird_i_b
+    label: Infected bird (I b)
+  - name: susceptible_bird_s_b
+    maps_to: epidemiology_sbml_lee2018_avian_human_half_saturated_incidence_hsi_biomd0000000717_model.susceptible_bird_s_b
+    label: Susceptible bird (S b)
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

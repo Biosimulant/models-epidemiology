@@ -1,0 +1,5 @@
+# Mukhta2018-the effect of bednet coverage on malaria transmission in South Sudan Visualisation
+
+Desktop-compatible visualisation model for the curated epidemiology lab.
+It renders a lab-specific scientific Q/A table, selected time-series,
+and a latest-burden bar chart using `data.items`.

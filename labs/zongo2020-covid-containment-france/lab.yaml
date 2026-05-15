@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Zongo2020 - model of COVID-19 transmission dynamics under containment measures
+  in France Lab
+description: 'Single-model lab wrapper for Zongo2020 - model of COVID-19 transmission
+  dynamics under containment measures in France. The main objective of this paper
+  is to address the following question: are the containment measures imposed by most
+  of the world governments effective and sufficient to stop the epidemic of COVID-19
+  b. It can be used to explore transmission dynamics and compare scenario outcomes
+  across conditions.'
+models:
+- alias: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000983.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.state
+  to:
+  - visualisation.epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model_state
+- from: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.summary
+  to:
+  - visualisation.epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model_summary
+- from: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.species_labels
+  to:
+  - visualisation.epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model_species_labels
+io:
+  inputs:
+  - name: transmission_probability
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.transmission_probability
+    label: Transmission Probability
+  - name: incubation_rate
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.incubation_rate
+    label: Incubation Rate
+  - name: containment_quarantine_rate
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.containment_quarantine_rate
+    label: Containment Quarantine Rate
+  - name: confinement_fraction
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.confinement_fraction
+    label: Confinement Fraction
+  - name: unreported_infection_fraction
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.unreported_infection_fraction
+    label: Unreported Infection Fraction
+  outputs:
+  - name: state
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.state
+    label: Model state
+  - name: summary
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.species_labels
+    label: Species labels
+  - name: susceptible_unconfined
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.susceptible_unconfined
+    label: Susceptible unconfined
+  - name: infected_unreported
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.infected_unreported
+    label: Infected unreported
+  - name: susceptible_confined
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.susceptible_confined
+    label: Susceptible confined
+  - name: exposed
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.exposed
+    label: Exposed
+  - name: infected_reported
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.infected_reported
+    label: Infected reported
+  - name: recovered
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.recovered
+    label: Recovered
+  - name: quarantined
+    maps_to: epidemiology_sbml_zongo2020_model_of_covid_19_transmission_dynamic_biomd0000000983_model.quarantined
+    label: Quarantined
+runtime:
+  duration: 10.0
+  communication_step: 0.1
+  initial_inputs: {}

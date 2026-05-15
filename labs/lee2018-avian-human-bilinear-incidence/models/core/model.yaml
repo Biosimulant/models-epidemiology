@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Lee2018 - Avian human bilinear incidence (BI) model
+description: Hanl Lee & Angelyn Lao. Transmission dynamics and control strategies
+  assessment of avian influenza A (H5N6) in the Philippines.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Hanl Lee
+- Angelyn Lao
+upstream:
+  id: biomodels_ebi:BIOMD0000000716
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000716
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000716
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000716?filename=BI
+    reactions.xml
+  license: CC0
+biosim:
+  entrypoint: src.lee2018_avian_human_bilinear_incidence_bi_model_biomd0000000716_model:Lee2018AvianHumanBilinearIncidenceBiModelBiomd0000000716Model
+  init_kwargs:
+    model_path: data/BIOMD0000000716.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: bird_to_human_transmission
+    maps_to: beta_bh
+    label: Bird To Human Transmission
+    description: Bird-to-human avian influenza transmission parameter. Maps to SBML
+      symbol `beta_bh`.
+  - name: bird_to_bird_transmission
+    maps_to: beta_b
+    label: Bird To Bird Transmission
+    description: Bird-to-bird avian influenza transmission parameter. Maps to SBML
+      symbol `beta_b`.
+  - name: environmental_transmission
+    maps_to: beta_v
+    label: Environmental Transmission
+    description: Environmental/vector-mediated avian influenza transmission parameter.
+      Maps to SBML symbol `beta_v`.
+  - name: infected_bird_culling_rate
+    maps_to: c
+    label: Infected Bird Culling Rate
+    description: Infected-bird culling/control parameter. Maps to SBML symbol `c`.
+  - name: human_quarantine_rate
+    maps_to: q
+    label: Human Quarantine Rate
+    description: Human quarantine/control parameter. Maps to SBML symbol `q`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: infected_human_i_a
+    maps_to: I_a
+    label: Infected Human (I a)
+  - name: susceptible_human_s_h
+    maps_to: S_h
+    label: Susceptible human (S h)
+  - name: infected_bird_i_b
+    maps_to: I_b
+    label: Infected bird (I b)
+  - name: susceptible_bird_s_b
+    maps_to: S_b
+    label: Susceptible bird (S b)

@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Chitnis2008 - Mathematical model of malaria transmission
+description: Mathematical model of malaria transmission for low and high transmission
+  rates. It can be used to explore transmission dynamics and compare scenario outcomes
+  across conditions.
+standard: sbml
+tags:
+- biomodels_ebi
+- curated
+- epidemiology
+- faithful
+- sbml
+- tellurium
+authors:
+- Biosimulant Team
+- Nakul Chitnis
+- James M Hyman
+- Jim M Cushing
+upstream:
+  id: biomodels_ebi:BIOMD0000000949
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000949
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000949
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000949?filename=Chitnis2008.xml
+  license: CC0
+biosim:
+  entrypoint: src.chitnis2008_mathematical_model_of_malaria_transm_biomd0000000949_model:Chitnis2008MathematicalModelOfMalariaTransmBiomd0000000949Model
+  init_kwargs:
+    model_path: data/BIOMD0000000949.xml
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: human_to_mosquito_transmission
+    maps_to: Beta_hv
+    label: Human To Mosquito Transmission
+    description: Human-to-mosquito malaria transmission parameter. Maps to SBML symbol
+      `Beta_hv`.
+  - name: mosquito_to_human_transmission
+    maps_to: Beta_vh
+    label: Mosquito To Human Transmission
+    description: Mosquito-to-human malaria transmission parameter. Maps to SBML symbol
+      `Beta_vh`.
+  - name: human_recovery_rate
+    maps_to: gamma_h
+    label: Human Recovery Rate
+    description: Human recovery-rate parameter. Maps to SBML symbol `gamma_h`.
+  - name: mosquito_mortality_rate
+    maps_to: u_1v
+    label: Mosquito Mortality Rate
+    description: Adult mosquito mortality parameter. Maps to SBML symbol `u_1v`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Model state
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: species_labels
+    label: Species labels
+  - name: exposed_human
+    maps_to: Exposed_Human
+    label: Exposed Human
+  - name: infected_human
+    maps_to: Infected_Human
+    label: Infected Human
+  - name: exposed_mosquito
+    maps_to: Exposed_Mosquito
+    label: Exposed Mosquito
+  - name: infected_mosquito
+    maps_to: Infected_Mosquito
+    label: Infected Mosquito
+  - name: susceptible_human
+    maps_to: Susceptible_Human
+    label: Susceptible Human
+  - name: susceptible_mosquito
+    maps_to: Susceptible_Mosquito
+    label: Susceptible Mosquito
+  - name: recovered
+    maps_to: Recovered
+    label: Recovered

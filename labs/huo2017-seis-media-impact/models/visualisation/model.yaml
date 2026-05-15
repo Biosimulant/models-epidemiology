@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Huo2017 - SEIS epidemic model with the impact of media Visualisation
+description: Desktop-compatible visualisation for the curated epidemiology lab.
+standard: other
+tags:
+- epidemiology
+- visualisation
+- curated
+biosim:
+  entrypoint: src.epidemiology_visualisation:EpidemiologyVisualisationModel
+  init_kwargs:
+    lab_title: Huo2017 - SEIS epidemic model with the impact of media
+    question: Does media-response dynamics suppress infection in the SEIS model?
+    sources:
+    - alias: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model
+      schemas:
+        state:
+          E: float
+          I: float
+          S: float
+          M: float
+          N: float
+        summary:
+          duration_simulated: float
+          observable_count: int
+          largest_change_observable: str
+          largest_change_magnitude: float
+          peak_observable: str
+          peak_value: float
+        species_labels:
+          E: str
+          I: str
+          S: str
+          M: str
+          N: str
+    integration_step: 0.1
+  communication_step: 0.1
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs:
+  - name: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model_state
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.state
+    label: Model state
+  - name: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model_summary
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.summary
+    label: Simulation summary
+  - name: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model_species_labels
+    maps_to: epidemiology_sbml_huo2017_seis_epidemic_model_with_the_impact_of_m_biomd0000000715_model.species_labels
+    label: Species labels
+  outputs: []
