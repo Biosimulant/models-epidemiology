@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "490da815-9fe0-47b4-89d3-51b67e0fce19",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "592f4f8a-b91b-4e6b-a883-76d38f3fb58b",
+  "created_at": "2026-05-15T10:30:55.456646970+00:00",
+  "last_synced_at": "2026-05-15T14:05:04.929428+00:00",
+  "hub_manifest_hash": "3a78c73665bcc01e620ebc406cb85b03ae3ce9ba93e11629ee55d023b65e33d5",
+  "package_name": "liu2017-dynamics-of-avian-influenza-with-logistic-growth-lab"
+}

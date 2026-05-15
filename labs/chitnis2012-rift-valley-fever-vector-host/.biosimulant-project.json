@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "6b7fcb17-6600-4d00-b7b5-f894bb46c598",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "4f527b32-4150-4c21-8384-2b9860d88596",
+  "created_at": "2026-05-15T12:20:44.539441574+00:00",
+  "last_synced_at": "2026-05-15T13:57:56.906935+00:00",
+  "hub_manifest_hash": "f83ef6e081b9e931e8d09a850d293e8686672f220a1e7d15ffd5d6422b00365d",
+  "package_name": "chitnis2012-model-rift-valley-fever-transmission-between-cattle"
+}

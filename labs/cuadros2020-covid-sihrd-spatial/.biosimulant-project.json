@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "90542197-5235-4efb-90f0-7fabf271cb09",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "dd9a495d-c08c-4211-9a64-9987785744ae",
+  "created_at": "2026-05-15T12:20:44.571226940+00:00",
+  "last_synced_at": "2026-05-15T13:59:04.847028+00:00",
+  "hub_manifest_hash": "3e104a61b96b60b3993c767956167bd0ece900f53b1239545b92827d3c224f88",
+  "package_name": "cuadros2020-sihrd-spatiotemporal-model-of-covid-19-transmission"
+}

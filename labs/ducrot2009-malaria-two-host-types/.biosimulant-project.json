@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "352e4765-8811-4d74-b507-f386417ae047",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "97452840-2314-4559-8b2f-77501afdedb5",
+  "created_at": "2026-05-15T12:20:44.646024238+00:00",
+  "last_synced_at": "2026-05-15T13:59:28.496596+00:00",
+  "hub_manifest_hash": "9b76f9a81c0665d260764aee1a48fe18b21c385c5bfe6904c4959d6193365ae6",
+  "package_name": "ducrot2009-malaria-transmission-in-two-host-types-lab"
+}

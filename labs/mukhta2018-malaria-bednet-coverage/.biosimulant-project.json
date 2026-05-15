@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "5722a462-b962-4ce1-8751-caf783509771",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "4a5134a3-628c-4f6f-8e28-1a226489c461",
+  "created_at": "2026-05-15T12:20:44.822527042+00:00",
+  "last_synced_at": "2026-05-15T14:06:33.090229+00:00",
+  "hub_manifest_hash": "bc18c0953232bbc4aef10617c9e44c1b1b295b73e151f6845de83f00f984de19",
+  "package_name": "mukhta2018-the-effect-of-bednet-coverage-on-malaria-transmission"
+}

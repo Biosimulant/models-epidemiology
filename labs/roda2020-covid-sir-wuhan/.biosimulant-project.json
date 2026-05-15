@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "602dd726-845b-450d-9760-afaf59fa864a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "8c9675ed-ff1b-4f1d-97a9-78c554500cb3",
+  "created_at": "2026-05-15T10:30:55.635150285+00:00",
+  "last_synced_at": "2026-05-15T14:09:18.364740+00:00",
+  "hub_manifest_hash": "230a08fa88a6817f217918941be17875728955e970f455e315d15b86140c5a97",
+  "package_name": "roda2020-sir-model-of-covid-19-spread-in-wuhan-lab"
+}

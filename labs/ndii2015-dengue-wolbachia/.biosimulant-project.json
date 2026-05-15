@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f0cb10f2-065d-40d3-ae9b-6db449a00fbb",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "1567cbb1-17e2-4dbe-9ba6-41fb0b45bcf5",
+  "created_at": "2026-05-15T12:20:44.916175310+00:00",
+  "last_synced_at": "2026-05-15T14:08:10.092465+00:00",
+  "hub_manifest_hash": "217835ed35e1e734a20f8e66e842ba987d3da4d03f6e4936d7de5c93ecdd4171",
+  "package_name": "ndii2015-transmission-dynamics-of-dengue-in-the-presence-of-wolb"
+}

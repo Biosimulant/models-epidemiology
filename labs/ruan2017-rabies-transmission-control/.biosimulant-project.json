@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "abffcde6-9e57-4921-875a-9d3f5d24e10e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "b8bc5dde-d587-49fa-9b2e-42619efcd336",
+  "created_at": "2026-05-15T10:30:55.653567411+00:00",
+  "last_synced_at": "2026-05-15T14:10:14.637310+00:00",
+  "hub_manifest_hash": "142951cb4085fbd7b199a412730df5dd8b8b5a5dab5eebf757401eb29ea7b525",
+  "package_name": "ruan2017-transmission-dynamics-and-control-of-rabies-in-china-la"
+}

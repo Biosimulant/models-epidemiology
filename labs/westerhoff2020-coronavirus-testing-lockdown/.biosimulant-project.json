@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "1ae7df61-c3da-418c-af01-3c0ee75a6a0f",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "3d0e5eec-8c78-4970-8816-ef91e2df2d17",
+  "created_at": "2026-05-15T10:30:55.801993413+00:00",
+  "last_synced_at": "2026-05-15T14:13:21.516349+00:00",
+  "hub_manifest_hash": "7b9f189f5985ae03105d547518c27878eeaafedf79518c13eecfaa16653e2481",
+  "package_name": "westerhoff2020-systems-biology-model-of-the-coronavirus-pandemic"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3139b489-d834-4df2-b944-39117be2d36b",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "81bc14fc-012a-40f5-9fd5-c07718cfad3c",
+  "created_at": "2026-05-15T10:30:55.486225705+00:00",
+  "last_synced_at": "2026-05-15T14:05:48.279460+00:00",
+  "hub_manifest_hash": "f2c9eec43da028e130578ee8522157eba3a9339356eac2c8eefe355a09e76f00",
+  "package_name": "malkov2020-seirs-model-of-covid-19-transmission-with-time-varyin"
+}

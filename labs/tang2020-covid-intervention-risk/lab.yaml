@@ -1,6 +1,5 @@
 schema_version: '2.0'
-title: Tang2020 - Estimation of transmission risk of COVID-19 and impact of public
-  health interventions Lab
+title: Tang2020 COVID-19 Intervention Risk Original Model Lab
 description: Single-model lab wrapper for Tang2020 - Estimation of transmission risk
   of COVID-19 and impact of public health interventions. Since the emergence of the
   first cases in Wuhan, China, the novel coronavirus (2019-nCoV) infection has been

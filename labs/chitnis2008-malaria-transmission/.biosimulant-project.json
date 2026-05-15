@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "60d01322-9b16-4953-9567-78914ecdf098",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "3d06392b-f000-47ca-bfe3-8e59b9437909",
+  "created_at": "2026-05-15T12:20:44.513670823+00:00",
+  "last_synced_at": "2026-05-15T13:57:34.467592+00:00",
+  "hub_manifest_hash": "7e9b1fd7aef52395fccd8eb2999a56ed5f718458996d32bd467873ebbb6d3dbe",
+  "package_name": "chitnis2008-mathematical-model-of-malaria-transmission-lab"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "232c173e-8cc7-4c1b-b45f-eb57115676bc",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "be59c506-3d4f-438c-91a1-7b3138561f64",
+  "created_at": "2026-05-15T10:30:55.819229008+00:00",
+  "last_synced_at": "2026-05-15T14:13:45.407877+00:00",
+  "hub_manifest_hash": "0bdb11f0d09242e80f7b88743fe801f1d075283543d4518fcce28afccbb63492",
+  "package_name": "zhao2020-suqc-model-of-covid-19-transmission-dynamics-in-wuhan-h"
+}

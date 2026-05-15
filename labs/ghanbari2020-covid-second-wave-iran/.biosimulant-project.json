@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "9cea0b4d-3b25-4317-8731-5a756706deff",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "cba7404a-aa68-4c33-8735-9e02ccf28708",
+  "created_at": "2026-05-15T12:20:44.734088890+00:00",
+  "last_synced_at": "2026-05-15T14:00:59.741397+00:00",
+  "hub_manifest_hash": "2723c140541fdad2b7ef6d68b981405cde4d869ec6cdbc3001b530977baa06f3",
+  "package_name": "ghanbari2020-forecasting-the-second-wave-of-covid-19-in-iran-lab"
+}

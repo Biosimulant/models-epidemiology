@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: COVID-19 immunotherapy A mathematical model Lab
+title: COVID-19 Immunotherapy 2021 Innate Immunity Model Lab
 description: Single-model lab wrapper for COVID-19 immunotherapy A mathematical model.
   We propose a within-host population (ODE) innate immunity model, whose focus is
   on NK cells and their relevant role in preventing COVID19 from progressing to the

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f091e348-a01c-4379-a20b-8b1d4b7ace24",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "5a1a7458-4481-4439-9fdd-a5baad0d8b3b",
+  "created_at": "2026-05-15T12:20:44.670906116+00:00",
+  "last_synced_at": "2026-05-15T14:01:22.215855+00:00",
+  "hub_manifest_hash": "4f4592737a8cb472cf15a47c007d43745bc4cc7a41388ab6fe0cfc9259908d6c",
+  "package_name": "giordano2020-sidarthe-model-of-covid-19-spread-in-italy-lab"
+}

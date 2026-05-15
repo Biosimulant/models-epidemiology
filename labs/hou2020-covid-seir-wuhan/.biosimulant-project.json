@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c4320c74-2cf3-48cc-96f9-56116085284a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "1dc3087c-7895-4b7c-a578-2bda0c47b7b9",
+  "created_at": "2026-05-15T10:30:55.352135658+00:00",
+  "last_synced_at": "2026-05-15T14:02:08.205811+00:00",
+  "hub_manifest_hash": "cbdd958ec71948b46c94f809ef368b2d37a84bfcc8279f9f433f7de548722a4c",
+  "package_name": "hou2020-seir-model-of-covid-19-transmission-in-wuhan-lab"
+}

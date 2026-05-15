@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "bc802e40-6cf8-41cb-a8b2-66626377cd00",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "4be27091-3274-4bd4-aaf1-38e62116fbba",
+  "created_at": "2026-05-15T10:30:55.135570727+00:00",
+  "last_synced_at": "2026-05-15T13:57:11.857134+00:00",
+  "hub_manifest_hash": "47d963a09b4a51d7c6df5534d153e85825ae26a44038fc49602f33997ca6b737",
+  "package_name": "carcione2020-deterministic-seir-simulation-of-a-covid-19-outbrea"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "428ec9af-efde-44e1-b1a8-3e17a607e702",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "83684ce2-d5a8-4207-ac8d-b075cb3d23d9",
+  "created_at": "2026-05-15T12:20:44.860876564+00:00",
+  "last_synced_at": "2026-05-15T14:06:55.807511+00:00",
+  "hub_manifest_hash": "e508dd95f5014d2a936335fd3e502ca72df8b9f9f7d4c8af8e5e4af9ee3eb63e",
+  "package_name": "mukhtar2018-modelling-the-effect-of-bednet-coverage-on-malaria-t"
+}

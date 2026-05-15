@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "6cf29bd0-3883-4135-9423-dcd43eafa183",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f5c4aa3f-eb86-40f0-afff-f2071734aab3",
+  "created_at": "2026-05-15T10:30:55.365961659+00:00",
+  "last_synced_at": "2026-05-15T14:02:31.198106+00:00",
+  "hub_manifest_hash": "43dbdf8cd23984c61b363f823cf2266f0c56af8f64805d982e3eeb291ad56e0f",
+  "package_name": "huo2017-seis-epidemic-model-with-the-impact-of-media-lab"
+}

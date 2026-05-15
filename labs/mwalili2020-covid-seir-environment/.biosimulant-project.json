@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "89756d89-62d4-479f-9e06-b897be6da7ad",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7d836de5-e123-43ad-ad15-34b9a862343d",
+  "created_at": "2026-05-15T10:30:55.546517997+00:00",
+  "last_synced_at": "2026-05-15T14:07:20.848339+00:00",
+  "hub_manifest_hash": "0f441042a7df01f31e085f23be16503947200a6caa044a2f468bb96f23437cd9",
+  "package_name": "mwalili2020-seir-model-of-covid-19-transmission-and-environmenta"
+}

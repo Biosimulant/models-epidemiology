@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d84b442b-cb3c-4cd3-a399-7d54d060fda4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "84f5c074-8d71-42b1-88ed-e422feb270ac",
+  "created_at": "2026-05-15T12:20:44.893164430+00:00",
+  "last_synced_at": "2026-05-15T14:08:55.907963+00:00",
+  "hub_manifest_hash": "99d5e9c21d08da99f70f0035b27f8dd8a7263e20d3a357aa639f45492a1765cd",
+  "package_name": "paiva2020-seiahrd-model-of-transmission-dynamics-of-covid-19-lab"
+}

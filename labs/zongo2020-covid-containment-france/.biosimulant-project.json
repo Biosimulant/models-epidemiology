@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "0d63e4be-7df1-4bd4-9e68-0fa4f830150d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "af419a94-1539-4798-92ce-8d735d6b3e33",
+  "created_at": "2026-05-15T12:20:45.031616793+00:00",
+  "last_synced_at": "2026-05-15T14:14:08.616770+00:00",
+  "hub_manifest_hash": "496b3b24fc7dd71eb90d57dcffc02431e46bda525934717446bb84fa06ea7512",
+  "package_name": "zongo2020-model-of-covid-19-transmission-dynamics-under-containm"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d01be571-dc11-4b6d-b9df-f875abc7ef65",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "03f74ef1-52f3-4075-9ade-48df3e0d1f2b",
+  "created_at": "2026-05-15T12:20:44.778982236+00:00",
+  "last_synced_at": "2026-05-15T14:03:45.682078+00:00",
+  "hub_manifest_hash": "7f03047fa6ce63a36671f3b2d9802e53790700ac1871861b12d8413ebb25b661",
+  "package_name": "lee2018-avian-human-bilinear-incidence-bi-model-lab"
+}

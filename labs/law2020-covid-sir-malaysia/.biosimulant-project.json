@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f6aff8e4-4798-4084-91bc-bcd293278245",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f4db73a6-135d-4b8f-aa93-2fe5a13346f1",
+  "created_at": "2026-05-15T10:30:55.378740711+00:00",
+  "last_synced_at": "2026-05-15T14:02:59.723958+00:00",
+  "hub_manifest_hash": "c0851f2f799965f841a9b3c39ae397d2b62137624563d105769f5bb654643434",
+  "package_name": "law2020-sir-model-of-covid-19-transmission-in-malyasia-with-time"
+}

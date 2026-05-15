@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4e41df34-1a6e-4714-89fa-fa65de664856",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "9aabf08f-62c5-478d-b73d-69c77f867cd8",
+  "created_at": "2026-05-15T12:20:44.714646421+00:00",
+  "last_synced_at": "2026-05-15T14:00:36.827470+00:00",
+  "hub_manifest_hash": "58102dc268eb756dcaf1720dae723463067e8c68530e3160c4a76835c2598ab8",
+  "package_name": "garira2019-a-coupled-multiscale-model-to-guide-malaria-control-a"
+}

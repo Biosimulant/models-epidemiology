@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3caf250f-15f4-408d-8c73-4bf147abb170",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f6a39ff7-0f89-4f9f-9b88-53f9c2732436",
+  "created_at": "2026-05-15T10:30:55.598066243+00:00",
+  "last_synced_at": "2026-05-15T14:08:32.817963+00:00",
+  "hub_manifest_hash": "35bfa068265b7b3b80ce13ab26ec9f8c5532750dd772212d70b7a24a54a112ec",
+  "package_name": "okuonghae2020-seair-model-of-covid-19-transmission-in-lagos-nige"
+}

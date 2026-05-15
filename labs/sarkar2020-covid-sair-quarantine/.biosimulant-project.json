@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "5a4d374b-37d2-478d-9109-ed5c2b396178",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a55cee95-9891-410b-9ae4-90b43cdd7b44",
+  "created_at": "2026-05-15T12:20:44.938412150+00:00",
+  "last_synced_at": "2026-05-15T14:10:40.837346+00:00",
+  "hub_manifest_hash": "4e113016a9579b3c075628e87791efdff39cf34887cc53ecbcf94598cf6c4060",
+  "package_name": "sarkar2020-sair-model-of-covid-19-transmission-with-quarantine-m"
+}

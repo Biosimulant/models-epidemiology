@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "0a6359f6-aef9-4cd0-ac10-76ac0d333091",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "fd553005-d58c-4d4d-ad03-a50944b52f26",
+  "created_at": "2026-05-15T12:20:44.758896309+00:00",
+  "last_synced_at": "2026-05-15T14:03:23.510603+00:00",
+  "hub_manifest_hash": "c482cb0a6a57f0a69e393679b4fafb1e767453d6b1845a08157d7a173029ad38",
+  "package_name": "leander2021-innate-immune-response-to-sars-cov-2-in-the-alveolar"
+}

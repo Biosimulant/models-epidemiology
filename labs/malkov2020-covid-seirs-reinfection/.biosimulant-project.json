@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "94e1a83a-2107-45ab-89d2-a40e4f3bde7a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "04e9994a-e67c-4307-a3e9-e72ef0974511",
+  "created_at": "2026-05-15T10:30:55.471448712+00:00",
+  "last_synced_at": "2026-05-15T14:05:26.539789+00:00",
+  "hub_manifest_hash": "30742603e551a2e19e0331aaa9a09c319f5e901df67c476e8b2249c94f53d96f",
+  "package_name": "malkov2020-seirs-model-of-covid-19-transmission-with-reinfection"
+}

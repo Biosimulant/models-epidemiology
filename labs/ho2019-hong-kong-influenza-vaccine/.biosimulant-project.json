@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "18bdae5a-ec36-4f38-9b7f-ed7cf6ba710b",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "baabedf2-e07f-4bde-a05d-75cfaab81636",
+  "created_at": "2026-05-15T10:30:55.338222325+00:00",
+  "last_synced_at": "2026-05-15T14:01:45.076882+00:00",
+  "hub_manifest_hash": "c0837ed8736631d6548b0e32ac4fec2f2b5fd6fc61682afe1b05196fcddabbb2",
+  "package_name": "ho2019-mathematical-models-of-transmission-dynamics-and-vaccine"
+}

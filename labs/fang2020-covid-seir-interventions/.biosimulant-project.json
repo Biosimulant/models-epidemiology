@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "14293862-6023-4185-95f4-48c7387eff3d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "4c13a310-864e-4aaf-abf7-62e80215d12f",
+  "created_at": "2026-05-15T10:30:55.274747603+00:00",
+  "last_synced_at": "2026-05-15T14:00:12.826620+00:00",
+  "hub_manifest_hash": "98546816b99df961b3f823697e7f2105c906732cf2d3c968244ef1a92895bfea",
+  "package_name": "fang2020-seir-model-of-covid-19-transmission-considering-governm"
+}
