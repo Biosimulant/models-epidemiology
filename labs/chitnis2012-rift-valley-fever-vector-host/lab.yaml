@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chitnis2012-rift-valley-fever-vector-host
+version: 1.0.0
 title: Chitnis2012 - Model Rift Valley Fever transmission between cattle and mosquitoes
   (Model 1) Lab
 description: Single-model lab wrapper for Chitnis2012 - Model Rift Valley Fever transmission

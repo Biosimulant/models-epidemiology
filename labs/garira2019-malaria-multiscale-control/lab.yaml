@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: garira2019-malaria-multiscale-control
+version: 1.0.0
 title: Garira2019 - A coupled multiscale model to guide malaria control and elimination
   Lab
 description: 'Single-model lab wrapper for Garira2019 - A coupled multiscale model

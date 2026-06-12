@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: mwalili2020-covid-seir-environment
+version: 1.0.0
 title: Mwalili2020 - SEIR model of COVID-19 transmission and environmental pathogen
   prevalence Lab
 description: 'Single-model lab wrapper for Mwalili2020 - SEIR model of COVID-19 transmission

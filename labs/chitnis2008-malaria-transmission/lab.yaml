@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chitnis2008-malaria-transmission
+version: 1.0.0
 title: Chitnis2008 - Mathematical model of malaria transmission Lab
 description: Single-model lab wrapper for Chitnis2008 - Mathematical model of malaria
   transmission. Mathematical model of malaria transmission for low and high transmission

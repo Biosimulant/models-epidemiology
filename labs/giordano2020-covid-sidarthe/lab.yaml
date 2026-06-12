@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: giordano2020-covid-sidarthe
+version: 1.0.0
 title: Giordano2020 - SIDARTHE model of COVID-19 spread in Italy Lab
 description: Single-model lab wrapper for Giordano2020 - SIDARTHE model of COVID-19
   spread in Italy. In Italy, 128,948 confirmed cases and 15,887 deaths of people who

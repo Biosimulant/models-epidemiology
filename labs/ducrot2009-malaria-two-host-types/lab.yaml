@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ducrot2009-malaria-two-host-types
+version: 1.0.0
 title: Ducrot2009 - Malaria transmission in two host types Lab
 description: Single-model lab wrapper for Ducrot2009 - Malaria transmission in two
   host types. The main purpose of this article is to formulate a deterministic mathematical

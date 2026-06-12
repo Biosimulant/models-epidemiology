@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: carcione2020-covid-seir-outbreak
+version: 1.0.0
 title: Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak Lab
 description: Single-model lab wrapper for Carcione2020 - Deterministic SEIR simulation
   of a COVID-19 outbreak. An epidemic disease caused by a new coronavirus has spread

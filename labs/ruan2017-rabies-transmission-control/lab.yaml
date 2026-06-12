@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ruan2017-rabies-transmission-control
+version: 1.0.0
 title: Ruan2017 - Transmission dynamics and control of rabies in China Lab
 description: Single-model lab wrapper for Ruan2017 - Transmission dynamics and control
   of rabies in China. Shigui Ruan. Modeling the transmission dynamics and control

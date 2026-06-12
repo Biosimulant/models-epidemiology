@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ethiopia2022-sars-cov2-extended-seir
+version: 1.0.0
 title: 'Model-based prediction of SARS-CoV-2 in Ethiopia: Extended SEIR model Lab'
 description: 'Single-model lab wrapper for Model-based prediction of SARS-CoV-2 in
   Ethiopia: Extended SEIR model. One of three models used to describe dynamics of

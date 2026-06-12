@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: liu2017-avian-influenza-allee-growth
+version: 1.0.0
 title: Liu2017 - Dynamics of Avian Influenza with Allee Growth Effect Lab
 description: Single-model lab wrapper for Liu2017 - Dynamics of Avian Influenza with
   Allee Growth Effect. Sanhong Liu, Shigui Ruan & Xinan Zhang. It can be used to explore

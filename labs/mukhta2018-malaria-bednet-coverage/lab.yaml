@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: mukhta2018-malaria-bednet-coverage
+version: 1.0.0
 title: Mukhta2018-the effect of bednet coverage on malaria transmission in South Sudan
   Lab
 description: Single-model lab wrapper for Mukhta2018-the effect of bednet coverage

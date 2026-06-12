@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: roda2020-covid-sir-wuhan
+version: 1.0.0
 title: Roda2020 - SIR model of COVID-19 spread in Wuhan Lab
 description: Single-model lab wrapper for Roda2020 - SIR model of COVID-19 spread
   in Wuhan. =Since the COVID-19 outbreak in Wuhan City in December of 2019, numerous

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: huo2017-seis-media-impact
+version: 1.0.0
 title: Huo2017 - SEIS epidemic model with the impact of media Lab
 description: Single-model lab wrapper for Huo2017 - SEIS epidemic model with the impact
   of media. Hai-Feng Huo, Peng Yang & Hong Xiang. Stability and bifurcation for an

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bertozzi2020-covid-sir-california-new-york
+version: 1.0.0
 title: Bertozzi2020 - SIR model of scenarios of COVID-19 spread in CA and NY Lab
 description: Single-model lab wrapper for Bertozzi2020 - SIR model of scenarios of
   COVID-19 spread in CA and NY. The coronavirus disease 2019 (COVID-19) pandemic has

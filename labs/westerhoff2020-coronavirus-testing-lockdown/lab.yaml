@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: westerhoff2020-coronavirus-testing-lockdown
+version: 1.0.0
 title: Westerhoff2020 - systems biology model of the coronavirus pandemic 2020 Lab
 description: 'Single-model lab wrapper for Westerhoff2020 - systems biology model
   of the coronavirus pandemic 2020. Using standard systems biology methodologies a

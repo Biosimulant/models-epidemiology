@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zhao2020-covid-suqc-wuhan
+version: 1.0.0
 title: Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and
   China Lab
 description: Single-model lab wrapper for Zhao2020 - SUQC model of COVID-19 transmission

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: wan2020-covid-risk-china
+version: 1.0.0
 title: Wan2020 - risk estimation and prediction of the transmission of COVID-19 in
   maninland China excluding Hubei province Lab
 description: 'Single-model lab wrapper for Wan2020 - risk estimation and prediction

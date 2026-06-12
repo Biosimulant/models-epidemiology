@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: fang2020-covid-seir-interventions
+version: 1.0.0
 title: Fang2020 - SEIR model of COVID-19 transmission considering government interventions
   in Wuhan Lab
 description: Single-model lab wrapper for Fang2020 - SEIR model of COVID-19 transmission

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ghanbari2020-covid-second-wave-iran
+version: 1.0.0
 title: Ghanbari2020 - forecasting the second wave of COVID-19 in Iran Lab
 description: Single-model lab wrapper for Ghanbari2020 - forecasting the second wave
   of COVID-19 in Iran. One of the common misconceptions about COVID-19 disease is

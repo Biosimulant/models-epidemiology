@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zongo2020-covid-containment-france
+version: 1.0.0
 title: Zongo2020 - model of COVID-19 transmission dynamics under containment measures
   in France Lab
 description: 'Single-model lab wrapper for Zongo2020 - model of COVID-19 transmission

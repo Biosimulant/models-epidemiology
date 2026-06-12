@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ndii2015-dengue-wolbachia
+version: 1.0.0
 title: Ndii2015-transmission dynamics of dengue in the presence of Wolbachia Lab
 description: 'Single-model lab wrapper for Ndii2015-transmission dynamics of dengue
   in the presence of Wolbachia.. Use of the bacterium Wolbachia is an innovative new

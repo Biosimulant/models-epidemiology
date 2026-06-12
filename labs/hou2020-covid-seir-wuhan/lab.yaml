@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hou2020-covid-seir-wuhan
+version: 1.0.0
 title: Hou2020 - SEIR model of COVID-19 transmission in Wuhan Lab
 description: Single-model lab wrapper for Hou2020 - SEIR model of COVID-19 transmission
   in Wuhan. A novel coronavirus pneumonia, first identified in Wuhan City and referred

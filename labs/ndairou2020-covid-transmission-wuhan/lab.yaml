@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ndairou2020-covid-transmission-wuhan
+version: 1.0.0
 title: Ndairou2020 - early-stage transmission dynamics of COVID-19 in Wuhan Lab
 description: Single-model lab wrapper for Ndairou2020 - early-stage transmission dynamics
   of COVID-19 in Wuhan. We propose a compartmental mathematical model for the spread

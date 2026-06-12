@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: mukandavire2020-covid-seir-south-africa
+version: 1.0.0
 title: Mukandavire2020 - SEIR model of early COVID-19 transmission in South Africa
   Lab
 description: Single-model lab wrapper for Mukandavire2020 - SEIR model of early COVID-19

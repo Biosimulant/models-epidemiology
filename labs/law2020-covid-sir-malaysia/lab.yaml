@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: law2020-covid-sir-malaysia
+version: 1.0.0
 title: Law2020 - SIR model of COVID-19 transmission in Malyasia with time-varying
   parameters Lab
 description: Single-model lab wrapper for Law2020 - SIR model of COVID-19 transmission

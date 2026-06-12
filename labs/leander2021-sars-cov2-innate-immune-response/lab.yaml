@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: leander2021-sars-cov2-innate-immune-response
+version: 1.0.0
 title: Leander2021 - innate immune response to SARS-CoV-2 in the alveolar epithelium
   Lab
 description: Single-model lab wrapper for Leander2021 - innate immune response to

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: okuonghae2020-covid-seair-lagos
+version: 1.0.0
 title: Okuonghae2020 - SEAIR model of COVID-19 transmission in Lagos, Nigeria Lab
 description: Single-model lab wrapper for Okuonghae2020 - SEAIR model of COVID-19
   transmission in Lagos, Nigeria. This work examines the impact of various non-pharmaceutical

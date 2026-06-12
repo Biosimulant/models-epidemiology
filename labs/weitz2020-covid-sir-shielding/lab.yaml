@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: weitz2020-covid-sir-shielding
+version: 1.0.0
 title: Weitz2020 - SIR model of COVID-19 transmission with shielding Lab
 description: Single-model lab wrapper for Weitz2020 - SIR model of COVID-19 transmission
   with shielding. The COVID-19 pandemic has precipitated a global crisis, with more

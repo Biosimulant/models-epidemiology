@@ -1,0 +1,268 @@
+schema_version: "1"
+namespace: demi
+default_visibility: public
+packages:
+  - id: bertozzi2020-covid-sir-california-new-york-lab
+    package: bertozzi2020-covid-sir-california-new-york
+    version: 1.0.0
+    type: lab
+    path: labs/bertozzi2020-covid-sir-california-new-york
+    visibility: public
+  - id: carcione2020-covid-seir-outbreak-lab
+    package: carcione2020-covid-seir-outbreak
+    version: 1.0.0
+    type: lab
+    path: labs/carcione2020-covid-seir-outbreak
+    visibility: public
+  - id: chitnis2008-malaria-transmission-lab
+    package: chitnis2008-malaria-transmission
+    version: 1.0.0
+    type: lab
+    path: labs/chitnis2008-malaria-transmission
+    visibility: public
+  - id: chitnis2012-rift-valley-fever-vector-host-lab
+    package: chitnis2012-rift-valley-fever-vector-host
+    version: 1.0.0
+    type: lab
+    path: labs/chitnis2012-rift-valley-fever-vector-host
+    visibility: public
+  - id: covidimmunotherapy2021-immune-treatment-lab
+    package: covidimmunotherapy2021-immune-treatment
+    version: 1.0.0
+    type: lab
+    path: labs/covidimmunotherapy2021-immune-treatment
+    visibility: public
+  - id: covidimmunotherapy2022-immune-treatment-lab
+    package: covidimmunotherapy2022-immune-treatment
+    version: 1.0.0
+    type: lab
+    path: labs/covidimmunotherapy2022-immune-treatment
+    visibility: public
+  - id: cuadros2020-covid-sihrd-spatial-lab
+    package: cuadros2020-covid-sihrd-spatial
+    version: 1.0.0
+    type: lab
+    path: labs/cuadros2020-covid-sihrd-spatial
+    visibility: public
+  - id: ducrot2009-malaria-two-host-types-lab
+    package: ducrot2009-malaria-two-host-types
+    version: 1.0.0
+    type: lab
+    path: labs/ducrot2009-malaria-two-host-types
+    visibility: public
+  - id: ethiopia2022-sars-cov2-extended-seir-lab
+    package: ethiopia2022-sars-cov2-extended-seir
+    version: 1.0.0
+    type: lab
+    path: labs/ethiopia2022-sars-cov2-extended-seir
+    visibility: public
+  - id: fang2020-covid-seir-interventions-lab
+    package: fang2020-covid-seir-interventions
+    version: 1.0.0
+    type: lab
+    path: labs/fang2020-covid-seir-interventions
+    visibility: public
+  - id: garira2019-malaria-multiscale-control-lab
+    package: garira2019-malaria-multiscale-control
+    version: 1.0.0
+    type: lab
+    path: labs/garira2019-malaria-multiscale-control
+    visibility: public
+  - id: ghanbari2020-covid-second-wave-iran-lab
+    package: ghanbari2020-covid-second-wave-iran
+    version: 1.0.0
+    type: lab
+    path: labs/ghanbari2020-covid-second-wave-iran
+    visibility: public
+  - id: giordano2020-covid-sidarthe-lab
+    package: giordano2020-covid-sidarthe
+    version: 1.0.0
+    type: lab
+    path: labs/giordano2020-covid-sidarthe
+    visibility: public
+  - id: ho2019-hong-kong-influenza-vaccine-lab
+    package: ho2019-hong-kong-influenza-vaccine
+    version: 1.0.0
+    type: lab
+    path: labs/ho2019-hong-kong-influenza-vaccine
+    visibility: public
+  - id: hou2020-covid-seir-wuhan-lab
+    package: hou2020-covid-seir-wuhan
+    version: 1.0.0
+    type: lab
+    path: labs/hou2020-covid-seir-wuhan
+    visibility: public
+  - id: huo2017-seis-media-impact-lab
+    package: huo2017-seis-media-impact
+    version: 1.0.0
+    type: lab
+    path: labs/huo2017-seis-media-impact
+    visibility: public
+  - id: law2020-covid-sir-malaysia-lab
+    package: law2020-covid-sir-malaysia
+    version: 1.0.0
+    type: lab
+    path: labs/law2020-covid-sir-malaysia
+    visibility: public
+  - id: leander2021-sars-cov2-innate-immune-response-lab
+    package: leander2021-sars-cov2-innate-immune-response
+    version: 1.0.0
+    type: lab
+    path: labs/leander2021-sars-cov2-innate-immune-response
+    visibility: public
+  - id: lee2018-avian-human-bilinear-incidence-lab
+    package: lee2018-avian-human-bilinear-incidence
+    version: 1.0.0
+    type: lab
+    path: labs/lee2018-avian-human-bilinear-incidence
+    visibility: public
+  - id: lee2018-avian-human-saturated-incidence-lab
+    package: lee2018-avian-human-saturated-incidence
+    version: 1.0.0
+    type: lab
+    path: labs/lee2018-avian-human-saturated-incidence
+    visibility: public
+  - id: liu2017-avian-influenza-allee-growth-lab
+    package: liu2017-avian-influenza-allee-growth
+    version: 1.0.0
+    type: lab
+    path: labs/liu2017-avian-influenza-allee-growth
+    visibility: public
+  - id: liu2017-avian-influenza-logistic-growth-lab
+    package: liu2017-avian-influenza-logistic-growth
+    version: 1.0.0
+    type: lab
+    path: labs/liu2017-avian-influenza-logistic-growth
+    visibility: public
+  - id: malkov2020-covid-seirs-reinfection-lab
+    package: malkov2020-covid-seirs-reinfection
+    version: 1.0.0
+    type: lab
+    path: labs/malkov2020-covid-seirs-reinfection
+    visibility: public
+  - id: malkov2020-covid-seirs-time-varying-r-lab
+    package: malkov2020-covid-seirs-time-varying-r
+    version: 1.0.0
+    type: lab
+    path: labs/malkov2020-covid-seirs-time-varying-r
+    visibility: public
+  - id: mukandavire2020-covid-seir-south-africa-lab
+    package: mukandavire2020-covid-seir-south-africa
+    version: 1.0.0
+    type: lab
+    path: labs/mukandavire2020-covid-seir-south-africa
+    visibility: public
+  - id: mukhta2018-malaria-bednet-coverage-lab
+    package: mukhta2018-malaria-bednet-coverage
+    version: 1.0.0
+    type: lab
+    path: labs/mukhta2018-malaria-bednet-coverage
+    visibility: public
+  - id: mukhtar2018-malaria-bednet-coverage-lab
+    package: mukhtar2018-malaria-bednet-coverage
+    version: 1.0.0
+    type: lab
+    path: labs/mukhtar2018-malaria-bednet-coverage
+    visibility: public
+  - id: mwalili2020-covid-seir-environment-lab
+    package: mwalili2020-covid-seir-environment
+    version: 1.0.0
+    type: lab
+    path: labs/mwalili2020-covid-seir-environment
+    visibility: public
+  - id: ndairou2020-covid-transmission-wuhan-lab
+    package: ndairou2020-covid-transmission-wuhan
+    version: 1.0.0
+    type: lab
+    path: labs/ndairou2020-covid-transmission-wuhan
+    visibility: public
+  - id: ndii2015-dengue-wolbachia-lab
+    package: ndii2015-dengue-wolbachia
+    version: 1.0.0
+    type: lab
+    path: labs/ndii2015-dengue-wolbachia
+    visibility: public
+  - id: okuonghae2020-covid-seair-lagos-lab
+    package: okuonghae2020-covid-seair-lagos
+    version: 1.0.0
+    type: lab
+    path: labs/okuonghae2020-covid-seair-lagos
+    visibility: public
+  - id: paiva2020-covid-seiahrd-lab
+    package: paiva2020-covid-seiahrd
+    version: 1.0.0
+    type: lab
+    path: labs/paiva2020-covid-seiahrd
+    visibility: public
+  - id: roda2020-covid-sir-wuhan-lab
+    package: roda2020-covid-sir-wuhan
+    version: 1.0.0
+    type: lab
+    path: labs/roda2020-covid-sir-wuhan
+    visibility: public
+  - id: ruan2017-rabies-transmission-control-lab
+    package: ruan2017-rabies-transmission-control
+    version: 1.0.0
+    type: lab
+    path: labs/ruan2017-rabies-transmission-control
+    visibility: public
+  - id: sarkar2020-covid-sair-quarantine-lab
+    package: sarkar2020-covid-sair-quarantine
+    version: 1.0.0
+    type: lab
+    path: labs/sarkar2020-covid-sair-quarantine
+    visibility: public
+  - id: smithmoore2004-hong-kong-flu-sir-lab
+    package: smithmoore2004-hong-kong-flu-sir
+    version: 1.0.0
+    type: lab
+    path: labs/smithmoore2004-hong-kong-flu-sir
+    visibility: public
+  - id: tang2020-covid-intervention-risk-lab
+    package: tang2020-covid-intervention-risk
+    version: 1.0.0
+    type: lab
+    path: labs/tang2020-covid-intervention-risk
+    visibility: public
+  - id: tang2020-covid-intervention-risk-update-lab
+    package: tang2020-covid-intervention-risk-update
+    version: 1.0.0
+    type: lab
+    path: labs/tang2020-covid-intervention-risk-update
+    visibility: public
+  - id: turner2015-human-mosquito-seir-sei-lab
+    package: turner2015-human-mosquito-seir-sei
+    version: 1.0.0
+    type: lab
+    path: labs/turner2015-human-mosquito-seir-sei
+    visibility: public
+  - id: wan2020-covid-risk-china-lab
+    package: wan2020-covid-risk-china
+    version: 1.0.0
+    type: lab
+    path: labs/wan2020-covid-risk-china
+    visibility: public
+  - id: weitz2020-covid-sir-shielding-lab
+    package: weitz2020-covid-sir-shielding
+    version: 1.0.0
+    type: lab
+    path: labs/weitz2020-covid-sir-shielding
+    visibility: public
+  - id: westerhoff2020-coronavirus-testing-lockdown-lab
+    package: westerhoff2020-coronavirus-testing-lockdown
+    version: 1.0.0
+    type: lab
+    path: labs/westerhoff2020-coronavirus-testing-lockdown
+    visibility: public
+  - id: zhao2020-covid-suqc-wuhan-lab
+    package: zhao2020-covid-suqc-wuhan
+    version: 1.0.0
+    type: lab
+    path: labs/zhao2020-covid-suqc-wuhan
+    visibility: public
+  - id: zongo2020-covid-containment-france-lab
+    package: zongo2020-covid-containment-france
+    version: 1.0.0
+    type: lab
+    path: labs/zongo2020-covid-containment-france
+    visibility: public

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: sarkar2020-covid-sair-quarantine
+version: 1.0.0
 title: Sarkar2020 - SAIR model of COVID-19 transmission with quarantine measures in
   India Lab
 description: Single-model lab wrapper for Sarkar2020 - SAIR model of COVID-19 transmission
